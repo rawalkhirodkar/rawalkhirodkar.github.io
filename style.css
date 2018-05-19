@@ -19,7 +19,8 @@ html, body {
   background-image: url('cmu.jpg');
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: auto 100%;
+  /*background-size: auto 100%;*/
+  background-size:cover;
 }
 .bg2 {
   background-color: #299DB6;
