@@ -111,11 +111,10 @@
     <td width="68%" valign="top" align="justify">
     <p>I am a Ph.D. student (2019-) at <a href="https://www.ri.cmu.edu/" target="_blank">Robotics Institute, Carnegie Mellon University</a>, advised by 
       Prof. <a href="http://www.cs.cmu.edu/~kkitani/" target="_blank">Kris Kitani</a>. Earlier, I received my <a href="docs/MSR_Thesis_Rawal.pdf"> Masters</a> (2017-2019) at CMU working 
-      Prof. Kris Kitani and obtained my <a href="docs/Btech_Report_Rawal.pdf"> B.Tech</a> (2013-2017) in computer science from <a href="https://www.cse.iitb.ac.in/" target="_blank"> IIT Bombay</a> working with Prof. <a href="https://www.cse.iitb.ac.in/~ganesh/" target="_blank">Ganesh Ramakrishnan</a>. I am a recipient of 2019 <a href="https://www.amazon.com/b?node=16008589011" target="_blank">Amazon Go Fellowship</a>. My graduate study is supported partly by <a href="https://www.mhrd.gov.in/" target="_blank">Gov. of India</a> and <a href="https://www.iarpa.gov/" target="_blank">IARPA</a>.
+      Prof. Kris Kitani and obtained my <a href="docs/Btech_Report_Rawal.pdf"> B.Tech</a> (2013-2017) in computer science from <a href="https://www.cse.iitb.ac.in/" target="_blank"> IIT Bombay</a> working with Prof. <a href="https://www.cse.iitb.ac.in/~ganesh/" target="_blank">Ganesh Ramakrishnan</a>. I am a recipient of 2019 <a href="https://www.amazon.com/b?node=16008589011" target="_blank">Amazon Fellowship</a>. My graduate study is supported by <a href="https://www.mhrd.gov.in/" target="_blank">Gov. of India</a> and <a href="https://www.iarpa.gov/" target="_blank">IARPA</a>.
     </p>
 
-    <p>I work in Artificial Intelligence at the intersection of Computer Vision, Machine Learning & Robotics. My research is focused on efficient use of synthetic data for problems in computer vision
-      where annotations are scarcely available. 
+    <p>I work in Artificial Intelligence at the intersection of Computer Vision, Machine Learning & Robotics. My research is focused on multi-human understanding in 3D under occlusion and crowding. 
     </td>
   </tr>
 </table>
@@ -126,8 +125,8 @@
     <ul>
     <li> July, 2021. <a href="http://iccv2021.thecvf.com/home/">Two papers accepted to ICCV 2021</a>.</li>
     <li> July, 2021. <a href="https://amazon.jobs/en/teams/lab126/">Research Internship at Amazon Lab126, CA</a>.</li>
+    <li> Nov, 2020. <a href="https://www.amazon.com/b?node=16008589011">Awarded Amazon Fellowship</a>.</li>
     <!-- <li> Aug, 2020. <a href="https://amazon.jobs/en/teams/lab126/">Research Internship at Amazon Lab126, CA</a>.</li> -->
-    <!-- <li> Nov, 2019. <a href="https://www.amazon.com/b?node=16008589011">Awarded Amazon Go Fellowship</a>.</li> -->
     <!-- <li> Apr, 2019. <a href="docs/MSR_Thesis_Rawal.pdf">Defended by master thesis at CMU</a>.</li> -->
     <!-- <li> Jan, 2019. <a href="https://ieeexplore.ieee.org/document/8658387">Paper accepted to WACV 2019</a>.</li> -->
     </ul>
@@ -149,9 +148,12 @@
       </p>
 
       <div class="paper" id="iccv21_mip">
+        <a href="https://rawalkhirodkar.github.io/mipnet/">project page</a> |
+        <a href="https://www.amazon.science/publications/multi-instance-pose-networks-rethinking-top-down-pose-estimation">Amazon Science</a> |
         <a href="https://arxiv.org/abs/2101.11223.pdf">pdf</a> |
         <a href="javascript:toggleblock('iccv21_mip_abs')">abstract</a> |
         <a shape="rect" href="javascript:togglebib('iccv21_mip')" class="togglebib">bibtex</a> |
+        <a href="https://github.com/rawalkhirodkar/MIPNet">code</a> 
 
         <p align="justify"> <i id="iccv21_mip_abs">A key assumption of top-down human pose estimation approaches is their expectation of having a single person/instance present in the input bounding box. This often leads to failures in crowded scenes with occlusions. We propose a novel solution to overcome the limitations of this fundamental assumption. Our Multi-Instance Pose Network (MIPNet) allows for predicting multiple 2D pose instances within a given bounding box. We introduce a Multi-Instance Modulation Block (MIMB) that can adaptively modulate channel-wise feature responses for each instance and is parameter efficient. We demonstrate the efficacy of our approach by evaluating on COCO, CrowdPose, and OCHuman datasets. Specifically, we achieve 70.0 AP on CrowdPose and 42.5 AP on OCHuman test sets, a significant improvement of 2.4 AP and 6.5 AP over the prior art, respectively. When using ground truth bounding boxes for inference, MIPNet achieves an improvement of 0.7 AP on COCO, 0.9 AP on CrowdPose, and 9.1 AP on OCHuman validation sets compared to HRNet. Interestingly, when fewer, high confidence bounding boxes are used, HRNet's performance degrades (by 5 AP) on OCHuman, whereas MIPNet maintains a relatively stable performance (drop of 1 AP) for the same inputs.</i></p>
 
@@ -190,6 +192,7 @@
         <a href="https://arxiv.org/pdf/2104.00633.pdf">pdf</a> |
         <a href="javascript:toggleblock('iccv21_repose_abs')">abstract</a> |
         <a shape="rect" href="javascript:togglebib('iccv21_repose')" class="togglebib">bibtex</a> |
+        <a href="https://github.com/sh8/RePOSE">code</a> 
 
         <p align="justify"> <i id="iccv21_repose_abs">The use of iterative pose refinement is a critical processing step for 6D object pose estimation, and its performance depends greatly on one's choice of image representation. Image representations learned via deep convolutional neural networks (CNN) are currently the method of choice as they are able to robustly encode object keypoint locations. However, CNN-based image representations are computational expensive to use for iterative pose refinement, as they require that image features are extracted using a deep network, once for the input image and multiple times for rendered images during the refinement process. Instead of using a CNN to extract image features from a rendered RGB image, we propose to directly render a deep feature image. We call this deep texture rendering, where a shallow multi-layer perceptron is used to directly regress a view invariant image representation of an object. Using an estimate of the pose and deep texture rendering, our system can render an image representation in under 1ms. This image representation is optimized such that it makes it easier to perform nonlinear 6D pose estimation by adding a differentiable Levenberg-Marquardt optimization network and back-propagating the 6D pose alignment error. We call our method, RePOSE, a Real-time Iterative Rendering and Refinement algorithm for 6D POSE estimation. RePOSE runs at 71 FPS and achieves state-of-the-art accuracy of 51.6% on the Occlusion LineMOD dataset - a 4.1% absolute improvement over the prior art, and comparable performance on the YCB-Video dataset with a much faster runtime than the other pose refinement methods.</i></p>
 
@@ -217,6 +220,44 @@
     </td>
   </tr>
 
+  
+  <tr>
+    <td width="33%" valign="top"><a href="images/publications/adr/1.png"><img src="images/publications/adr/1.png" alt="sym" width="90%" style="border-radius:15px"></a></td>
+    <td width="67%" valign="top">
+      <p><a href="https://arxiv.org/pdf/1812.00491" id="ADR">
+      <heading>Adversarial Domain Randomization</heading></a><br>
+      <strong>Rawal Khirodkar</strong>, Kris M. Kitani<br>
+      preprint
+      </p>
+
+      <div class="paper" id="adr">
+        <a href="https://arxiv.org/pdf/1812.00491.pdf">pdf</a> |
+        <a href="javascript:toggleblock('adr_abs')">abstract</a> |
+        <a shape="rect" href="javascript:togglebib('adr')" class="togglebib">bibtex</a>
+
+        <p align="justify"> <i id="adr_abs">Domain Randomization (DR) is known to require a significant amount of training data for good performance. We argue that this is due to DR's strategy of random data generation using a uniform distribution over simulation parameters, as a result, DR often generates samples which are uninformative for the learner. In this work, we theoretically analyze DR using ideas from multi-source domain adaptation. Based on our findings, we propose Adversarial Domain Randomization (ADR) as an efficient variant of DR which generates adversarial samples with respect to the learner during training. We implement ADR as a policy whose action space is the quantized simulation parameter space. At each iteration, the policy's action generates labeled data and the reward is set as negative of learner's loss on this data. As a result, we observe ADR frequently generates novel samples for the learner like truncated and occluded objects for object detection and confusing classes for image classification. We perform evaluations on datasets like CLEVR, Syn2Real, and VIRAT for various tasks where we demonstrate that ADR outperforms DR by generating fewer data samples.</i></p>
+
+        <pre xml:space="preserve">
+          @article{DBLP:journals/corr/abs-1812-00491,
+            author    = {Rawal Khirodkar and
+                         Donghyun Yoo and
+                         Kris M. Kitani},
+            title     = {{VADRA:} Visual Adversarial Domain Randomization and Augmentation},
+            journal   = {CoRR},
+            volume    = {abs/1812.00491},
+            year      = {2018},
+            url       = {http://arxiv.org/abs/1812.00491},
+            archivePrefix = {arXiv},
+            eprint    = {1812.00491},
+            timestamp = {Tue, 01 Jan 2019 15:01:25 +0100},
+            biburl    = {https://dblp.org/rec/journals/corr/abs-1812-00491.bib},
+            bibsource = {dblp computer science bibliography, https://dblp.org}
+          }
+        </pre>
+      </div>
+    </td>
+  </tr>
+
   <tr>
     <td width="33%" valign="top"><a href="images/wacv19.png"><img src="images/wacv19.png" alt="sym" width="90%" style="border-radius:15px"></a></td>
     <td width="67%" valign="top">
@@ -230,7 +271,7 @@
         <a href="https://arxiv.org/pdf/1811.05939.pdf">pdf</a> |
         <a href="javascript:toggleblock('wacv19_dr_abs')">abstract</a> |
         <a shape="rect" href="javascript:togglebib('wacv19_dr')" class="togglebib">bibtex</a> |
-        <a href="https://github.com/rawalkhirodkar/car_pose">code</a> |
+        <a href="https://github.com/rawalkhirodkar/car_pose">code</a> 
 
         <p align="justify"> <i id="wacv19_dr_abs">We address the issue of domain gap when making use of synthetic data to train a scene-specific object detector and pose estimator. While previous works have shown that the constraints of learning a scene-specific model can be leveraged to create geometrically and photometrically consistent synthetic data, care must be taken to design synthetic content which is as close as possible to the real-world data distribution. In this work, we propose to solve domain gap through the use of appearance randomization to generate a wide range of synthetic objects to span the space of realistic images for training. An ablation study of our results is presented to delineate the individual contribution of different components in the randomization process. We evaluate our method on VIRAT, UA-DETRAC, EPFL-Car datasets, where we demonstrate that using scene specific domain randomized synthetic data is better than fine-tuning off-the-shelf models on limited real data.</i></p>
 
@@ -257,6 +298,11 @@
 <table width="100%" align="top" border="0" cellpadding="20">
   <tr>
     <td valign="top">
+      <p>
+        <a href="http://www.cs.cmu.edu/~me/811/"><heading>16-720: Computer Vision - Fall, 2021</heading></a><br>
+        <strong>Instructor</strong>: Prof. Kris Kitani<br>
+      </p>
+
       <p>
         <a href="http://www.cs.cmu.edu/~me/811/"><heading>16-720: Computer Vision - Fall, 2020</heading></a><br>
         <strong>Instructor</strong>: Prof. Kris Kitani<br>
@@ -302,6 +348,7 @@ hideallbibs();
 <script xml:space="preserve" language="JavaScript">
 hideblock('iccv21_mip_abs');
 hideblock('iccv21_repose_abs');
+hideblock('adr_abs');
 hideblock('wacv19_dr_abs');
 
 </script>
