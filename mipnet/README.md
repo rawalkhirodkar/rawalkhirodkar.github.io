@@ -1,2 +1,2 @@
-# MIPnet
+# MIPNet
 
