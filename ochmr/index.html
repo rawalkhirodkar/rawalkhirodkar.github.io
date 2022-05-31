@@ -60,7 +60,7 @@
                   <span>Paper</span>
                 </a>
               </span>
-              <span class="link-block">
+             <!--  <span class="link-block">
                 <a href="files/supplementary.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -68,8 +68,8 @@
                   </span>
                   <span>Supp.</span>
                 </a>
-              </span>
-              <span class="link-block">
+              </span> -->
+              <!-- <span class="link-block">
                 <a href="files/poster.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -77,7 +77,7 @@
                   </span>
                   <span>Poster</span>
                 </a>
-              </span>
+              </span> -->
               <span class="link-block">
                 <a href="https://arxiv.org/abs/2203.13349"
                    class="external-link button is-normal is-rounded is-dark">
@@ -116,244 +116,17 @@
   </div>
 </section>
 
- <!-- Teaser. -->
-    <div class="columns is-centered">
-        <div class="columns is-centered teaser-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="files/images/1_input.png"
-                 class="teaser-image"
-                 alt="Interpolate start reference image."/>
-            <p>Input Image</p>
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="files/images/1_hrnet.png"
-                 class="teaser-image"
-                 alt="Interpolate start reference image."/>
-            <p>Top-Down Pose Estimator</p>
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="files/images/1_mipnet.png"
-                 class="teaser-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">MIPNet</p>
-          </div>
-        </div>
-    </div>
-    <!--/ Teaser. -->
-
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            A key assumption of top-down human pose estimation approaches is their expectation of having a single person/instance present in the input bounding box. This often leads to failures in crowded scenes with occlusions. We propose a novel solution to overcome the limitations of this fundamental assumption. Our Multi-Instance Pose Network (MIPNet) allows for predicting multiple 2D pose instances within a given bounding box. We introduce a Multi-Instance Modulation Block (MIMB) that can adaptively modulate channel-wise feature responses for each instance and is parameter efficient. 
-          </p>
-          <p>
-            We demonstrate the efficacy of our approach by evaluating on COCO, CrowdPose, and OCHuman datasets. Specifically, we achieve 70.0 AP on CrowdPose and 42.5 AP on OCHuman test sets, a significant improvement of 2.4 AP and 6.5 AP over the prior art, respectively. When using ground truth bounding boxes for inference, MIPNet achieves an improvement of 0.7 AP on COCO, 0.9 AP on CrowdPose, and 9.1 AP on OCHuman validation sets compared to HRNet. Interestingly, when fewer, high confidence bounding boxes are used, HRNet's performance degrades (by 5 AP) on OCHuman, whereas MIPNet maintains a relatively stable performance (drop of 1 AP) for the same inputs.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Abstract. -->
-
-  </div>
-</section>
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Pose Estimation under Occlusion</h2>
-        <br>
-        <div class="columns is-centered">
-
-            <!-- --------------------------- -->
-            <div class="column is-3 has-text-centered">
-              <img src="files/images/1/a.jpeg"
-                   class="teaser-image"
-                   alt="Interpolate start reference image."/>
-              <p>Input</p>
-            </div>
-
-            <div class="column is-3 has-text-centered">
-              <img src="files/images/1/b.jpeg"
-                   class="teaser-image"
-                   alt="Interpolate start reference image."/>
-              <p>HRNet</p>
-            </div>
-            
-            <div class="column is-3 has-text-centered">
-              <img src="files/images/1/c.jpeg"
-                   class="teaser-image"
-                   alt="Interpolation end reference image."/>
-              <p class="is-bold">MIPNet</p>
-            </div>
-
-            <!-- --------------------------- -->
-            <div class="column is-3 has-text-centered">
-              <img src="files/images/2/a.jpeg"
-                   class="teaser-image"
-                   alt="Interpolate start reference image."/>
-              <p>Input</p>
-            </div>
-
-            <div class="column is-3 has-text-centered">
-              <img src="files/images/2/b.jpeg"
-                   class="teaser-image"
-                   alt="Interpolate start reference image."/>
-              <p>HRNet</p>
-            </div>
-            
-            <div class="column is-3 has-text-centered">
-              <img src="files/images/2/c.jpeg"
-                   class="teaser-image"
-                   alt="Interpolation end reference image."/>
-              <p class="is-bold">MIPNet</p>
-            </div>
-
-            <!-- --------------------------- -->
-
-        </div>
-
-        <div class="columns is-centered">
-            <!-- --------------------------- -->
-            <div class="column is-3 has-text-centered">
-              <img src="files/images/3/a.jpeg"
-                   class="teaser-image"
-                   alt="Interpolate start reference image."/>
-              <p>Input</p>
-            </div>
-
-            <div class="column is-3 has-text-centered">
-              <img src="files/images/3/b.jpeg"
-                   class="teaser-image"
-                   alt="Interpolate start reference image."/>
-              <p>HRNet</p>
-            </div>
-            
-            <div class="column is-3 has-text-centered">
-              <img src="files/images/3/c.jpeg"
-                   class="teaser-image"
-                   alt="Interpolation end reference image."/>
-              <p class="is-bold">MIPNet</p>
-            </div>
-
-            <!-- --------------------------- -->
-            
-            <!-- --------------------------- -->
-            <div class="column is-3 has-text-centered">
-              <img src="files/images/4/a.jpeg"
-                   class="teaser-image"
-                   alt="Interpolate start reference image."/>
-              <p>Input</p>
-            </div>
-
-            <div class="column is-3 has-text-centered">
-              <img src="files/images/4/b.jpeg"
-                   class="teaser-image"
-                   alt="Interpolate start reference image."/>
-              <p>HRNet</p>
-            </div>
-            
-            <div class="column is-3 has-text-centered">
-              <img src="files/images/4/c.jpeg"
-                   class="teaser-image"
-                   alt="Interpolation end reference image."/>
-              <p class="is-bold">MIPNet</p>
-            </div>
-
-            <!-- --------------------------- -->
-        </div>
-
-        <div class="columns is-centered">
-            <!-- --------------------------- -->
-            <div class="column is-3 has-text-centered">
-              <img src="files/images/5/a.jpeg"
-                   class="teaser-image"
-                   alt="Interpolate start reference image."/>
-              <p>Input</p>
-            </div>
-
-            <div class="column is-3 has-text-centered">
-              <img src="files/images/5/b.jpeg"
-                   class="teaser-image"
-                   alt="Interpolate start reference image."/>
-              <p>HRNet</p>
-            </div>
-            
-            <div class="column is-3 has-text-centered">
-              <img src="files/images/5/c.jpeg"
-                   class="teaser-image"
-                   alt="Interpolation end reference image."/>
-              <p class="is-bold">MIPNet</p>
-            </div>
-
-            <!-- --------------------------- -->
-            
-            <!-- --------------------------- -->
-            <div class="column is-3 has-text-centered">
-              <img src="files/images/6/a.jpeg"
-                   class="teaser-image"
-                   alt="Interpolate start reference image."/>
-              <p>Input</p>
-            </div>
-
-            <div class="column is-3 has-text-centered">
-              <img src="files/images/6/b.jpeg"
-                   class="teaser-image"
-                   alt="Interpolate start reference image."/>
-              <p>HRNet</p>
-            </div>
-            
-            <div class="column is-3 has-text-centered">
-              <img src="files/images/6/c.jpeg"
-                   class="teaser-image"
-                   alt="Interpolation end reference image."/>
-              <p class="is-bold">MIPNet</p>
-            </div>
-
-            <!-- --------------------------- -->
-
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>
-      @InProceedings{Khirodkar_2021_ICCV,
-              author    = {Khirodkar, Rawal and Chari, Visesh and Agrawal, Amit and Tyagi, Ambrish},
-              title     = {Multi-Instance Pose Networks: Rethinking Top-Down Pose Estimation},
-              booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
-              month     = {October},
-              year      = {2021},
-              pages     = {3122-3131}
-          }
-</code></pre>
-  </div>
-</section>
-
 
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
       <a class="icon-link"
-         href="https://arxiv.org/pdf/2101.11223.pdf">
+         href="https://arxiv.org/pdf/2203.13349.pdf">
         <i class="fas fa-file-pdf"></i>
       </a>
-      <a class="icon-link" href="https://github.com/rawalkhirodkar/MIPNet" class="external-link" disabled>
+      <!-- <a class="icon-link" href="https://github.com/rawalkhirodkar/MIPNet" class="external-link" disabled>
         <i class="fab fa-github"></i>
-      </a>
+      </a> -->
     </div>
     <div class="columns is-centered">
       <div class="column is-8">
