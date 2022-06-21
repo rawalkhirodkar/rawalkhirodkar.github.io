@@ -60,7 +60,7 @@
                   <span>Paper</span>
                 </a>
               </span>
-             <!--  <span class="link-block">
+              <span class="link-block">
                 <a href="files/supplementary.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -68,8 +68,8 @@
                   </span>
                   <span>Supp.</span>
                 </a>
-              </span> -->
-              <!-- <span class="link-block">
+              </span>
+              <span class="link-block">
                 <a href="files/poster.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -77,7 +77,7 @@
                   </span>
                   <span>Poster</span>
                 </a>
-              </span> -->
+              </span>
               <span class="link-block">
                 <a href="https://arxiv.org/abs/2203.13349"
                    class="external-link button is-normal is-rounded is-dark">
@@ -113,6 +113,149 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+
+ <!-- Teaser. -->
+    <div class="columns is-centered">
+        <div class="columns is-centered teaser-panel">
+          <div class="column is-2 has-text-centered">
+            <img src="files/images/1_input.jpeg"
+                 class="teaser-image"
+                 alt="Interpolate start reference image."/>
+            <p>Input Image</p>
+          </div>
+          <div class="column is-2 has-text-centered">
+            <img src="files/images/1_romp.jpeg"
+                 class="teaser-image"
+                 alt="Interpolate start reference image."/>
+            <p>Bottom-up Mesh Recovery</p>
+          </div>
+          <div class="column is-2 has-text-centered">
+            <img src="files/images/1_ochmr.jpeg"
+                 class="teaser-image"
+                 alt="Interpolation end reference image."/>
+            <p class="is-bold">OCHMR</p>
+          </div>
+        </div>
+    </div>
+    <!--/ Teaser. -->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Top-down methods for monocular human mesh recovery have two stages: (1) detect human bounding boxes; (2) treat each bounding box as an independent single-human mesh recovery task. Unfortunately, the single-human assumption does not hold in images with multi-human occlusion and crowding. Consequently, top-down methods have difficulties in recovering accurate 3D human meshes under severe person-person occlusion. To address this, we present Occluded Human Mesh Recovery (OCHMR) - a novel top-down mesh recovery approach that incorporates image spatial context to overcome the limitations of the single-human assumption. The approach is conceptually simple and can be applied to any existing top-down architecture. Along with the input image, we condition the top-down model on spatial context from the image in the form of body-center heatmaps. To reason from the predicted body centermaps, we introduce Contextual Normalization (CoNorm) blocks to adaptively modulate intermediate features of the top-down model. The contextual conditioning helps our model disambiguate between two severely overlapping human bounding-boxes, making it robust to multi-person occlusion. 
+          </p>
+          <p>
+            Compared with state-of-the-art methods, OCHMR achieves superior performance on challenging multi-person benchmarks like 3DPW, CrowdPose and OCHuman. Specifically, our proposed contextual reasoning architecture applied to the SPIN model with ResNet-50 backbone results in 75.2 PMPJPE on 3DPW-PC, 23.6 AP on CrowdPose and 37.7 AP on OCHuman datasets, a significant improvement of 6.9 mm, 6.4 AP and 20.8 AP respectively over the baseline. 
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-eight-fifths">
+        <h2 class="title is-3">Human Mesh Recovery under Crowding</h2>
+        <br>
+        <div class="columns is-centered">
+            <div class="column is-15 has-text-centered">
+              <img src="files/images/1/rgb.jpg"
+                   class="teaser-image"
+                   alt="Interpolate start reference image."/>
+              <p>Input</p>
+            </div>
+
+            <div class="column is-15 has-text-centered">
+              <img src="files/images/1/center.jpg"
+                   class="teaser-image"
+                   alt="Interpolate start reference image."/>
+              <p>Body-Centermap</p>
+            </div>
+        </div>
+
+        <div class="columns is-centered">
+            <div class="column is-15 has-text-centered">
+              <img src="files/images/1/romp.jpeg"
+                   class="teaser-image"
+                   alt="Interpolate start reference image."/>
+              <p>Bottom-up (ROMP)</p>
+            </div>
+
+            <div class="column is-15 has-text-centered">
+              <img src="files/images/1/ochmr.jpg"
+                   class="teaser-image"
+                   alt="Interpolate start reference image."/>
+              <p>OCHMR (Ours)</p>
+            </div>
+        </div>
+
+
+        <br>
+
+        <div class="columns is-centered">
+            <div class="column is-15 has-text-centered">
+              <img src="files/images/2/rgb.jpeg"
+                   class="teaser-image"
+                   alt="Interpolate start reference image."/>
+              <p>Input</p>
+            </div>
+            <div class="column is-15 has-text-centered">
+              <img src="files/images/2/center.jpeg"
+                   class="teaser-image"
+                   alt="Interpolate start reference image."/>
+              <p>Body-Centermap</p>
+            </div>
+        </div>
+
+
+        <div class="columns is-centered">
+            <div class="column is-15 has-text-centered">
+              <img src="files/images/2/romp.jpeg"
+                   class="teaser-image"
+                   alt="Interpolate start reference image."/>
+              <p>Bottom-up (ROMP)</p>
+            </div>
+            <div class="column is-15 has-text-centered">
+              <img src="files/images/2/ochmr.jpeg"
+                   class="teaser-image"
+                   alt="Interpolate start reference image."/>
+              <p>OCHMR (Ours)</p>
+            </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+      @InProceedings{Khirodkar_2022_CVPR,
+          author    = {Khirodkar, Rawal and Tripathi, Shashank and Kitani, Kris},
+          title     = {Occluded Human Mesh Recovery},
+          booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+          month     = {June},
+          year      = {2022},
+          pages     = {1715-1725}
+      }
+</code></pre>
   </div>
 </section>
 
