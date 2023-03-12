@@ -112,7 +112,7 @@
     <td width="68%" valign="top" align="justify">
     <p>I am a Ph.D. student (2019-) at <a href="https://www.ri.cmu.edu/" target="_blank">Robotics Institute, Carnegie Mellon University</a>, advised by 
       Prof. <a href="http://www.cs.cmu.edu/~kkitani/" target="_blank">Kris Kitani</a>. Earlier, I received my <a href="docs/MSR_Thesis_Rawal.pdf"> Masters</a> (2017-2019) at CMU working 
-      Prof. Kris Kitani and obtained my <a href="docs/Btech_Report_Rawal.pdf"> B.Tech</a> (2013-2017) in computer science from <a href="https://www.cse.iitb.ac.in/" target="_blank"> IIT Bombay</a> working with Prof. <a href="https://www.cse.iitb.ac.in/~ganesh/" target="_blank">Ganesh Ramakrishnan</a>. I am a recipient of 2019 <a href="https://www.amazon.com/b?node=16008589011" target="_blank">Amazon Fellowship</a>. My graduate study is supported by <a href="https://www.mhrd.gov.in/" target="_blank">Gov. of India</a> and <a href="https://www.iarpa.gov/" target="_blank">IARPA</a>.
+      Prof. Kris Kitani and obtained my <a href="docs/Btech_Report_Rawal.pdf"> B.Tech</a> (2013-2017) in computer science from <a href="https://www.cse.iitb.ac.in/" target="_blank"> IIT Bombay</a> working with Prof. <a href="https://www.cse.iitb.ac.in/~ganesh/" target="_blank">Ganesh Ramakrishnan</a>. I am a recipient of 2020 <a href="https://www.amazon.com/b?node=16008589011" target="_blank">Amazon Fellowship</a>. My graduate study is supported by <a href="https://www.mhrd.gov.in/" target="_blank">Gov. of India</a> and <a href="https://www.iarpa.gov/" target="_blank">IARPA</a>.
     </p>
 
     <p>My research is focused on the development of computer vision algorithms to understand human interactions with other humans and the real world. My current projects span developing methods and infrastructure to obtain data useful in estimating 2D/3D pose of humans under complex interaction scenarios. These projects are part of my longer term goal of improving the ways in which we model human-to-human interactions in the real world. These interaction models can then be used to simulate multi-human interactions and behavior in social settings.
@@ -124,11 +124,13 @@
   <tr><td>
     <sectionheading>&nbsp;&nbsp;News</sectionheading>
     <ul>
-    <li> March, 2022. <a href="https://cvpr2022.thecvf.com/">One paper accepted to CVPR 2022</a>.</li>
-    <li> Dec, 2021. <a href="https://about.facebook.com/realitylabs/">I will be interning at Meta for Summer 2022</a>.</li>
+    <li> Feb, 2023. <a href="https://cvpr2023.thecvf.com/">OCSORT accepted to CVPR 2023. Congratulations Jinkun!</a>.</li>
+    <li> Nov, 2022. <a href="https://youtu.be/VI4o0d_oWP4?list=PLw28TsbHRy4RrYFqETfGv7FHQ7L6EYO8-&t=13">Completed my Ph.D. proposal</a>.</li>
+    <li> Aug, 2022. <a href="https://about.facebook.com/realitylabs/">Completed internship at Meta Reality Labs</a>.</li>
+    <li> March, 2022. <a href="https://cvpr2022.thecvf.com/">OCHMR accepted to CVPR 2022</a>.</li>
     <li> July, 2021. <a href="http://iccv2021.thecvf.com/home/">Two papers accepted to ICCV 2021</a>.</li>
-    <li> July, 2021. <a href="https://amazon.jobs/en/teams/lab126/">Research Internship at Amazon Lab126, CA</a>.</li>
-    <li> Nov, 2020. <a href="https://www.amazon.com/b?node=16008589011">Awarded Amazon Fellowship</a>.</li>
+    <!-- <li> July, 2021. <a href="https://amazon.jobs/en/teams/lab126/">Research Internship at Amazon Lab126, CA</a>.</li> -->
+    <!-- <li> Nov, 2020. <a href="https://www.amazon.com/b?node=16008589011">Awarded Amazon Fellowship</a>.</li> -->
     <!-- <li> Aug, 2020. <a href="https://amazon.jobs/en/teams/lab126/">Research Internship at Amazon Lab126, CA</a>.</li> -->
     <!-- <li> Apr, 2019. <a href="docs/MSR_Thesis_Rawal.pdf">Defended by master thesis at CMU</a>.</li> -->
     <!-- <li> Jan, 2019. <a href="https://ieeexplore.ieee.org/document/8658387">Paper accepted to WACV 2019</a>.</li> -->
@@ -140,6 +142,63 @@
   <tr><td><sectionheading>&nbsp;&nbsp;Publications</sectionheading></td></tr>
 </table>
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
+
+<tr>
+    <td width="40%" valign="top"><a href="images/ocsort.png"><img src="images/ocsort.png" alt="sym" width="90%" style="border-radius:15px"></a></td>
+    <td width="67%" valign="top">
+      <p><a href="https://arxiv.org/abs/2203.14360" id="cvpr_2023">
+      <heading>Observation-Centric SORT: Rethinking SORT for Robust Multi-Object Tracking</heading></a><br>
+      Jinkun Cao, Xinshuo Weng, <strong>Rawal Khirodkar</strong>, Jiangmiao Pang, Kris Kitani<br>
+      CVPR 2023
+      </p>
+
+      <div class="paper" id="ocsort">
+        <a href="https://arxiv.org/pdf/2210.05387.pdf" target="_blank">pdf</a> |
+        <a href="javascript:toggleblock('ocsort_abs')">abstract</a> |
+        <a shape="rect" href="javascript:togglebib('ocsort')" class="togglebib">bibtex</a> |
+        <a href="https://github.com/noahcao/OC_SORT">code</a> 
+
+        <p align="justify"> <i id="ocsort_abs">Multi-Object Tracking (MOT) has rapidly progressed with the development of object detection and re-identification. However, motion modeling, which facilitates object association by forecasting short-term trajectories with past observations, has been relatively under-explored in recent years. Current motion models in MOT typically assume that the object motion is linear in a small time window and needs continuous observations, so these methods are sensitive to occlusions and non-linear motion and require high frame-rate videos. In this work, we show that a simple motion model can obtain state-of-the-art tracking performance without other cues like appearance. We emphasize the role of "observation" when recovering tracks from being lost and reducing the error accumulated by linear motion models during the lost period. We thus name the proposed method as Observation-Centric SORT, OC-SORT for short. It remains simple, online, and real-time but improves robustness over occlusion and non-linear motion. It achieves 63.2 and 62.1 HOTA on MOT17 and MOT20, respectively, surpassing all published methods. It also sets new states of the art on KITTI Pedestrian Tracking and DanceTrack where the object motion is highly non-linear.</i></p>
+
+        <pre xml:space="preserve">
+         @article{cao2022observation,
+            title={Observation-centric sort: Rethinking sort for robust multi-object tracking},
+            author={Cao, Jinkun and Weng, Xinshuo and Khirodkar, Rawal and Pang, Jiangmiao and Kitani, Kris},
+            journal={arXiv preprint arXiv:2203.14360},
+            year={2022}
+          }
+        </pre>
+      </div>
+    </td>
+  </tr>
+
+<tr>
+    <td width="40%" valign="top"><a href="images/seq_ens.png"><img src="images/seq_ens.png" alt="sym" width="90%" style="border-radius:15px"></a></td>
+    <td width="67%" valign="top">
+      <p><a href="https://arxiv.org/abs/2210.05387" id="arxiv_2022">
+      <heading>Sequential Ensembling for Semantic Segmentation</heading></a><br>
+      <strong>Rawal Khirodkar</strong>, Brandon Smith, Siddhartha Chandra, Amit Agrawal, Antonio Criminisi<br>
+      preprint
+      </p>
+
+      <div class="paper" id="seq_ens">
+        <a href="https://arxiv.org/pdf/2210.05387.pdf" target="_blank">pdf</a> |
+        <a href="javascript:toggleblock('seq_ens_abs')">abstract</a> |
+        <a shape="rect" href="javascript:togglebib('seq_ens')" class="togglebib">bibtex</a> 
+
+        <p align="justify"> <i id="seq_ens_abs">Ensemble approaches for deep-learning-based semantic segmentation remain insufficiently explored despite the proliferation of competitive benchmarks and downstream applications. In this work, we explore and benchmark the popular ensembling approach of combining predictions of multiple, independently-trained, state-of-the-art models at test time on popular datasets. Furthermore, we propose a novel method inspired by boosting to sequentially ensemble networks that significantly outperforms the naive ensemble baseline. Our approach trains a cascade of models conditioned on class probabilities predicted by the previous model as an additional input. A key benefit of this approach is that it allows for dynamic computation offloading, which helps deploy models on mobile devices. Our proposed novel ADaptive modulatiON (ADON) block allows spatial feature modulation at various layers using previous-stage probabilities. Our approach does not require sophisticated sample selection strategies during training and works with multiple neural architectures. We significantly improve over the naive ensemble baseline on challenging datasets such as Cityscapes, ADE-20K, COCO-Stuff, and PASCAL-Context and set a new state-of-the-art.</i></p>
+
+        <pre xml:space="preserve">
+         @article{khirodkar2022sequential,
+              title={Sequential Ensembling for Semantic Segmentation},
+              author={Khirodkar, Rawal and Smith, Brandon and Chandra, Siddhartha and Agrawal, Amit and Criminisi, Antonio},
+              journal={arXiv preprint arXiv:2210.05387},
+              year={2022}
+            }
+        </pre>
+      </div>
+    </td>
+  </tr>
 
   <tr>
     <td width="40%" valign="top"><a href="images/cvpr22_ochmr.png"><img src="images/cvpr22_ochmr.png" alt="sym" width="90%" style="border-radius:15px"></a></td>
@@ -154,11 +213,11 @@
         <a href="https://rawalkhirodkar.github.io/ochmr/">project page</a> |
         <!-- <a href="https://www.amazon.science/publications/multi-instance-pose-networks-rethinking-top-down-pose-estimation">Amazon Science</a> | -->
         <!-- <a href="https://arxiv.org/abs/2101.11223.pdf">pdf</a> | -->
-        <a href="ochmr/files/paper.pdf">pdf</a> |
+        <a href="ochmr/files/paper.pdf" target="_blank">pdf</a> |
         <a href="javascript:toggleblock('cvpr22_ochmr_abs')">abstract</a> |
-        <a shape="rect" href="javascript:togglebib('cvpr22_ochmr')" class="togglebib">bibtex</a> |
+        <a shape="rect" href="javascript:togglebib('cvpr22_ochmr')" class="togglebib">bibtex</a> 
 
-        <p align="justify"> <i id="cvpr22_ochmr_abs">Top-down methods for monocular human mesh recovery have two stages: (1) detect human bounding boxes; (2) treat each bounding box as an independent single-human mesh recovery task. Unfortunately, the single-human assumption does not hold in images with multi-human occlusion and crowding. Consequently, top-down methods have difficulties in recovering accurate 3D human meshes under severe person-person occlusion. To address this, we present Occluded Human Mesh Recovery (OCHMR) - a novel top-down mesh recovery approach that incorporates image spatial context to overcome the limitations of the single-human assumption. The approach is conceptually simple and can be applied to any existing top-down architecture. Along with the input image, we condition the top-down model on spatial context from the image in the form of body-center heatmaps. To reason from the predicted body centermaps, we introduce Contextual Normalization (CoNorm) blocks to adaptively modulate intermediate features of the top-down model. The contextual conditioning helps our model disambiguate between two severely overlapping human bounding-boxes, making it robust to multi-person occlusion. Compared with state-of-the-art methods, OCHMR achieves superior performance on challenging multi-person benchmarks like 3DPW, CrowdPose and OCHuman. Specifically, our proposed contextual reasoning architecture applied to the SPIN model with ResNet-50 backbone results in 75.2 PMPJPE on 3DPW-PC, 23.6 AP on CrowdPose and 37.7 AP on OCHuman datasets, a significant improvement of 6.9 mm, 6.4 AP and 20.8 AP respectively over the baseline. Code and models will be released.</i></p>
+        <p align="justify"> <i id="cvpr22_ochmr_abs">Top-down methods for monocular human mesh recovery have two stages: (1) detect human bounding boxes; (2) treat each bounding box as an independent single-human mesh recovery task. Unfortunately, the single-human assumption does not hold in images with multi-human occlusion and crowding. Consequently, top-down methods have difficulties in recovering accurate 3D human meshes under severe person-person occlusion. To address this, we present Occluded Human Mesh Recovery (OCHMR) - a novel top-down mesh recovery approach that incorporates image spatial context to overcome the limitations of the single-human assumption. The approach is conceptually simple and can be applied to any existing top-down architecture. Along with the input image, we condition the top-down model on spatial context from the image in the form of body-center heatmaps. To reason from the predicted body centermaps, we introduce Contextual Normalization (CoNorm) blocks to adaptively modulate intermediate features of the top-down model. The contextual conditioning helps our model disambiguate between two severely overlapping human bounding-boxes, making it robust to multi-person occlusion. Compared with state-of-the-art methods, OCHMR achieves superior performance on challenging multi-person benchmarks like 3DPW, CrowdPose and OCHuman. Specifically, our proposed contextual reasoning architecture applied to the SPIN model with ResNet-50 backbone results in 75.2 PMPJPE on 3DPW-PC, 23.6 AP on CrowdPose and 37.7 AP on OCHuman datasets, a significant improvement of 6.9 mm, 6.4 AP and 20.8 AP respectively over the baseline.</i></p>
 
         <pre xml:space="preserve">
          @article{khirodkar2022occluded,
@@ -185,7 +244,7 @@
         <a href="https://rawalkhirodkar.github.io/mipnet/">project page</a> |
         <a href="https://www.amazon.science/publications/multi-instance-pose-networks-rethinking-top-down-pose-estimation">Amazon Science</a> |
         <!-- <a href="https://arxiv.org/abs/2101.11223.pdf">pdf</a> | -->
-        <a href="mipnet/files/paper.pdf">pdf</a> |
+        <a href="mipnet/files/paper.pdf" target="_blank">pdf</a> |
         <a href="javascript:toggleblock('iccv21_mip_abs')">abstract</a> |
         <a shape="rect" href="javascript:togglebib('iccv21_mip')" class="togglebib">bibtex</a> |
         <a href="https://github.com/rawalkhirodkar/MIPNet">code</a> 
@@ -216,7 +275,7 @@
       </p>
 
       <div class="paper" id="iccv21_repose">
-        <a href="https://arxiv.org/pdf/2104.00633.pdf">pdf</a> |
+        <a href="https://arxiv.org/pdf/2104.00633.pdf" target="_blank">pdf</a> |
         <a href="javascript:toggleblock('iccv21_repose_abs')">abstract</a> |
         <a shape="rect" href="javascript:togglebib('iccv21_repose')" class="togglebib">bibtex</a> |
         <a href="https://github.com/sh8/RePOSE">code</a> 
@@ -248,7 +307,7 @@
       </p>
 
       <div class="paper" id="adr">
-        <a href="https://arxiv.org/pdf/1812.00491.pdf">pdf</a> |
+        <a href="https://arxiv.org/pdf/1812.00491.pdf" target="_blank">pdf</a> |
         <a href="javascript:toggleblock('adr_abs')">abstract</a> |
         <a shape="rect" href="javascript:togglebib('adr')" class="togglebib">bibtex</a>
 
@@ -285,7 +344,7 @@
       </p>
 
       <div class="paper" id="wacv19_dr">
-        <a href="https://arxiv.org/pdf/1811.05939.pdf">pdf</a> |
+        <a href="https://arxiv.org/pdf/1811.05939.pdf" target="_blank">pdf</a> |
         <a href="javascript:toggleblock('wacv19_dr_abs')">abstract</a> |
         <a shape="rect" href="javascript:togglebib('wacv19_dr')" class="togglebib">bibtex</a> |
         <a href="https://github.com/rawalkhirodkar/car_pose">code</a> 
@@ -316,12 +375,7 @@
   <tr>
     <td valign="top">
       <p>
-        <a href="http://www.cs.cmu.edu/~me/811/"><heading>16-720: Computer Vision - Fall, 2021</heading></a><br>
-        <strong>Instructor</strong>: Prof. Kris Kitani<br>
-      </p>
-
-      <p>
-        <a href="http://www.cs.cmu.edu/~me/811/"><heading>16-720: Computer Vision - Fall, 2020</heading></a><br>
+        <a href="http://www.cs.cmu.edu/~me/811/"><heading>16-720: Computer Vision - Fall 2022, Fall 2021, Fall 2020, Spring 2018</heading></a><br>
         <strong>Instructor</strong>: Prof. Kris Kitani<br>
       </p>
 
@@ -339,10 +393,7 @@
         <a href="http://www.cs.cmu.edu/~mgormley/courses/10601/"><heading>10-601: Introduction to Machine Learning - Fall, 2018</heading></a><br>
         <strong>Instructor</strong>: Prof. Matt Gormley<br>
       </p>
-      <p>
-        <a href="http://16720.courses.cs.cmu.edu/"><heading>16-720: Computer Vision - Spring, 2018</heading></a><br>
-        <strong>Instructor</strong>: Prof. Kris Kitani<br>
-      </p>
+
     </td>
   </tr>
 </table>
@@ -378,6 +429,8 @@ hideallbibs();
 </script>
 
 <script xml:space="preserve" language="JavaScript">
+hideblock('ocsort_abs');
+hideblock('seq_ens_abs');
 hideblock('cvpr22_ochmr_abs');
 hideblock('iccv21_mip_abs');
 hideblock('iccv21_repose_abs');
