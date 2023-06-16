@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="EgoHumans Dataset.">
+  <meta name="keywords" content="ego, mesh recovery, tracking, ego-pose, egohumans, ego-view, multi-view, 3d pose estimation, SMPL, exo">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EgoHumans</title>
+  <link rel="shortcut icon" href="https://www.cs.cmu.edu/sites/default/files/favicon_0.ico" type="image/vnd.microsoft.icon">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title" style="white-space: nowrap;">EgoHumans: An Egocentric 3D Multi-Human Benchmark</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://rawalkhirodkar.github.io/">Rawal Khirodkar</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.aayushbansal.xyz/">Aayush Bansal</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/lingnima/">Lingni Ma</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/richard-newcombe-a094164/">Richard Newcombe</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://minhpvo.github.io/">Minh Vo</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://kriskitani.github.io/">Kris Kitani</a><sup>1</sup>,
+            </span>
+
+            </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Carnegie Mellon University,</span>
+            <span class="author-block"><sup>2</sup>Meta</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2305.16487"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/rawalkhirodkar/egohumans"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/rawalkhirodkar/egohumans"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fa fa-database"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <div class="columns is-centered">
+        <div class="columns is-centered teaser-panel">
+
+          <div class="column has-text-centered">
+            <iframe width="1280" height="720" 
+                  src="https://youtube.com/embed/TsLxINpWXR8?loop=1&playlist=TsLxINpWXR8" 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+            </iframe>
+
+            <p>3D Mesh Visualization: Volleyball sequence with 4 ego views and 15 static cameras.</p>
+          </div>
+        </div>
+    </div>
+  
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-ten-fifths">
+        <h2 class="title is-2">Overview</h2>
+        <div class="content has-text-justified">
+          <img src="./static/images/dataset_overview.png" alt="Dataset Overview" width="100%">
+          <p>
+            We present EgoHumans, a new multi-view multi-human video benchmark to advance the state-of-the-art of egocentric human 3D pose estimation and tracking. 
+            Existing egocentric benchmarks either capture single subject or indoor-only scenarios, which limit the generalization of computer vision algorithms for real-world applications.
+            We propose a novel 3D capture setup to construct a comprehensive egocentric multi-human benchmark in the wild with annotations to support diverse tasks 
+            such as human detection, tracking, 2D/3D pose estimation, and mesh recovery. We leverage consumer-grade wearable camera-equipped glasses for the egocentric view, 
+            which enables us to capture dynamic activities like playing soccer, fencing, volleyball, etc. Furthermore, our multi-view setup generates accurate 3D ground truth
+            even under severe or complete occlusion. The dataset consists of more than 125k egocentric images, spanning diverse scenes with a particular focus on challenging and
+            unchoreographed multi-human activities and fast-moving egocentric views. We rigorously evaluate existing state-of-the-art methods and highlight their limitations in
+            the egocentric scenario, specifically on multi-human tracking. To address such limitations, we propose EgoFormer, a novel approach with a multi-stream transformer 
+            architecture and explicit 3D spatial reasoning to estimate and track the human pose. EgoFormer significantly outperforms prior art by 13.6% IDF1 and 9.3% HOTA.
+          </p>
+
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-2">In-the-Wild Sequences</h2>
+        
+
+        <!-- ------------------------------------------------ -->
+        <h3 class="title is-3">Fencing</h3>
+        
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <iframe width="1280" height="720" 
+                  src="https://youtube.com/embed/Lcdjv3wxoWg?loop=1&playlist=Lcdjv3wxoWg" 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+            </iframe>
+            <p>3D Mesh from the secondary views.</p>
+          </div>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <iframe width="1280" height="720" 
+                  src="https://youtube.com/embed/ZE3ZBy_E3Z8?loop=1&playlist=ZE3ZBy_E3Z8" 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+            </iframe>
+            <p>3D Mesh from the ego views.</p>
+          </div>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <iframe width="1280" height="720" 
+                  src="https://youtube.com/embed/27x17t9I4d8?loop=1&playlist=27x17t9I4d8" 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+            </iframe>
+            <p>3D Pose from the secondary views.</p>
+          </div>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <iframe width="1280" height="720" 
+                  src="https://youtube.com/embed/ji58myAkeVE?loop=1&playlist=ji58myAkeVE" 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+            </iframe>
+            <p>3D Pose from the ego views along with the stereo cameras.</p>
+          </div>
+        </div>
+        <!-- ------------------------------------------------ -->
+
+        <!-- ------------------------------------------------ -->
+        <h3 class="title is-3">Tagging</h3>
+
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <iframe width="1280" height="720" 
+                  src="https://youtube.com/embed/q46He3po58k?loop=1&playlist=q46He3po58k" 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+            </iframe>
+            <p>3D Mesh from the secondary views.</p>
+          </div>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <iframe width="1280" height="720" 
+                  src="https://youtube.com/embed/N_Qp5yHOPhs?loop=1&playlist=N_Qp5yHOPhs" 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+            </iframe>
+            <p>3D Mesh from the ego views.</p>
+          </div>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <iframe width="1280" height="720" 
+                  src="https://youtube.com/embed/yTdsiUGMJBM?loop=1&playlist=yTdsiUGMJBM" 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+            </iframe>
+            <p>3D Pose from the secondary views.</p>
+          </div>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <iframe width="1280" height="720" 
+                  src="https://youtube.com/embed/AzEZFPIN87o?loop=1&playlist=AzEZFPIN87o" 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+            </iframe>
+            <p>3D Pose from the ego views along with the stereo cameras.</p>
+          </div>
+        </div>
+        <!-- ------------------------------------------------ -->
+
+        <!-- ------------------------------------------------ -->
+        <h3 class="title is-3">Volleyball</h3>
+
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <iframe width="1280" height="720" 
+                  src="https://youtube.com/embed/EG9Ny5amZvQ?loop=1&playlist=EG9Ny5amZvQ" 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+            </iframe>
+            <p>3D Mesh from the secondary views.</p>
+          </div>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <iframe width="1280" height="720" 
+                  src="https://youtube.com/embed/9vulxD3npUM?loop=1&playlist=9vulxD3npUM" 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+            </iframe>
+            <p>3D Mesh from the ego views.</p>
+          </div>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <iframe width="1280" height="720" 
+                  src="https://youtube.com/embed/cCbLyNbOucw?loop=1&playlist=cCbLyNbOucw" 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+            </iframe>
+            <p>3D Pose from the secondary views.</p>
+          </div>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <iframe width="1280" height="720" 
+                  src="https://youtube.com/embed/xdkgjhtBrSc?loop=1&playlist=xdkgjhtBrSc" 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+            </iframe>
+            <p>3D Pose from the ego views along with the stereo cameras.</p>
+          </div>
+        </div>
+        <!-- ------------------------------------------------ -->
+
+        <!-- ------------------------------------------------ -->
+        <h3 class="title is-3">Lego Assembly</h3>
+
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <iframe width="1280" height="720" 
+                  src="https://youtube.com/embed/ezD6BnHo1-o?loop=1&playlist=ezD6BnHo1-o" 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+            </iframe>
+            <p>3D Mesh from the secondary views.</p>
+          </div>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <iframe width="1280" height="720" 
+                  src="https://youtube.com/embed/YoEUyxouFwI?loop=1&playlist=YoEUyxouFwI" 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+            </iframe>
+            <p>3D Mesh from the ego views.</p>
+          </div>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <iframe width="1280" height="720" 
+                  src="https://youtube.com/embed/EKP3J5MOIWU?loop=1&playlist=EKP3J5MOIWU" 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+            </iframe>
+            <p>3D Pose from the secondary views.</p>
+          </div>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <iframe width="1280" height="720" 
+                  src="https://youtube.com/embed/OWB27eiWdAY?loop=1&playlist=OWB27eiWdAY" 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+            </iframe>
+            <p>3D Pose from the ego views along with the stereo cameras.</p>
+          </div>
+        </div>
+        <!-- ------------------------------------------------ -->
+
+        <!-- ------------------------------------------------ -->
+        <h3 class="title is-3">Badminton</h3>
+
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <iframe width="1280" height="720" 
+                  src="https://youtube.com/embed/zRxGVw3ntLI-o?loop=1&playlist=zRxGVw3ntLI" 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+            </iframe>
+            <p>3D Mesh from the secondary views.</p>
+          </div>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <iframe width="1280" height="720" 
+                  src="https://youtube.com/embed/7LGINqM0Veg?loop=1&playlist=7LGINqM0Veg" 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+            </iframe>
+            <p>3D Mesh from the ego views.</p>
+          </div>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <iframe width="1280" height="720" 
+                  src="https://youtube.com/embed/069Lg3M7qVo?loop=1&playlist=069Lg3M7qVo" 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+            </iframe>
+            <p>3D Pose from the secondary views.</p>
+          </div>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <iframe width="1280" height="720" 
+                  src="https://youtube.com/embed/qkKh41oS_fk?loop=1&playlist=qkKh41oS_fk" 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+            </iframe>
+            <p>3D Pose from the ego views along with the stereo cameras.</p>
+          </div>
+        </div>
+        <!-- ------------------------------------------------ -->
+        
+        <!-- ------------------------------------------------ -->
+        <h3 class="title is-3">Dodgeball</h3>
+
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <iframe width="1280" height="720" 
+                  src="https://youtube.com/embed/H0kQ6Ity-_Y-o?loop=1&playlist=H0kQ6Ity-_Y" 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+            </iframe>
+            <p>3D Mesh from the secondary views.</p>
+          </div>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <iframe width="1280" height="720" 
+                  src="https://youtube.com/embed/VHaDzP7UlzU?loop=1&playlist=VHaDzP7UlzU" 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+            </iframe>
+            <p>3D Mesh from the ego views.</p>
+          </div>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <iframe width="1280" height="720" 
+                  src="https://youtube.com/embed/UDyWZGX8Pak?loop=1&playlist=UDyWZGX8Pak" 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+            </iframe>
+            <p>3D Pose from the secondary views.</p>
+          </div>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <iframe width="1280" height="720" 
+                  src="https://youtube.com/embed/4-FksJDB5tw?loop=1&playlist=4-FksJDB5tw" 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+            </iframe>
+            <p>3D Pose from the ego views along with the stereo cameras.</p>
+          </div>
+        </div>
+        <!-- ------------------------------------------------ -->
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+      @article{khirodkar2023egohumans,
+          title={EgoHumans: An Egocentric 3D Multi-Human Benchmark},
+          author={Khirodkar, Rawal and Bansal, Aayush and Ma, Lingni and Newcombe, Richard and Vo, Minh and Kitani, Kris},
+          journal={arXiv preprint arXiv:2305.16487},
+          year={2023}
+        }
+    </code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="https://arxiv.org/pdf/2101.11223.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/rawalkhirodkar/MIPNet" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            Website adapted from <a
+              href="https://github.com/nerfies/nerfies.github.io">this</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
