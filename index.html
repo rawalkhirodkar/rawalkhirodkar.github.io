@@ -116,10 +116,13 @@
     <td width="68%" valign="top" align="justify">
     <p>I am a Ph.D. student (2019-) at <a href="https://www.ri.cmu.edu/" target="_blank">Robotics Institute, Carnegie Mellon University</a>, advised by 
       Prof. <a href="http://www.cs.cmu.edu/~kkitani/" target="_blank">Kris Kitani</a>. Earlier, I received my <a href="docs/MSR_Thesis_Rawal.pdf"> Masters</a> (2017-2019) at CMU working with 
-      Prof. Kris Kitani and obtained my <a href="docs/Btech_Report_Rawal.pdf"> B.Tech</a> (2013-2017) in computer science from <a href="https://www.cse.iitb.ac.in/" target="_blank"> IIT Bombay</a> working with Prof. <a href="https://www.cse.iitb.ac.in/~ganesh/" target="_blank">Ganesh Ramakrishnan</a>. I am a recipient of 2020 <a href="https://www.amazon.com/b?node=16008589011" target="_blank">Amazon Fellowship</a>. My graduate study is supported by <a href="https://www.mhrd.gov.in/" target="_blank">Gov. of India</a> and <a href="https://www.iarpa.gov/" target="_blank">IARPA</a>.
+      Prof. Kris Kitani and obtained my <a href="docs/Btech_Report_Rawal.pdf"> B.Tech</a> (2013-2017) in computer science from <a href="https://www.cse.iitb.ac.in/" target="_blank"> IIT Bombay</a> working with Prof. <a href="https://www.cse.iitb.ac.in/~ganesh/" target="_blank">Ganesh Ramakrishnan</a>.
     </p>
 
-    <p>My research is focused on the development of computer vision algorithms to understand human interactions with other humans and the real world. My current projects span developing methods and infrastructure to obtain data useful in estimating 2D/3D pose of humans under complex interaction scenarios. These projects are part of my longer term goal of improving the ways in which we model human-to-human interactions in the real world. These interaction models can then be used to simulate multi-human interactions and behavior in social settings.
+    <p>My research is focused on reconstructing humans in 3D from natural videos captured in the real world. 
+      To build such systems, we need to unlock web-scale 3D data of humans in the wild. 
+      My current projects, therefore, span developing methods and infrastructure to obtain ground-truth data useful in estimating 2D/3D pose and mesh of multiple humans in unchoreographed dynamic settings. 
+      These projects are part of my longer-term goal of constructing 3D human avatars in the wild with details like hair, clothing, teeth, etc, from monocular videos. 
     </td>
   </tr>
 </table>
@@ -128,8 +131,8 @@
   <tr><td>
     <sectionheading>&nbsp;&nbsp;News</sectionheading>
     <ul>
-    <li> June, 2023. <a href="https://rawalkhirodkar.github.io/egohumans">Check out our new work - EgoHumans!</a>.</li>
-    <li> Feb, 2023. <a href="https://cvpr2023.thecvf.com/">OCSORT accepted to CVPR 2023.</a>.</li>
+    <li> July, 2023. <a href="https://rawalkhirodkar.github.io/egohumans">EgoHumans accepted to ICCV 2023</a>.</li>
+    <li> Feb, 2023. <a href="https://cvpr2023.thecvf.com/">OCSORT accepted to CVPR 2023</a>.</li>
     <li> Nov, 2022. <a href="https://youtu.be/VI4o0d_oWP4?list=PLw28TsbHRy4RrYFqETfGv7FHQ7L6EYO8-&t=13">Completed my Ph.D. proposal</a>.</li>
     <li> Aug, 2022. <a href="https://about.facebook.com/realitylabs/">Completed internship at Meta Reality Labs</a>.</li>
     <li> March, 2022. <a href="https://cvpr2022.thecvf.com/">OCHMR accepted to CVPR 2022</a>.</li>
@@ -137,6 +140,7 @@
     </ul>
   </td></tr>
 </table>
+
 
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
   <tr><td><sectionheading>&nbsp;&nbsp;Publications</sectionheading></td></tr>
@@ -146,10 +150,10 @@
 <tr>
     <td width="40%" valign="top"><a href="egohumans/files/thumbnail.png"><img src="egohumans/files/thumbnail.png" alt="sym" width="90%" style="border-radius:15px"></a></td>
     <td width="67%" valign="top">
-      <p><a href="egohumans/files/paper.pdf" id="preprint_2023">
+      <p><a href="https://rawalkhirodkar.github.io/egohumans" id="iccv_2023">
       <heading>EgoHumans: An Egocentric 3D Multi-Human Benchmark</heading></a><br>
       <strong>Rawal Khirodkar</strong>, Aayush Bansal, Lingni Ma, Richard Newcombe, Minh Vo, Kris Kitani<br>
-      preprint 2023
+      ICCV 2023
       </p>
 
       <div class="paper" id="egohumans">
@@ -157,6 +161,7 @@
         <a href="egohumans/files/paper.pdf" target="_blank">pdf</a> |
         <a href="javascript:toggleblock('egohumans_abs')">abstract</a> |
         <a shape="rect" href="javascript:togglebib('egohumans')" class="togglebib">bibtex</a> |
+        <a href="https://github.com/rawalkhirodkar/egohumans">code</a> 
         <p align="justify"> <i id="egohumans_abs">We present EgoHumans, a new multi-view multi-human video benchmark to advance the state-of-the-art of egocentric human 3D pose estimation and tracking. Existing egocentric benchmarks either capture single subject or indoor-only scenarios, which limit the generalization of computer vision algorithms for real-world applications. We propose a novel 3D capture setup to construct a comprehensive egocentric multi-human benchmark in the wild with annotations to support diverse tasks such as human detection, tracking, 2D/3D pose estimation, and mesh recovery. We leverage consumer-grade wearable camera-equipped glasses for the egocentric view, which enables us to capture dynamic activities like playing soccer, fencing, volleyball, etc. Furthermore, our multi-view setup generates accurate 3D ground truth even under severe or complete occlusion. The dataset consists of more than 125k egocentric images, spanning diverse scenes with a particular focus on challenging and unchoreographed multi-human activities and fast-moving egocentric views. We rigorously evaluate existing state-of-the-art methods and highlight their limitations in the egocentric scenario, specifically on multi-human tracking. To address such limitations, we propose EgoFormer, a novel approach with a multi-stream transformer architecture and explicit 3D spatial reasoning to estimate and track the human pose. EgoFormer significantly outperforms prior art by 13.6 IDF1 and 9.3 HOTA on the EgoHumans dataset.</i></p>
         <pre xml:space="preserve">
          WIP
@@ -164,7 +169,6 @@
       </div>
     </td>
   </tr>
-
 <tr>
     <td width="40%" valign="top"><a href="images/ocsort.png"><img src="images/ocsort.png" alt="sym" width="90%" style="border-radius:15px"></a></td>
     <td width="67%" valign="top">
