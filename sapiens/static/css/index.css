@@ -2,6 +2,13 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
+a {
+  color: #3273dc;
+}
+
+a:hover {
+  color: #2366d1;
+}
 
 .footer .icon-link {
     font-size: 25px;

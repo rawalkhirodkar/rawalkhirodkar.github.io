@@ -136,12 +136,12 @@
   <tr><td>
     <sectionheading>&nbsp;&nbsp;News</sectionheading>
     <ul>
-    <li> Aug, 2024. <a href="https://eccv2024.ecva.net/">One paper accepted to ECCV 2024</a>.</li>
+    <li> Aug, 2024. <a href="https://github.com/facebookresearch/sapiens">Sapiens accepted to ECCV 2024 as an oral presentation</a>.</li>
     <li> July, 2024. <a href="https://asia.siggraph.org/2024/">One paper accepted to SIGGRAPH Asia 2024</a>.</li>
     <li> June, 2024. <a href="https://egovis.github.io/awards/2022_2023/">EgoHumans received the EgoVis Distinguished Paper Award at CVPR 2024</a>.</li>
-    <li> Feb, 2024. <a href="https://cvpr.thecvf.com/">Two papers accepted to CVPR 2024</a>.</li>
+    <!-- <li> Feb, 2024. <a href="https://cvpr.thecvf.com/">Two papers accepted to CVPR 2024</a>.</li> -->
     <li> Jan, 2024. <a href="https://sites.google.com/view/3d-humans-cvpr2024">Co-organizing the Humans Workshop at CVPR 2024</a>.</li>
-    <li> Dec, 2023. <a href="https://ai.meta.com/blog/ego-exo4d-video-learning-perception/">Ego-Exo4D project is launched</a>.</li>
+    <li> Dec, 2023. <a href="https://ai.meta.com/blog/ego-exo4d-video-learning-perception/">Ego-Exo4D accepted to CVPR 2024 as an oral presentation</a>.</li>
     <li> Sept, 2023. <a href="https://youtu.be/h8-skpm5qAU">Successfully defended my PhD</a>.</li>
     <li> July, 2023. <a href="https://rawalkhirodkar.github.io/egohumans">EgoHumans accepted to ICCV 2023 as an oral presentation</a>.</li>
     <!-- <li> Feb, 2023. <a href="https://cvpr2023.thecvf.com/">OCSORT accepted to CVPR 2023</a>.</li> -->
@@ -155,9 +155,39 @@
 
 
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
-  <tr><td><sectionheading>&nbsp;&nbsp;Publications</sectionheading></td></tr>
+  <tr><td><sectionheading>&nbsp;&nbsp;Selected Publications</sectionheading></td></tr>
 </table>
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
+
+  <tr>
+    <td width="40%" valign="top"><a href="sapiens/sapiens.gif"><img src="sapiens/sapiens.gif" alt="sym" width="90%" style="border-radius:15px"></a></td>
+    <td width="67%" valign="top">
+      <p><a href="https://rawalkhirodkar.github.io/sapiens/" id="sapiens_eccv_2024">
+      <heading>Sapiens: Foundation for Human Vision Models</heading></a><br>
+      <strong>Rawal Khirodkar</strong>, Timur Bagautdinov, Julieta Martinez, Su Zhaoen, Austin James, Peter Selednik, Stuart Anderson, Shunsuke Saito<br>
+      <i>ECCV 2024 <strong style="color: orange;">(Oral)</strong>.
+      </p>
+
+      <div class="paper" id="sapiens_eccv_2024">
+        <a href="https://rawalkhirodkar.github.io/sapiens/">project page</a> |
+        <a href="https://arxiv.org/pdf/2408.12569" target="_blank">pdf</a> |
+        <a href="javascript:toggleblock('sapiens_abs')">abstract</a> |
+        <a href="https://github.com/facebookresearch/sapiens">code</a>
+        <p align="justify"> <i id="sapiens_abs">We present Sapiens, a family of models for four fundamental human-centric vision tasks -- 2D pose estimation, body-part segmentation, depth estimation, and surface normal prediction. Our models natively support 1K high-resolution inference and are extremely easy to adapt for individual tasks by simply fine-tuning models pretrained on over 300 million in-the-wild human images. We observe that, given the same computational budget, self-supervised pretraining on a curated dataset of human images significantly boosts the performance for a diverse set of human-centric tasks. The resulting models exhibit remarkable generalization to in-the-wild data, even when labeled data is scarce or entirely synthetic. Our simple model design also brings scalability -- model performance across tasks improves as we scale the number of parameters from 0.3 to 2 billion. Sapiens consistently surpasses existing baselines across various human-centric benchmarks. We achieve significant improvements over the prior state-of-the-art on Humans-5K (pose) by 7.6 mAP, Humans-2K (part-seg) by 17.1 mIoU, Hi4D (depth) by 22.4% relative RMSE, and THuman2 (normal) by 53.5% relative angular error</i></p>
+        <pre xml:space="preserve">
+          @misc{khirodkar2024_sapiens,
+            title={Sapiens: Foundation for Human Vision Models},
+            author={Khirodkar, Rawal and Bagautdinov, Timur and Martinez, Julieta and Zhaoen, Su and James, Austin and Selednik, Peter and Anderson, Stuart and Saito, Shunsuke},
+            year={2024},
+            eprint={2408.12569},
+            archivePrefix={arXiv},
+            primaryClass={cs.CV},
+            url={https://arxiv.org/abs/2408.12569}
+        }
+        </pre>
+      </div>
+    </td>
+  </tr>
 
   <tr>
     <td width="40%" valign="top"><a href="ego_exo4d/ego_exo4d.gif"><img src="ego_exo4d/ego_exo4d.gif" alt="sym" width="90%" style="border-radius:15px"></a></td>
@@ -165,7 +195,7 @@
       <p><a href="https://ego-exo4d-data.org/" id="ego_exo_cvpr_2024">
       <heading>Ego-Exo4D: Understanding Skilled Human Activity from First- and Third-Person Perspectives</heading></a><br>
       Kristen Grauman et al.<br>
-      <i>CVPR 2024 <strong style="color: orange;">(Oral)</strong>. <i style="color: rgb(45, 85, 246);">Oral/Accepted: 90/2719 = 3.3%</i>.
+      <i>CVPR 2024 <strong style="color: orange;">(Oral)</strong>. <i style="color: rgb(45, 85, 246);">Oral/Accepted: 3.3%</i>.
       </p>
 
       <div class="paper" id="ego_exo_cvpr_2024">
@@ -193,7 +223,7 @@
       <p><a href="https://arxiv.org/abs/2210.05387" id="cvpr_2024">
       <heading>Real-Time Simulated Avatar from Head-Mounted Sensors</heading></a><br>
       Zhengyi Luo, Jinkun Cao, <strong>Rawal Khirodkar</strong>, Alexander Winkler, Jing Huang, Kris Kitani, Weipeng Xu<br>
-      <i>CVPR 2024 <strong style="color: orange;">(Poster Highlight)</strong>. <i style="color: rgb(45, 85, 246);">Highlight/Accepted: 324/2719 = 11.9%</i>.
+      <i>CVPR 2024 <strong style="color: orange;">(Highlight)</strong>. <i style="color: rgb(45, 85, 246);">Highlight/Accepted: 11.9%</i>.
       </p>
 
       <div class="paper" id="simxr">
@@ -202,7 +232,7 @@
     </td>
   </tr>
 
-  <tr>
+  <!-- <tr>
     <td width="40%" valign="top"><a href="lidar/lidar.png"><img src="lidar/lidar.png" alt="sym" width="90%" style="border-radius:15px"></a></td>
     <td width="67%" valign="top">
       <p><a href="https://arxiv.org/pdf/2401.15616.pdf" id="lidar_arxiv_2024">
@@ -253,7 +283,7 @@
       </div>
 
     </td>
-  </tr>
+  </tr> -->
 
   <tr>
     <td width="40%" valign="top"><a href="phd_thesis/grappling2.gif"><img src="phd_thesis/grappling2.gif" alt="sym" width="90%" style="border-radius:15px"></a></td>
@@ -275,7 +305,7 @@
         <p><a href="https://rawalkhirodkar.github.io/egohumans" id="iccv_2023">
         <heading>EgoHumans: An Egocentric 3D Multi-Human Benchmark</heading></a><br>
         <strong>Rawal Khirodkar</strong>, Aayush Bansal, Lingni Ma, Richard Newcombe, Minh Vo, Kris Kitani<br>
-        ICCV 2023 <strong style="color: orange;">(Oral)</strong>. <i style="color: rgb(45, 85, 246);">Oral/Accepted: 195/2160 = 9.0%</i>.
+        ICCV 2023 <strong style="color: orange;">(Oral)</strong>. <i style="color: rgb(45, 85, 246);">Oral/Accepted: 9.0%</i>.
         </p>
 
         <div class="paper" id="egohumans">
@@ -558,7 +588,8 @@ hideallbibs();
 </script>
 
 <script xml:space="preserve" language="JavaScript">
-hideblock('lidar_arxiv_2024_abs');
+hideblock('sapiens_abs');
+// hideblock('lidar_arxiv_2024_abs');
 hideblock('ego_exo_4d_abs');
 hideblock('egohumans_abs');
 hideblock('ocsort_abs');
