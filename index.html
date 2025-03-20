@@ -134,12 +134,14 @@
   <tr><td>
     <sectionheading>&nbsp;&nbsp;News</sectionheading>
     <ul>
+    <li> March, 2025. <a href="https://github.com/facebookresearch/pippo">Pippo accepted to CVPR 2025</a>.</li>
+    <li> Jan, 2025. <a href="https://sites.google.com/view/3d-humans-cvpr2025">Co-organizing the 2nd Edition of Humans Workshop at CVPR 2025</a>.</li>
     <li> Sept, 2024. <a href="https://jyuntins.github.io/harmony4d/">Harmony4D accepted to NeurIPS 2024</a>.</li>
     <li> Aug, 2024. <a href="https://github.com/facebookresearch/sapiens">Sapiens accepted to ECCV 2024 - Best Paper Candidate</a>.</li>
     <li> July, 2024. <a href="https://asia.siggraph.org/2024/">URAvatar accepted to SIGGRAPH Asia 2024</a>.</li>
     <li> June, 2024. <a href="https://egovis.github.io/awards/2022_2023/">EgoHumans received the EgoVis Distinguished Paper Award at CVPR 2024</a>.</li>
-    <li> Jan, 2024. <a href="https://sites.google.com/view/3d-humans-cvpr2024">Co-organizing the Humans Workshop at CVPR 2024</a>.</li>
-    <li> Dec, 2023. <a href="https://ai.meta.com/blog/ego-exo4d-video-learning-perception/">Ego-Exo4D accepted to CVPR 2024 - Oral Presentation</a>.</li>
+    <!-- <li> Jan, 2024. <a href="https://sites.google.com/view/3d-humans-cvpr2024">Co-organizing the Humans Workshop at CVPR 2024</a>.</li> -->
+    <!-- <li> Dec, 2023. <a href="https://ai.meta.com/blog/ego-exo4d-video-learning-perception/">Ego-Exo4D accepted to CVPR 2024 - Oral Presentation</a>.</li> -->
     <!-- <li> Sept, 2023. <a href="https://youtu.be/h8-skpm5qAU">Successfully defended my PhD</a>.</li> -->
     <!-- <li> July, 2023. <a href="https://rawalkhirodkar.github.io/egohumans">EgoHumans accepted to ICCV 2023 as an oral presentation</a>.</li> -->
     <!-- <li> Feb, 2023. <a href="https://cvpr2023.thecvf.com/">OCSORT accepted to CVPR 2023</a>.</li> -->
@@ -156,6 +158,33 @@
   <tr><td><sectionheading>&nbsp;&nbsp;Selected Publications</sectionheading></td></tr>
 </table>
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
+
+  <tr>
+    <td width="40%" valign="top"><a href="pippo/pippo.gif"><img src="pippo/pippo.gif" alt="sym" width="90%" style="border-radius:15px"></a></td>
+    <td width="67%" valign="top">
+      <p><a href="https://yashkant.github.io/pippo/" id="pippo_cvpr_2025">
+      <heading>Pippo : High-Res Multi-View Humans from a Single Image</heading></a><br>
+      Yash Kant, Ethan Weber, Jin Kyu Kim, <strong>Rawal Khirodkar</strong>, Su Zhaoen, Julieta Martinez, Igor Gilitschenski, Shunsuke Saito, Timur Bagautdinov<br>
+      <i>CVPR 2025</i>.
+      </p>
+
+      <div class="paper" id="pippo_cvpr_2025">
+        <a href="https://yashkant.github.io/pippo/">project page</a> |
+        <a href="https://arxiv.org/abs/2502.07785" target="_blank">pdf</a> |
+        <a href="javascript:toggleblock('pippo_abs')">abstract</a> |
+        <a href="https://github.com/facebookresearch/pippo">code</a> 
+        <p align="justify"> <i id="pippo_abs">We present Pippo, a generative model capable of producing 1K resolution dense turnaround videos of a person from a single casually clicked photo. Pippo is a multi-view diffusion transformer and does not require any additional inputs - e.g., a fitted parametric model or camera parameters of the input image. We pre-train Pippo on 3B human images without captions, and conduct multi-view mid-training and post-training on studio captured humans. During mid-training, to quickly absorb the studio dataset, we denoise several (up to 48) views at low-resolution, and encode target cameras coarsely using a shallow MLP. During post-training, we denoise fewer views at high-resolution and use pixel-aligned controls (e.g., Spatial anchor and Plucker rays) to enable 3D consistent generations. At inference, we propose an attention biasing technique that allows Pippo to simultaneously generate greater than 5 times as many views as seen during training. Finally, we also introduce an improved metric to evaluate 3D consistency of multi-view generations, and show that Pippo outperforms existing works on multi-view human generation from a single image.</i></p>
+        <pre xml:space="preserve">
+          @article{kant2025pippo,
+            title={Pippo: High-Resolution Multi-View Humans from a Single Image},
+            author={Kant, Yash and Weber, Ethan and Kim, Jin Kyu and Khirodkar, Rawal and Zhaoen, Su and Martinez, Julieta and Gilitschenski, Igor and Saito, Shunsuke and Bagautdinov, Timur},
+            journal={arXiv preprint arXiv:2502.07785},
+            year={2025}
+          }
+        </pre>
+      </div>
+    </td>
+  </tr>
 
   <tr>
     <td width="40%" valign="top"><a href="phd_thesis/grappling2.gif"><img src="phd_thesis/grappling2.gif" alt="sym" width="90%" style="border-radius:15px"></a></td>
@@ -612,11 +641,11 @@
     <td width="33%" valign="top"><a href="images/cvf.jpg"><img src="images/cvf.jpg" alt="sym" width="90%" style="border-radius:15px"></a></td>
     <td>
       <ul>
-        <li>CVPR (2018, 2020, 2021, 2022, 2023, 2024)</li>
+        <li>CVPR (2018, 2020, 2021, 2022, 2023, 2024, 2025)</li>
         <li>ICCV (2019, 2021, 2023)</li>
-        <li>ECCV (2020, 2022)</li>
-        <li>NeurIPS (2022, 2023)</li>
-        <li>ICLR (2022, 2023, 2024)</li>
+        <li>ECCV (2020, 2022, 2024)</li>
+        <li>NeurIPS (2022, 2023, 2024)</li>
+        <li>ICLR (2022, 2023, 2024, 2025)</li>
         <li>IJCV (2022)</li>
         <li>TPAMI (2023)</li>
         <li>WACV (2021, 2022, 2023, 2024)</li>
@@ -644,6 +673,7 @@ hideallbibs();
 </script>
 
 <script xml:space="preserve" language="JavaScript">
+hideblock('pippo_abs');
 hideblock('harmony4d_abs');
 hideblock('uravatar_abs');
 hideblock('sapiens_abs');
