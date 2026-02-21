@@ -1,745 +1,626 @@
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <!-- Start : Google Analytics Code -->
-  <!-- <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-177079629-1', 'auto');
-    ga('send', 'pageview');
-  </script> -->
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177079629-1"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-177079629-1');
-  </script>
-
-  <!-- End : Google Analytics Code -->
-  <meta http-equiv='cache-control' content='no-cache'>
-  <meta http-equiv='expires' content='0'>
-  <meta http-equiv='pragma' content='no-cache'>
-
-  <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
-  <style type="text/css">
-  a {
-  color: #1772d0;
-  text-decoration:none;
-  }
-  a:focus, a:hover {
-  color: #f09228;
-  text-decoration:none;
-  }
-  body,td,th {
-    font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
-    font-size: 16px;
-    font-weight: 400
-  }
-  heading {
-    font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
-    font-size: 17px; /* 19 */
-    font-weight: 600 /* 1000 */
-  }
-  strong {
-    font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
-    font-size: 16px;
-    font-weight: 600 /* 800 */
-  }
-  strongred {
-    font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
-    color: 'red' ;
-    font-size: 16px
-  }
-  sectionheading {
-    font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
-    font-size: 22px;
-    font-weight: 600
-  }
-  pageheading {
-    font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
-    font-size: 38px;
-    font-weight: 400
-  }
-  .ImageBorder
-  {
-      border-width: 1px;
-      border-color: Black;
-  }
-  </style>
-  <!-- <link rel="shortcut icon" href="https://www.cs.cmu.edu/sites/default/files/favicon_0.ico" type="image/vnd.microsoft.icon"> -->
-  <link rel="shortcut icon" type="image/png" href="icons/meta-logo.svg" sizes="32x32">
-  <script type="text/javascript" src="js/hidebib.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rawal Khirodkar</title>
-  <meta name="Rawal Khirodkar's Homepage" http-equiv="Content-Type" content="Rawal Khirodkar's Homepage">
-  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'>
-  <!-- Scramble Script by Jeff Donahue -->
-  <script src="js/scramble.js"></script>
+  <meta name="description" content="Rawal Khirodkar - Research Scientist at Meta. Ph.D. in Robotics from Carnegie Mellon University.">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Rawal Khirodkar">
+  <meta property="og:description" content="Research Scientist at Meta. Ph.D. in Robotics from Carnegie Mellon University.">
+  <meta property="og:image" content="images/rawal.jpeg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@rawal_khirodkar">
+
+  <!-- Self-hosted Inter font -->
+  <style>
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(fonts/inter-latin.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(fonts/inter-latin-ext.woff2) format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url(fonts/inter-latin.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url(fonts/inter-latin-ext.woff2) format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url(fonts/inter-latin.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url(fonts/inter-latin-ext.woff2) format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+
+    /* Critical above-the-fold CSS */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; line-height: 1.65; color: #1a1a2e; background: #fff; -webkit-font-smoothing: antialiased; }
+    a { color: #2563eb; text-decoration: none; }
+    img { max-width: 100%; height: auto; display: block; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+    .site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(255,255,255,0.8); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.05); transform: translateY(-100%); transition: transform 0.3s ease; }
+    .site-nav.visible { transform: translateY(0); }
+    .site-nav .container { display: flex; align-items: center; justify-content: space-between; height: 56px; }
+    .nav-name { font-weight: 600; font-size: 16px; color: #1a1a2e; }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { font-size: 14px; font-weight: 500; color: #5a6578; }
+    .nav-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; color: #1a1a2e; }
+    .nav-hamburger svg { width: 24px; height: 24px; fill: currentColor; }
+    .hero { padding: 60px 0 20px; }
+    .hero-grid { display: grid; grid-template-columns: 220px 1fr; gap: 40px; align-items: start; }
+    .hero-photo { width: 220px; height: 220px; border-radius: 16px; object-fit: cover; box-shadow: 0 4px 20px rgba(0,0,0,0.10); }
+    .hero-name { font-size: 36px; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 6px; line-height: 1.2; }
+    .hero-title { font-size: 17px; color: #5a6578; margin-bottom: 20px; }
+    .hero-links { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+    .hero-links a { display: inline-flex; align-items: center; gap: 6px; padding: 7px 16px; border-radius: 999px; font-size: 14px; font-weight: 500; color: #2563eb; background: rgba(37,99,235,0.06); }
+    .hero-links a svg { width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; }
+    .hero-bio { font-size: 16px; color: #5a6578; line-height: 1.7; }
+    .hero-bio p + p { margin-top: 14px; }
+    .js-ready .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.3s ease, transform 0.3s ease; }
+    .js-ready .fade-in.visible { opacity: 1; transform: translateY(0); }
+  </style>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="icons/meta-logo.svg">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-<table width="840" border="0" align="center" border="0" cellspacing="0" cellpadding="20">
-  <tr><td>
+<script>document.documentElement.classList.add('js-ready');</script>
+<!-- Skip to content -->
+<a href="#about" class="skip-link">Skip to main content</a>
 
-<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-  <p align="center">
-    <pageheading>Rawal Khirodkar</pageheading><br>
-    <b>email</b>:&nbsp
-    <font id="email" style="display:inline;">
-      <noscript><i>Please enable Javascript to view</i></noscript>
-    </font>
-    <script>
-    emailScramble = new scrambledString(document.getElementById('email'),
-        'emailScramble', 'kadhorwalirc@amgli.omrka',
-        [6, 2, 11, 7, 10, 1, 3, 4, 5, 8, 9, 22, 15, 13, 17, 16, 20, 19, 21, 23, 24, 14, 12, 18]);
-
-    </script>
-  </p>
-<!-- rkhirodk -->
-  <tr>
-    <!-- <td width="32%" valign="top"><a href="images/rawal.jpg"><img src="images/rawal.jpg" width="100%" style="border-radius:15px"></a> -->
-    <td width="23%" valign="top"><a href="images/rawal.jpeg"><img src="images/rawal.jpeg" width="100%" style="border-radius:15px"></a>
-    <p align=center>
-     | <a href="docs/rawalk_cv.pdf">CV</a> |
-    <a href="https://scholar.google.com/citations?user=hS6M138AAAAJ&hl=en&oi=ao">Google Scholar</a> |<br/>|
-    <a href="https://github.com/rawalkhirodkar">Github</a> |
-    <a href="https://twitter.com/rawal_khirodkar">Twitter</a> |
-    </p>
-    </td>
-    <td width="68%" valign="top" align="justify">
-    <p>I am a Research Scientist at <a href="https://about.meta.com/realitylabs/" target="_blank">Meta</a>.
-      I received Ph.D. in Robotics (2017-2023) from <a href="https://www.ri.cmu.edu/" target="_blank">Carnegie Mellon University</a> advised by
-      Prof. <a href="http://www.cs.cmu.edu/~kkitani/" target="_blank">Kris Kitani</a>.
-      I did <a href="docs/Btech_Report_Rawal.pdf"> Bachelors</a> (2013-2017) in Computer Science from
-      <a href="https://www.cse.iitb.ac.in/" target="_blank"> IIT Bombay</a>.
-    </p>
-
-    <p>My research is focused on reconstructing photorealistic humans in 3D from real world videos. If you are interested in interning at Meta with me, please send an email with your resume and research interests.
-    </td>
-  </tr>
-</table>
-
-<table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
-  <tr><td>
-    <sectionheading>&nbsp;&nbsp;News</sectionheading>
-    <ul>
-    <li> Nov, 2025. <a href="https://ai.meta.com/blog/sam-3d/">MHR used by SAM3D-Body is out</a>.</li>
-    <li> June, 2025. <a href="https://jindapark.github.io/projects/atlas/">ATLAS accepted to ICCV 2025</a>.</li>
-    <li> March, 2025. <a href="https://github.com/facebookresearch/pippo">Pippo accepted to CVPR 2025</a>.</li>
-    <li> Jan, 2025. <a href="https://sites.google.com/view/3d-humans-cvpr2025">Co-organizing the 2nd Edition of Humans Workshop at CVPR 2025</a>.</li>
-    <li> Sept, 2024. <a href="https://jyuntins.github.io/harmony4d/">Harmony4D accepted to NeurIPS 2024</a>.</li>
-    <li> Aug, 2024. <a href="https://github.com/facebookresearch/sapiens">Sapiens accepted to ECCV 2024 - Best Paper Candidate</a>.</li>
-    <li> July, 2024. <a href="https://asia.siggraph.org/2024/">URAvatar accepted to SIGGRAPH Asia 2024</a>.</li>
-    <li> June, 2024. <a href="https://egovis.github.io/awards/2022_2023/">EgoHumans received the EgoVis Distinguished Paper Award at CVPR 2024</a>.</li>
-    <li> Jan, 2024. <a href="https://sites.google.com/view/3d-humans-cvpr2024">Co-organizing the Humans Workshop at CVPR 2024</a>.</li>
-    <li> Dec, 2023. <a href="https://ai.meta.com/blog/ego-exo4d-video-learning-perception/">Ego-Exo4D accepted to CVPR 2024 - Oral Presentation</a>.</li>
-    <!-- <li> Sept, 2023. <a href="https://youtu.be/h8-skpm5qAU">Successfully defended my PhD</a>.</li> -->
-    <!-- <li> July, 2023. <a href="https://rawalkhirodkar.github.io/egohumans">EgoHumans accepted to ICCV 2023 as an oral presentation</a>.</li> -->
-    <!-- <li> Feb, 2023. <a href="https://cvpr2023.thecvf.com/">OCSORT accepted to CVPR 2023</a>.</li> -->
-    <!-- <li> Nov, 2022. <a href="https://youtu.be/VI4o0d_oWP4?list=PLw28TsbHRy4RrYFqETfGv7FHQ7L6EYO8-&t=13">Completed my Ph.D. proposal</a>.</li> -->
-<!--     <li> Aug, 2022. <a href="https://about.facebook.com/realitylabs/">Completed internship at Meta Reality Labs</a>.</li> -->
-<!--     <li> March, 2022. <a href="https://cvpr2022.thecvf.com/">OCHMR accepted to CVPR 2022</a>.</li> -->
-<!--     <li> July, 2021. <a href="http://iccv2021.thecvf.com/home/">Two papers accepted to ICCV 2021</a>.</li> -->
+<!-- ===== Sticky Navigation ===== -->
+<nav class="site-nav" id="site-nav">
+  <div class="container">
+    <span class="nav-name">Rawal Khirodkar</span>
+    <button class="nav-hamburger" aria-label="Toggle navigation">
+      <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/></svg>
+    </button>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#affiliations">Affiliations</a></li>
+      <li><a href="#publications">Publications</a></li>
     </ul>
-  </td></tr>
-</table>
+  </div>
+</nav>
 
-
-<table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
-  <tr><td><sectionheading>&nbsp;&nbsp;Selected Publications</sectionheading></td></tr>
-</table>
-<table width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
-
-  <tr>
-    <td width="40%" valign="top"><a href="images/sam_body.gif"><img src="images/sam_body.gif" alt="sym" width="90%" style="border-radius:15px"></a></td>
-    <td width="67%" valign="top">
-      <p><a href="https://ai.meta.com/blog/sam-3d/" id="atlas_iccv_2025">
-      <heading>MHR: Momentum Human Rig</heading></a><br>
-      Ferguson et. al. Mesh representation used by SAM3D-Body.<br>
-      <i>arxiv 2025</i>.
-      </p>
-
-      <div class="paper" id="mhr_arxiv_2025">
-        <a href="https://github.com/facebookresearch/MHR">code</a> |
-        <a href="https://arxiv.org/abs/2511.15586" target="_blank">pdf</a> |
-        <a href="javascript:toggleblock('mhr_abs')">abstract</a> |
-        <p align="justify"> <i id="mhr_abs">We present MHR, a parametric human body model that combines the decoupled skeleton/shape paradigm of ATLAS with a flexible, modern rig and pose corrective system inspired by the Momentum library. Our model enables expressive, anatomically plausible human animation, supporting non-linear pose correctives, and is designed for robust integration in AR/VR and graphics pipelines.</i></p>
-        <pre xml:space="preserve">
-          @article{ferguson2025mhr,
-            title={MHR: Momentum Human Rig},
-            author={Ferguson, Aaron and Osman, Ahmed AA and Bescos, Berta and Stoll, Carsten and Twigg, Chris and Lassner, Christoph and Otte, David and Vignola, Eric and Prada, Fabian and Bogo, Federica and others},
-            journal={arXiv preprint arXiv:2511.15586},
-            year={2025}
-          }
-        </pre>
+<!-- ===== Hero / About ===== -->
+<main>
+<section class="hero" id="about">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <img src="images/rawal.jpeg" alt="Rawal Khirodkar" class="hero-photo" width="220" height="220" fetchpriority="high">
       </div>
-    </td>
-  </tr>
+      <div>
+        <h1 class="hero-name">Rawal Khirodkar</h1>
+        <p class="hero-title">Research Scientist, Meta</p>
 
-  <tr>
-    <td width="40%" valign="top"><a href="atlas/atlas.gif"><img src="atlas/atlas.gif" alt="sym" width="90%" style="border-radius:15px"></a></td>
-    <td width="67%" valign="top">
-      <p><a href="https://jindapark.github.io/projects/atlas/" id="atlas_iccv_2025">
-      <heading>ATLAS: Decoupling Skeletal and Shape Parameters for Expressive Parametric Human Modeling</heading></a><br>
-      Jinhyung Park, Javier Romero, Shunsuke Saito, Fabian Prada, Takaaki Shiratori, Yichen Xu, Federica Bogo, Shoou-I Yu, Kris Kitani, <strong>Rawal Khirodkar</strong><br>
-      <i>ICCV 2025</i>.
-      </p>
-
-      <div class="paper" id="atlas_iccv_2025">
-        <a href="https://jindapark.github.io/projects/atlas/">project page</a> |
-        <a href="https://arxiv.org/abs/2508.15767" target="_blank">pdf</a> |
-        <a href="javascript:toggleblock('atlas_abs')">abstract</a> |
-        <p align="justify"> <i id="atlas_abs">Parametric body models offer expressive 3D representation of humans across a wide range of poses, shapes, and facial expressions, typically derived by learning a basis over registered 3D meshes. However, existing human mesh modeling approaches struggle to capture detailed variations across diverse body poses and shapes, largely due to limited training data diversity and restrictive modeling assumptions. Moreover, the common paradigm first optimizes the external body surface using a linear basis, then regresses internal skeletal joints from surface vertices. This approach introduces problematic dependencies between internal skeleton and outer soft tissue, limiting direct control over body height and bone lengths. To address these issues, we present ATLAS, a high-fidelity body model learned from 600k high-resolution scans captured using 240 synchronized cameras. Unlike previous methods, we explicitly decouple the shape and skeleton bases by grounding our mesh representation in the human skeleton. This decoupling enables enhanced shape expressivity, fine-grained customization of body attributes, and keypoint fitting independent of external soft-tissue characteristics. ATLAS outperforms existing methods by fitting unseen subjects in diverse poses more accurately, and quantitative evaluations show that our non-linear pose correctives more effectively capture complex poses compared to linear models.</i></p>
-        <pre xml:space="preserve">
-          @article{park2025atlas,
-            title={ATLAS: Decoupling Skeletal and Shape Parameters for Expressive Parametric Human Modeling},
-            author={Park, Jinhyung and Romero, Javier and Saito, Shunsuke and Prada, Fabian and Shiratori, Takaaki and Xu, Yichen and Bogo, Federica and Yu, Shoou-I and Kitani, Kris and Khirodkar, Rawal},
-            journal={arXiv preprint arXiv:2508.15767},
-            year={2025}
-          }
-        </pre>
-      </div>
-    </td>
-  </tr>
-
-  <tr>
-    <td width="40%" valign="top"><a href="pippo/pippo.gif"><img src="pippo/pippo.gif" alt="sym" width="90%" style="border-radius:15px"></a></td>
-    <td width="67%" valign="top">
-      <p><a href="https://yashkant.github.io/pippo/" id="pippo_cvpr_2025">
-      <heading>Pippo : High-Res Multi-View Humans from a Single Image</heading></a><br>
-      Yash Kant, Ethan Weber, Jin Kyu Kim, <strong>Rawal Khirodkar</strong>, Su Zhaoen, Julieta Martinez, Igor Gilitschenski, Shunsuke Saito, Timur Bagautdinov<br>
-      <i>CVPR 2025</i>.
-      </p>
-
-      <div class="paper" id="pippo_cvpr_2025">
-        <a href="https://yashkant.github.io/pippo/">project page</a> |
-        <a href="https://arxiv.org/abs/2502.07785" target="_blank">pdf</a> |
-        <a href="javascript:toggleblock('pippo_abs')">abstract</a> |
-        <a href="https://github.com/facebookresearch/pippo">code</a>
-        <p align="justify"> <i id="pippo_abs">We present Pippo, a generative model capable of producing 1K resolution dense turnaround videos of a person from a single casually clicked photo. Pippo is a multi-view diffusion transformer and does not require any additional inputs - e.g., a fitted parametric model or camera parameters of the input image. We pre-train Pippo on 3B human images without captions, and conduct multi-view mid-training and post-training on studio captured humans. During mid-training, to quickly absorb the studio dataset, we denoise several (up to 48) views at low-resolution, and encode target cameras coarsely using a shallow MLP. During post-training, we denoise fewer views at high-resolution and use pixel-aligned controls (e.g., Spatial anchor and Plucker rays) to enable 3D consistent generations. At inference, we propose an attention biasing technique that allows Pippo to simultaneously generate greater than 5 times as many views as seen during training. Finally, we also introduce an improved metric to evaluate 3D consistency of multi-view generations, and show that Pippo outperforms existing works on multi-view human generation from a single image.</i></p>
-        <pre xml:space="preserve">
-          @article{kant2025pippo,
-            title={Pippo: High-Resolution Multi-View Humans from a Single Image},
-            author={Kant, Yash and Weber, Ethan and Kim, Jin Kyu and Khirodkar, Rawal and Zhaoen, Su and Martinez, Julieta and Gilitschenski, Igor and Saito, Shunsuke and Bagautdinov, Timur},
-            journal={arXiv preprint arXiv:2502.07785},
-            year={2025}
-          }
-        </pre>
-      </div>
-    </td>
-  </tr>
-
-  <tr>
-    <td width="40%" valign="top"><a href="phd_thesis/grappling2.gif"><img src="phd_thesis/grappling2.gif" alt="sym" width="90%" style="border-radius:15px"></a></td>
-    <td width="67%" valign="top">
-      <p><a href="https://jyuntins.github.io/harmony4d/" id="harmony4d_neurips_2024">
-      <heading>Harmony4D: A Video Dataset for In-The-Wild Close Human Interactions</heading></a><br>
-      <strong>Rawal Khirodkar*</strong>, Jyun-Ting Song*, Jinkun Cao, Zen Luo, Kris Kitani<br>
-      <i>NeurIPS 2024, Datasets and Benchmarks Track</i>.
-      </p>
-
-      <div class="paper" id="harmony4d_neurips_2024">
-        <a href="https://jyuntins.github.io/harmony4d/">project page</a> |
-        <a href="https://arxiv.org/abs/2410.20294" target="_blank">pdf</a> |
-        <a href="javascript:toggleblock('harmony4d_abs')">abstract</a> |
-        <a href="https://github.com/jyuntins/harmony4d">code</a> |
-        <a href="https://huggingface.co/datasets/Jyun-Ting/Harmony4D/tree/main">data</a>
-        <p align="justify"> <i id="harmony4d_abs">Understanding how humans interact with each other is key to building realistic multi-human virtual reality systems. This area remains relatively unexplored due to the lack of large-scale datasets. Recent datasets focusing on this issue mainly consist of activities captured entirely in controlled indoor environments with choreographed actions, significantly affecting their diversity. To address this, we introduce Harmony4D, a multi-view video dataset for human-human interaction featuring in-the-wild activities such as wrestling, dancing, MMA, and more. We use a flexible multi-view capture system to record these dynamic activities and provide annotations for human detection, tracking, 2D/3D pose estimation, and mesh recovery for closely interacting subjects. We propose a novel markerless algorithm to track 3D human poses in severe occlusion and close interaction to obtain our annotations with minimal manual intervention. Harmony4D consists of 1.66 million images and 3.32 million human instances from more than 20 synchronized cameras with 208 video sequences spanning diverse environments and 24 unique subjects. We rigorously evaluate existing state-of-the-art methods for mesh recovery and highlight their significant limitations in modeling close interaction scenarios. Additionally, we fine-tune a pre-trained HMR2.0 model on Harmony4D and demonstrate an improved performance of 54.8% PVE in scenes with severe occlusion and contact.</i></p>
-        <pre xml:space="preserve">
-          @article{khirodkar2024harmony4d,
-            title={Harmony4D: A Video Dataset for In-The-Wild Close Human Interactions},
-            author={Khirodkar, Rawal and Song, Jyun-Ting and Cao, Jinkun and Luo, Zhengyi and Kitani, Kris},
-            journal={arXiv preprint arXiv:2410.20294},
-            year={2024}
-          }
-        </pre>
-      </div>
-    </td>
-  </tr>
-
-
-  <tr>
-    <td width="40%" valign="top"><a href="uravatar/uravatar.gif"><img src="uravatar/uravatar.gif" alt="sym" width="90%" style="border-radius:15px"></a></td>
-    <td width="67%" valign="top">
-      <p><a href="https://junxuan-li.github.io/urgca-website/" id="uravatar_siggraphasia_2024">
-      <heading>URAvatar: Universal Relightable Gaussian Codec Avatars</heading></a><br>
-      Junxuan Li, Chen Cao, Gabriel Schwartz, <strong>Rawal Khirodkar</strong>, Christian Richardt, Tomas Simon, Yaser Sheikh, and Shunsuke Saito<br>
-      <i>SIGGRAPH ASIA 2024</i>.
-      </p>
-
-      <div class="paper" id="uravatar_siggraphasia_2024">
-        <a href="https://junxuan-li.github.io/urgca-website/">project page</a> |
-        <a href="https://arxiv.org/abs/2410.24223" target="_blank">pdf</a> |
-        <a href="javascript:toggleblock('uravatar_abs')">abstract</a> |
-        <a href="https://github.com/jyuntins/harmony4d">code</a>
-        <p align="justify"> <i id="uravatar_abs">We present a new approach to creating photorealistic and relightable head avatars from a phone scan with unknown illumination. The reconstructed avatars can be animated and relit in real time with the global illumination of diverse environments. Unlike existing approaches that estimate parametric reflectance parameters via inverse rendering, our approach directly models learnable radiance transfer that incorporates global light transport in an efficient manner for real-time rendering. However, learning such a complex light transport that can generalize across identities is non-trivial. A phone scan in a single environment lacks sufficient information to infer how the head would appear in general environments. To address this, we build a universal relightable avatar model represented by 3D Gaussians. We train on hundreds of high-quality multi-view human scans with controllable point lights. High-resolution geometric guidance further enhances the reconstruction accuracy and generalization. Once trained, we finetune the pretrained model on a phone scan using inverse rendering to obtain a personalized relightable avatar. Our experiments establish the efficacy of our design, outperforming existing approaches while retaining real-time rendering capability.</i></p>
-        <pre xml:space="preserve">
-          @inproceedings{li2024uravatar,
-            title={URAvatar: Universal Relightable Gaussian Codec Avatars},
-            author={Li, Junxuan and Cao, Chen and Schwartz, Gabriel and Khirodkar, Rawal and Richardt, Christian and Simon, Tomas and Sheikh, Yaser and Saito, Shunsuke},
-            booktitle={SIGGRAPH Asia 2024 Conference Papers},
-            pages={1--11},
-            year={2024}
-          }
-        </pre>
-      </div>
-    </td>
-  </tr>
-
-  <tr>
-    <td width="40%" valign="top"><a href="sapiens/sapiens.gif"><img src="sapiens/sapiens.gif" alt="sym" width="90%" style="border-radius:15px"></a></td>
-    <td width="67%" valign="top">
-      <p><a href="https://rawalkhirodkar.github.io/sapiens/" id="sapiens_eccv_2024">
-      <heading>Sapiens: Foundation for Human Vision Models</heading></a><br>
-      <strong>Rawal Khirodkar</strong>, Timur Bagautdinov, Julieta Martinez, Su Zhaoen, Austin James, Peter Selednik, Stuart Anderson, Shunsuke Saito<br>
-      <i>ECCV 2024 <strong style="color: orange;">(Best Paper Candidate)</strong>. <i style="color: rgb(45, 85, 246);">Top 15 papers</i>.
-      </p>
-
-      <div class="paper" id="sapiens_eccv_2024">
-        <a href="https://rawalkhirodkar.github.io/sapiens/">project page</a> |
-        <a href="https://arxiv.org/pdf/2408.12569" target="_blank">pdf</a> |
-        <a href="javascript:toggleblock('sapiens_abs')">abstract</a> |
-        <a href="https://github.com/facebookresearch/sapiens">code</a>
-        <p align="justify"> <i id="sapiens_abs">We present Sapiens, a family of models for four fundamental human-centric vision tasks -- 2D pose estimation, body-part segmentation, depth estimation, and surface normal prediction. Our models natively support 1K high-resolution inference and are extremely easy to adapt for individual tasks by simply fine-tuning models pretrained on over 300 million in-the-wild human images. We observe that, given the same computational budget, self-supervised pretraining on a curated dataset of human images significantly boosts the performance for a diverse set of human-centric tasks. The resulting models exhibit remarkable generalization to in-the-wild data, even when labeled data is scarce or entirely synthetic. Our simple model design also brings scalability -- model performance across tasks improves as we scale the number of parameters from 0.3 to 2 billion. Sapiens consistently surpasses existing baselines across various human-centric benchmarks. We achieve significant improvements over the prior state-of-the-art on Humans-5K (pose) by 7.6 mAP, Humans-2K (part-seg) by 17.1 mIoU, Hi4D (depth) by 22.4% relative RMSE, and THuman2 (normal) by 53.5% relative angular error</i></p>
-        <pre xml:space="preserve">
-          @inproceedings{khirodkar2025sapiens,
-            title={Sapiens: Foundation for human vision models},
-            author={Khirodkar, Rawal and Bagautdinov, Timur and Martinez, Julieta and Zhaoen, Su and James, Austin and Selednik, Peter and Anderson, Stuart and Saito, Shunsuke},
-            booktitle={European Conference on Computer Vision},
-            pages={206--228},
-            year={2025},
-            organization={Springer}
-          }
-        </pre>
-      </div>
-    </td>
-  </tr>
-
-  <tr>
-    <td width="40%" valign="top"><a href="ego_exo4d/ego_exo4d.gif"><img src="ego_exo4d/ego_exo4d.gif" alt="sym" width="90%" style="border-radius:15px"></a></td>
-    <td width="67%" valign="top">
-      <p><a href="https://ego-exo4d-data.org/" id="ego_exo_cvpr_2024">
-      <heading>Ego-Exo4D: Understanding Skilled Human Activity from First- and Third-Person Perspectives</heading></a><br>
-      Kristen Grauman et al.<br>
-      <i>CVPR 2024 <strong style="color: orange;">(Oral)</strong>. <i style="color: rgb(45, 85, 246);">Oral/Accepted: 3.3%</i>.
-      </p>
-
-      <div class="paper" id="ego_exo_cvpr_2024">
-        <a href="https://ego-exo4d-data.org/">project page</a> |
-        <a href="https://arxiv.org/pdf/2311.18259.pdf" target="_blank">pdf</a> |
-        <a href="javascript:toggleblock('ego_exo_4d_abs')">abstract</a> |
-        <a href="https://ai.meta.com/blog/ego-exo4d-video-learning-perception/">blog</a> |
-        <a href="https://www.youtube.com/watch?v=GdooXEBAnI8">video</a>
-        <p align="justify"> <i id="ego_exo_4d_abs">We present Ego-Exo4D, a diverse, large-scale multimodal multiview video dataset and benchmark challenge. Ego-Exo4D centers around simultaneously-captured egocentric and exocentric video of skilled human activities (e.g., sports, music, dance, bike repair). More than 800 participants from 13 cities worldwide performed these activities in 131 different natural scene contexts, yielding long-form captures from 1 to 42 minutes each and 1,422 hours of video combined. The multimodal nature of the dataset is unprecedented: the video is accompanied by multichannel audio, eye gaze, 3D point clouds, camera poses, IMU, and multiple paired language descriptions -- including a novel "expert commentary" done by coaches and teachers and tailored to the skilled-activity domain. To push the frontier of first-person video understanding of skilled human activity, we also present a suite of benchmark tasks and their annotations, including fine-grained activity understanding, proficiency estimation, cross-view translation, and 3D hand/body pose. All resources will be open sourced to fuel new research in the community.</i></p>
-        <pre xml:space="preserve">
-          @article{grauman2023ego,
-            title={Ego-exo4d: Understanding skilled human activity from first-and third-person perspectives},
-            author={Grauman, Kristen and Westbury, Andrew and Torresani, Lorenzo and Kitani, Kris and Malik, Jitendra and Afouras, Triantafyllos and Ashutosh, Kumar and Baiyya, Vijay and Bansal, Siddhant and Boote, Bikram and others},
-            journal={arXiv preprint arXiv:2311.18259},
-            year={2023}
-          }
-        </pre>
-      </div>
-    </td>
-  </tr>
-
-  <tr>
-    <td width="40%" valign="top"><a href="simxr/simxr.gif"><img src="simxr/simxr.gif" alt="sym" width="90%" style="border-radius:15px"></a></td>
-    <td width="67%" valign="top">
-      <p><a href="https://arxiv.org/abs/2210.05387" id="cvpr_2024">
-      <heading>Real-Time Simulated Avatar from Head-Mounted Sensors</heading></a><br>
-      Zhengyi Luo, Jinkun Cao, <strong>Rawal Khirodkar</strong>, Alexander Winkler, Jing Huang, Kris Kitani, Weipeng Xu<br>
-      <i>CVPR 2024 <strong style="color: orange;">(Highlight)</strong>. <i style="color: rgb(45, 85, 246);">Highlight/Accepted: 11.9%</i>.
-      </p>
-
-      <div class="paper" id="simxr">
-        <a href="https://www.zhengyiluo.com/SimXR/">project page</a> |
-        <a href="https://github.com/ZhengyiLuo/SimXR">code</a>
-      </div>
-    </td>
-  </tr>
-
-  <!-- <tr>
-    <td width="40%" valign="top"><a href="lidar/lidar.png"><img src="lidar/lidar.png" alt="sym" width="90%" style="border-radius:15px"></a></td>
-    <td width="67%" valign="top">
-      <p><a href="https://arxiv.org/pdf/2401.15616.pdf" id="lidar_arxiv_2024">
-      <heading>Multi-Person 3D Pose Estimation from Multi-View Uncalibrated Depth Cameras</heading></a><br>
-      Yu-Jhe Li, Yan Xu, <strong>Rawal Khirodkar</strong>, Jinhyung Park, Kris Kitani<br>
-      arXiv, 2024
-      </p>
-
-      <div class="paper" id="lidar_arxiv_2024">
-        <a href="https://arxiv.org/pdf/2210.05387.pdf" target="_blank">pdf</a> |
-        <a href="javascript:toggleblock('lidar_arxiv_2024_abs')">abstract</a> |
-        <a shape="rect" href="javascript:togglebib('lidar_arxiv_2024')" class="togglebib">bibtex</a>
-
-        <p align="justify"> <i id="lidar_arxiv_2024_abs">We tackle the task of multi-view, multi-person 3D human
-          pose estimation from a limited number of uncalibrated depth
-          cameras. Recently, many approaches have been proposed
-          for 3D human pose estimation from multi-view RGB cameras. However, these works (1) assume the number of RGB
-          camera views is large enough for 3D reconstruction, (2)
-          the cameras are calibrated, and (3) rely on ground truth
-          3D poses for training their regression model. In this work,
-          we propose to leverage sparse, uncalibrated depth cameras
-          providing RGBD video streams for 3D human pose estimation. We present a simple pipeline for Multi-View Depth
-          Human Pose Estimation (MVD-HPE) for jointly predicting
-          the camera poses and 3D human poses without training a
-          deep 3D human pose regression model. This framework
-          utilizes 3D Re-ID appearance features from RGBD images
-          to formulate more accurate correspondences (for deriving
-          camera positions) compared to using RGB-only features. We
-          further propose (1) depth-guided camera-pose estimation
-          by leveraging 3D rigid transformations as guidance and (2)
-          depth-constrained 3D human pose estimation by utilizing
-          depth-projected 3D points as an alternative objective for
-          optimization. In order to evaluate our proposed pipeline,
-          we collect three video sets of RGBD videos recorded from
-          multiple sparse-view depth cameras, and ground truth 3D
-          poses are manually annotated. Experiments show that our
-          proposed method outperforms the current 3D human pose
-          regression-free pipelines in terms of both camera pose estimation and 3D human pose estimation..</i></p>
-
-        <pre xml:space="preserve">
-          @article{li2024multi,
-            title={Multi-Person 3D Pose Estimation from Multi-View Uncalibrated Depth Cameras},
-            author={Li, Yu-Jhe and Xu, Yan and Khirodkar, Rawal and Park, Jinhyung and Kitani, Kris},
-            journal={arXiv preprint arXiv:2401.15616},
-            year={2024}
-          }
-        </pre>
-      </div>
-
-    </td>
-  </tr> -->
-
-  <tr>
-    <td width="40%" valign="top"><a href="phd_thesis/grappling.gif"><img src="phd_thesis/grappling.gif" alt="sym" width="90%" style="border-radius:15px"></a></td>
-    <td width="67%" valign="top">
-      <p><a href="https://arxiv.org/abs/2210.05387" id="cmu_phd_thesis">
-      <heading>Multi-Human 3D Reconstruction from In-the-Wild Videos</heading></a><br>
-      Committee members: Kris Kitani, Deva Ramanan, Angjoo Kanazawa, Shubham Tulsiani<br>
-      </p>
-
-      <div class="paper" id="cmu_phd_thesis">
-        <a href="https://www.ri.cmu.edu/publications/multi-human-3d-reconstruction-from-in-the-wild-videos/">Ph.D. Thesis, Carnegie Mellon University, 2023</a>
-      </div>
-    </td>
-  </tr>
-
-  <tr>
-      <td width="40%" valign="top"><a href="egohumans/files/egohumans.gif"><img src="egohumans/files/egohumans.gif" alt="sym" width="90%" style="border-radius:15px"></a></td>
-      <td width="67%" valign="top">
-        <p><a href="https://rawalkhirodkar.github.io/egohumans" id="iccv_2023">
-        <heading>EgoHumans: An Egocentric 3D Multi-Human Benchmark</heading></a><br>
-        <strong>Rawal Khirodkar</strong>, Aayush Bansal, Lingni Ma, Richard Newcombe, Minh Vo, Kris Kitani<br>
-        ICCV 2023 <strong style="color: orange;">(Oral)</strong>. <i style="color: rgb(45, 85, 246);">Oral/Accepted: 9.0%</i>.<br>
-        <strong style="color: rgb(45, 85, 246);">EgoVis 2023 Distinguished Paper Award.</strong>
-        </p>
-
-        <div class="paper" id="egohumans">
-          <a href="https://rawalkhirodkar.github.io/egohumans">project page</a> |
-          <a href="egohumans/files/paper.pdf" target="_blank">pdf</a> |
-          <a href="javascript:toggleblock('egohumans_abs')">abstract</a> |
-          <a shape="rect" href="javascript:togglebib('egohumans')" class="togglebib">bibtex</a> |
-          <a href="https://github.com/rawalkhirodkar/egohumans">code</a>
-          <p align="justify"> <i id="egohumans_abs">We present EgoHumans, a new multi-view multi-human video benchmark to advance the state-of-the-art of egocentric human 3D pose estimation and tracking. Existing egocentric benchmarks either capture single subject or indoor-only scenarios, which limit the generalization of computer vision algorithms for real-world applications. We propose a novel 3D capture setup to construct a comprehensive egocentric multi-human benchmark in the wild with annotations to support diverse tasks such as human detection, tracking, 2D/3D pose estimation, and mesh recovery. We leverage consumer-grade wearable camera-equipped glasses for the egocentric view, which enables us to capture dynamic activities like playing soccer, fencing, volleyball, etc. Furthermore, our multi-view setup generates accurate 3D ground truth even under severe or complete occlusion. The dataset consists of more than 125k egocentric images, spanning diverse scenes with a particular focus on challenging and unchoreographed multi-human activities and fast-moving egocentric views. We rigorously evaluate existing state-of-the-art methods and highlight their limitations in the egocentric scenario, specifically on multi-human tracking. To address such limitations, we propose EgoFormer, a novel approach with a multi-stream transformer architecture and explicit 3D spatial reasoning to estimate and track the human pose. EgoFormer significantly outperforms prior art by 13.6 IDF1 and 9.3 HOTA on the EgoHumans dataset.</i></p>
-          <pre xml:space="preserve">
-            @article{khirodkar2023egohumans,
-              title={EgoHumans: An Egocentric 3D Multi-Human Benchmark},
-              author={Khirodkar, Rawal and Bansal, Aayush and Ma, Lingni and Newcombe, Richard and Vo, Minh and Kitani, Kris},
-              journal={arXiv preprint arXiv:2305.16487},
-              year={2023}
-            }
-          </pre>
+        <div class="hero-links">
+          <a href="mailto:rawalkhirodkar@gmail.com">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            Email
+          </a>
+          <a href="docs/rawalk_cv.pdf">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 2l5 5h-5V4zM6 20V4h5v7h7v9H6z"/></svg>
+            CV
+          </a>
+          <a href="https://scholar.google.com/citations?user=hS6M138AAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5 12 0z"/></svg>
+            Scholar
+          </a>
+          <a href="https://github.com/rawalkhirodkar" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="https://twitter.com/rawal_khirodkar" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            Twitter
+          </a>
+          <a href="https://www.linkedin.com/in/rawalkhirodkar/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
         </div>
-      </td>
-    </tr>
 
-
-    <tr>
-    <td width="40%" valign="top"><a href="images/ocsort.gif"><img src="images/ocsort.gif" alt="sym" width="90%" style="border-radius:15px"></a></td>
-    <td width="67%" valign="top">
-      <p><a href="https://arxiv.org/abs/2203.14360" id="cvpr_2023">
-      <heading>Observation-Centric SORT: Rethinking SORT for Robust Multi-Object Tracking</heading></a><br>
-      Jinkun Cao, Xinshuo Weng, <strong>Rawal Khirodkar</strong>, Jiangmiao Pang, Kris Kitani<br>
-      CVPR 2023
-      </p>
-
-      <div class="paper" id="ocsort">
-        <a href="https://arxiv.org/abs/2203.14360" target="_blank">pdf</a> |
-        <a href="javascript:toggleblock('ocsort_abs')">abstract</a> |
-        <a shape="rect" href="javascript:togglebib('ocsort')" class="togglebib">bibtex</a> |
-        <a href="https://github.com/noahcao/OC_SORT">code</a>
-
-        <p align="justify"> <i id="ocsort_abs">Multi-Object Tracking (MOT) has rapidly progressed with the development of object detection and re-identification. However, motion modeling, which facilitates object association by forecasting short-term trajectories with past observations, has been relatively under-explored in recent years. Current motion models in MOT typically assume that the object motion is linear in a small time window and needs continuous observations, so these methods are sensitive to occlusions and non-linear motion and require high frame-rate videos. In this work, we show that a simple motion model can obtain state-of-the-art tracking performance without other cues like appearance. We emphasize the role of "observation" when recovering tracks from being lost and reducing the error accumulated by linear motion models during the lost period. We thus name the proposed method as Observation-Centric SORT, OC-SORT for short. It remains simple, online, and real-time but improves robustness over occlusion and non-linear motion. It achieves 63.2 and 62.1 HOTA on MOT17 and MOT20, respectively, surpassing all published methods. It also sets new states of the art on KITTI Pedestrian Tracking and DanceTrack where the object motion is highly non-linear.</i></p>
-
-        <pre xml:space="preserve">
-         @article{cao2022observation,
-            title={Observation-centric sort: Rethinking sort for robust multi-object tracking},
-            author={Cao, Jinkun and Weng, Xinshuo and Khirodkar, Rawal and Pang, Jiangmiao and Kitani, Kris},
-            journal={arXiv preprint arXiv:2203.14360},
-            year={2022}
-          }
-        </pre>
+        <div class="hero-bio">
+          <p>I am a Research Scientist at <a href="https://research.facebook.com/" target="_blank" rel="noopener">Meta</a>, passionate about making digital humans a reality.</p>
+          <p>Previously, I completed my Masters (2017-2019) and Ph.D. (2019-2023) in Robotics from <a href="https://www.ri.cmu.edu/" target="_blank" rel="noopener">Carnegie Mellon University</a>, advised by
+            Prof. <a href="http://www.cs.cmu.edu/~kkitani/" target="_blank" rel="noopener">Kris Kitani</a>.
+            Before that, I received my <a href="docs/Btech_Report_Rawal.pdf">Bachelors</a> (2013-2017) in Computer Science from
+            <a href="https://www.cse.iitb.ac.in/" target="_blank" rel="noopener">IIT Bombay</a>.
+            My Ph.D. was supported by the <a href="https://www.amazon.science/news/amazon-launches-68-million-ai-phd-fellowship-program" target="_blank" rel="noopener">Amazon Fellowship Program</a>.
+          </p>
+          <p>My research interests are in large-scale self-supervised learning, 3D modeling, and controllable interactive video diffusion. If you are interested in interning with me, feel free to reach out via email with your resume and research interests.</p>
+        </div>
       </div>
-    </td>
-  </tr>
+    </div>
+  </div>
+</section>
 
-<!-- <tr>
-    <td width="40%" valign="top"><a href="images/seq_ens.png"><img src="images/seq_ens.png" alt="sym" width="90%" style="border-radius:15px"></a></td>
-    <td width="67%" valign="top">
-      <p><a href="https://arxiv.org/abs/2210.05387" id="arxiv_2022">
-      <heading>Sequential Ensembling for Semantic Segmentation</heading></a><br>
-      <strong>Rawal Khirodkar</strong>, Brandon Smith, Siddhartha Chandra, Amit Agrawal, Antonio Criminisi<br>
-      arXiv, 2022
-      </p>
-
-      <div class="paper" id="seq_ens">
-        <a href="https://arxiv.org/pdf/2210.05387.pdf" target="_blank">pdf</a> |
-        <a href="javascript:toggleblock('seq_ens_abs')">abstract</a> |
-        <a shape="rect" href="javascript:togglebib('seq_ens')" class="togglebib">bibtex</a>
-
-        <p align="justify"> <i id="seq_ens_abs">Ensemble approaches for deep-learning-based semantic segmentation remain insufficiently explored despite the proliferation of competitive benchmarks and downstream applications. In this work, we explore and benchmark the popular ensembling approach of combining predictions of multiple, independently-trained, state-of-the-art models at test time on popular datasets. Furthermore, we propose a novel method inspired by boosting to sequentially ensemble networks that significantly outperforms the naive ensemble baseline. Our approach trains a cascade of models conditioned on class probabilities predicted by the previous model as an additional input. A key benefit of this approach is that it allows for dynamic computation offloading, which helps deploy models on mobile devices. Our proposed novel ADaptive modulatiON (ADON) block allows spatial feature modulation at various layers using previous-stage probabilities. Our approach does not require sophisticated sample selection strategies during training and works with multiple neural architectures. We significantly improve over the naive ensemble baseline on challenging datasets such as Cityscapes, ADE-20K, COCO-Stuff, and PASCAL-Context and set a new state-of-the-art.</i></p>
-
-        <pre xml:space="preserve">
-         @article{khirodkar2022sequential,
-              title={Sequential Ensembling for Semantic Segmentation},
-              author={Khirodkar, Rawal and Smith, Brandon and Chandra, Siddhartha and Agrawal, Amit and Criminisi, Antonio},
-              journal={arXiv preprint arXiv:2210.05387},
-              year={2022}
-            }
-        </pre>
+<!-- ===== News ===== -->
+<section class="alt-bg" id="news">
+  <div class="container">
+    <h2 class="section-heading">News</h2>
+    <div class="news-list">
+      <div class="news-item fade-in">
+        <span class="news-date">Nov 2025</span>
+        <span class="news-text"><a href="https://ai.meta.com/blog/sam-3d/">MHR used by SAM3D-Body is out</a>. <span class="news-new">new</span></span>
       </div>
-    </td>
-  </tr> -->
-
-  <tr>
-    <td width="40%" valign="top"><a href="images/cvpr22_ochmr.png"><img src="images/cvpr22_ochmr.png" alt="sym" width="90%" style="border-radius:15px"></a></td>
-    <td width="67%" valign="top">
-      <p><a href="https://arxiv.org/abs/2203.13349" id="CVPR22">
-      <heading>Occluded Human Mesh Recovery</heading></a><br>
-      <strong>Rawal Khirodkar</strong>, Shashank Tripathi, Kris Kitani<br>
-      CVPR 2022
-      </p>
-
-      <div class="paper" id="cvpr22_ochmr">
-        <a href="https://rawalkhirodkar.github.io/ochmr/">project page</a> |
-        <a href="ochmr/files/paper.pdf" target="_blank">pdf</a> |
-        <a href="javascript:toggleblock('cvpr22_ochmr_abs')">abstract</a> |
-        <a shape="rect" href="javascript:togglebib('cvpr22_ochmr')" class="togglebib">bibtex</a>
-
-        <p align="justify"> <i id="cvpr22_ochmr_abs">Top-down methods for monocular human mesh recovery have two stages: (1) detect human bounding boxes; (2) treat each bounding box as an independent single-human mesh recovery task. Unfortunately, the single-human assumption does not hold in images with multi-human occlusion and crowding. Consequently, top-down methods have difficulties in recovering accurate 3D human meshes under severe person-person occlusion. To address this, we present Occluded Human Mesh Recovery (OCHMR) - a novel top-down mesh recovery approach that incorporates image spatial context to overcome the limitations of the single-human assumption. The approach is conceptually simple and can be applied to any existing top-down architecture. Along with the input image, we condition the top-down model on spatial context from the image in the form of body-center heatmaps. To reason from the predicted body centermaps, we introduce Contextual Normalization (CoNorm) blocks to adaptively modulate intermediate features of the top-down model. The contextual conditioning helps our model disambiguate between two severely overlapping human bounding-boxes, making it robust to multi-person occlusion. Compared with state-of-the-art methods, OCHMR achieves superior performance on challenging multi-person benchmarks like 3DPW, CrowdPose and OCHuman. Specifically, our proposed contextual reasoning architecture applied to the SPIN model with ResNet-50 backbone results in 75.2 PMPJPE on 3DPW-PC, 23.6 AP on CrowdPose and 37.7 AP on OCHuman datasets, a significant improvement of 6.9 mm, 6.4 AP and 20.8 AP respectively over the baseline.</i></p>
-
-        <pre xml:space="preserve">
-         @article{khirodkar2022occluded,
-          title={Occluded Human Mesh Recovery},
-          author={Khirodkar, Rawal and Tripathi, Shashank and Kitani, Kris},
-          journal={arXiv preprint arXiv:2203.13349},
-          year={2022}
-        }
-        </pre>
+      <div class="news-item fade-in">
+        <span class="news-date">Jun 2025</span>
+        <span class="news-text"><a href="https://jindapark.github.io/projects/atlas/">ATLAS accepted to ICCV 2025</a>. <span class="news-new">new</span></span>
       </div>
-    </td>
-  </tr>
-
-  <tr>
-    <td width="33%" valign="top"><a href="images/mipnet.gif"><img src="images/mipnet.gif" alt="sym" width="90%" style="border-radius:15px"></a></td>
-    <td width="67%" valign="top">
-      <p><a href="https://arxiv.org/abs/2101.11223" id="ICCV21">
-      <heading>Multi-Instance Pose Networks: Rethinking Top-Down Pose Estimation</heading></a><br>
-      <strong>Rawal Khirodkar</strong>, Visesh Chari, Amit Agrawal, Ambrish Tyagi<br>
-      ICCV 2021
-      </p>
-
-      <div class="paper" id="iccv21_mip">
-        <a href="https://rawalkhirodkar.github.io/mipnet/">project page</a> |
-        <a href="https://www.amazon.science/publications/multi-instance-pose-networks-rethinking-top-down-pose-estimation">Amazon Science</a> |
-        <a href="mipnet/files/paper.pdf" target="_blank">pdf</a> |
-        <a href="javascript:toggleblock('iccv21_mip_abs')">abstract</a> |
-        <a shape="rect" href="javascript:togglebib('iccv21_mip')" class="togglebib">bibtex</a> |
-        <a href="https://github.com/rawalkhirodkar/MIPNet">code</a>
-
-        <p align="justify"> <i id="iccv21_mip_abs">A key assumption of top-down human pose estimation approaches is their expectation of having a single person/instance present in the input bounding box. This often leads to failures in crowded scenes with occlusions. We propose a novel solution to overcome the limitations of this fundamental assumption. Our Multi-Instance Pose Network (MIPNet) allows for predicting multiple 2D pose instances within a given bounding box. We introduce a Multi-Instance Modulation Block (MIMB) that can adaptively modulate channel-wise feature responses for each instance and is parameter efficient. We demonstrate the efficacy of our approach by evaluating on COCO, CrowdPose, and OCHuman datasets. Specifically, we achieve 70.0 AP on CrowdPose and 42.5 AP on OCHuman test sets, a significant improvement of 2.4 AP and 6.5 AP over the prior art, respectively. When using ground truth bounding boxes for inference, MIPNet achieves an improvement of 0.7 AP on COCO, 0.9 AP on CrowdPose, and 9.1 AP on OCHuman validation sets compared to HRNet. Interestingly, when fewer, high confidence bounding boxes are used, HRNet's performance degrades (by 5 AP) on OCHuman, whereas MIPNet maintains a relatively stable performance (drop of 1 AP) for the same inputs.</i></p>
-
-        <pre xml:space="preserve">
-         @InProceedings{Khirodkar_2021_ICCV,
-              author    = {Khirodkar, Rawal and Chari, Visesh and Agrawal, Amit and Tyagi, Ambrish},
-              title     = {Multi-Instance Pose Networks: Rethinking Top-Down Pose Estimation},
-              booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
-              month     = {October},
-              year      = {2021},
-              pages     = {3122-3131}
-          }
-        </pre>
+      <div class="news-item fade-in">
+        <span class="news-date">Mar 2025</span>
+        <span class="news-text"><a href="https://github.com/facebookresearch/pippo">Pippo accepted to CVPR 2025</a>.</span>
       </div>
-    </td>
-  </tr>
-
-  <tr>
-    <td width="33%" valign="top"><a href="images/iccv21_repose.png"><img src="images/iccv21_repose.png" alt="sym" width="90%" style="border-radius:15px"></a></td>
-    <td width="67%" valign="top">
-      <p><a href="https://arxiv.org/pdf/2104.00633" id="ICCV21">
-      <heading>RePOSE: Fast 6D Object Pose Refinement via Deep Texture Rendering</heading></a><br>
-      Shun Iwase, Xingyu Liu, <strong>Rawal Khirodkar</strong>, Rio Yokota, Kris M. Kitani<br>
-      ICCV 2021
-      </p>
-
-      <div class="paper" id="iccv21_repose">
-        <a href="https://arxiv.org/pdf/2104.00633.pdf" target="_blank">pdf</a> |
-        <a href="javascript:toggleblock('iccv21_repose_abs')">abstract</a> |
-        <a shape="rect" href="javascript:togglebib('iccv21_repose')" class="togglebib">bibtex</a> |
-        <a href="https://github.com/sh8/RePOSE">code</a>
-
-        <p align="justify"> <i id="iccv21_repose_abs">The use of iterative pose refinement is a critical processing step for 6D object pose estimation, and its performance depends greatly on one's choice of image representation. Image representations learned via deep convolutional neural networks (CNN) are currently the method of choice as they are able to robustly encode object keypoint locations. However, CNN-based image representations are computational expensive to use for iterative pose refinement, as they require that image features are extracted using a deep network, once for the input image and multiple times for rendered images during the refinement process. Instead of using a CNN to extract image features from a rendered RGB image, we propose to directly render a deep feature image. We call this deep texture rendering, where a shallow multi-layer perceptron is used to directly regress a view invariant image representation of an object. Using an estimate of the pose and deep texture rendering, our system can render an image representation in under 1ms. This image representation is optimized such that it makes it easier to perform nonlinear 6D pose estimation by adding a differentiable Levenberg-Marquardt optimization network and back-propagating the 6D pose alignment error. We call our method, RePOSE, a Real-time Iterative Rendering and Refinement algorithm for 6D POSE estimation. RePOSE runs at 71 FPS and achieves state-of-the-art accuracy of 51.6% on the Occlusion LineMOD dataset - a 4.1% absolute improvement over the prior art, and comparable performance on the YCB-Video dataset with a much faster runtime than the other pose refinement methods.</i></p>
-
-        <pre xml:space="preserve">
-          @InProceedings{Iwase_2021_ICCV,
-              author    = {Iwase, Shun and Liu, Xingyu and Khirodkar, Rawal and Yokota, Rio and Kitani, Kris M.},
-              title     = {RePOSE: Fast 6D Object Pose Refinement via Deep Texture Rendering},
-              booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
-              month     = {October},
-              year      = {2021},
-              pages     = {3303-3312}
-          }
-        </pre>
+      <div class="news-item fade-in">
+        <span class="news-date">Jan 2025</span>
+        <span class="news-text"><a href="https://sites.google.com/view/3d-humans-cvpr2025">Co-organizing the 2nd Edition of Humans Workshop at CVPR 2025</a>.</span>
       </div>
-    </td>
-  </tr>
-
-
-  <!-- <tr>
-    <td width="33%" valign="top"><a href="images/publications/adr/1.png"><img src="images/publications/adr/1.png" alt="sym" width="90%" style="border-radius:15px"></a></td>
-    <td width="67%" valign="top">
-      <p><a href="https://arxiv.org/pdf/1812.00491" id="ADR">
-      <heading>Adversarial Domain Randomization</heading></a><br>
-      <strong>Rawal Khirodkar</strong>, Kris M. Kitani<br>
-      arXiv, 2018
-      </p>
-
-      <div class="paper" id="adr">
-        <a href="https://arxiv.org/pdf/1812.00491.pdf" target="_blank">pdf</a> |
-        <a href="javascript:toggleblock('adr_abs')">abstract</a> |
-        <a shape="rect" href="javascript:togglebib('adr')" class="togglebib">bibtex</a>
-
-        <p align="justify"> <i id="adr_abs">Domain Randomization (DR) is known to require a significant amount of training data for good performance. We argue that this is due to DR's strategy of random data generation using a uniform distribution over simulation parameters, as a result, DR often generates samples which are uninformative for the learner. In this work, we theoretically analyze DR using ideas from multi-source domain adaptation. Based on our findings, we propose Adversarial Domain Randomization (ADR) as an efficient variant of DR which generates adversarial samples with respect to the learner during training. We implement ADR as a policy whose action space is the quantized simulation parameter space. At each iteration, the policy's action generates labeled data and the reward is set as negative of learner's loss on this data. As a result, we observe ADR frequently generates novel samples for the learner like truncated and occluded objects for object detection and confusing classes for image classification. We perform evaluations on datasets like CLEVR, Syn2Real, and VIRAT for various tasks where we demonstrate that ADR outperforms DR by generating fewer data samples.</i></p>
-
-        <pre xml:space="preserve">
-          @article{DBLP:journals/corr/abs-1812-00491,
-            author    = {Rawal Khirodkar and
-                         Donghyun Yoo and
-                         Kris M. Kitani},
-            title     = {{VADRA:} Visual Adversarial Domain Randomization and Augmentation},
-            journal   = {CoRR},
-            volume    = {abs/1812.00491},
-            year      = {2018},
-            url       = {http://arxiv.org/abs/1812.00491},
-            archivePrefix = {arXiv},
-            eprint    = {1812.00491},
-            timestamp = {Tue, 01 Jan 2019 15:01:25 +0100},
-            biburl    = {https://dblp.org/rec/journals/corr/abs-1812-00491.bib},
-            bibsource = {dblp computer science bibliography, https://dblp.org}
-          }
-        </pre>
+      <div class="news-item fade-in">
+        <span class="news-date">Sep 2024</span>
+        <span class="news-text"><a href="https://jyuntins.github.io/harmony4d/">Harmony4D accepted to NeurIPS 2024</a>.</span>
       </div>
-    </td>
-  </tr> -->
-
-  <!-- <tr>
-    <td width="33%" valign="top"><a href="images/wacv19.png"><img src="images/wacv19.png" alt="sym" width="90%" style="border-radius:15px"></a></td>
-    <td width="67%" valign="top">
-      <p><a href="https://arxiv.org/abs/1811.05939" id="WACV19">
-      <heading>Domain Randomization for Scene-Specific Car Detection and Pose Estimation</heading></a><br>
-      <strong>Rawal Khirodkar</strong>, Donghyun Yoo, Kris M. Kitani<br>
-      WACV 2019
-      </p>
-
-      <div class="paper" id="wacv19_dr">
-        <a href="https://arxiv.org/pdf/1811.05939.pdf" target="_blank">pdf</a> |
-        <a href="javascript:toggleblock('wacv19_dr_abs')">abstract</a> |
-        <a shape="rect" href="javascript:togglebib('wacv19_dr')" class="togglebib">bibtex</a> |
-        <a href="https://github.com/rawalkhirodkar/car_pose">code</a>
-
-        <p align="justify"> <i id="wacv19_dr_abs">We address the issue of domain gap when making use of synthetic data to train a scene-specific object detector and pose estimator. While previous works have shown that the constraints of learning a scene-specific model can be leveraged to create geometrically and photometrically consistent synthetic data, care must be taken to design synthetic content which is as close as possible to the real-world data distribution. In this work, we propose to solve domain gap through the use of appearance randomization to generate a wide range of synthetic objects to span the space of realistic images for training. An ablation study of our results is presented to delineate the individual contribution of different components in the randomization process. We evaluate our method on VIRAT, UA-DETRAC, EPFL-Car datasets, where we demonstrate that using scene specific domain randomized synthetic data is better than fine-tuning off-the-shelf models on limited real data.</i></p>
-
-        <pre xml:space="preserve">
-          @inproceedings{khirodkar2019domain,
-            title={Domain randomization for scene-specific car detection and pose estimation},
-            author={Khirodkar, Rawal and Yoo, Donghyun and Kitani, Kris},
-            booktitle={2019 IEEE Winter Conference on Applications of Computer Vision (WACV)},
-            pages={1932--1940},
-            year={2019},
-            organization={IEEE}
-          }
-        </pre>
+      <div class="news-item fade-in">
+        <span class="news-date">Aug 2024</span>
+        <span class="news-text"><a href="https://github.com/facebookresearch/sapiens">Sapiens accepted to ECCV 2024 - Best Paper Candidate</a>.</span>
       </div>
-    </td>
-  </tr> -->
+      <div class="news-item fade-in">
+        <span class="news-date">Jul 2024</span>
+        <span class="news-text"><a href="https://asia.siggraph.org/2024/">URAvatar accepted to SIGGRAPH Asia 2024</a>.</span>
+      </div>
+      <div class="news-item fade-in">
+        <span class="news-date">Jun 2024</span>
+        <span class="news-text"><a href="https://egovis.github.io/awards/2022_2023/">EgoHumans received the EgoVis Distinguished Paper Award at CVPR 2024</a>.</span>
+      </div>
+      <!--
+      <div class="news-item fade-in">
+        <span class="news-date">Jan 2024</span>
+        <span class="news-text"><a href="https://sites.google.com/view/3d-humans-cvpr2024">Co-organizing the Humans Workshop at CVPR 2024</a>.</span>
+      </div>
+      -->
+      <!--
+      <div class="news-item fade-in">
+        <span class="news-date">Dec 2023</span>
+        <span class="news-text"><a href="https://ai.meta.com/blog/ego-exo4d-video-learning-perception/">Ego-Exo4D accepted to CVPR 2024 - Oral Presentation</a>.</span>
+      </div>
+      -->
+    </div>
+  </div>
+</section>
 
-</table>
+<!-- ===== Affiliations ===== -->
+<section id="affiliations">
+  <div class="container">
+    <h2 class="section-heading">Affiliations</h2>
+    <div class="affil-timeline">
+      <div class="affil-item fade-in">
+        <a href="https://www.iitb.ac.in/" target="_blank" rel="noopener"><img src="icons/iitb-logo.webp" alt="IIT Bombay" class="affil-logo" loading="lazy" width="160" height="156" decoding="async"></a>
+        <div class="affil-info">
+          <div class="affil-role">Bachelors, Computer Science</div>
+          <div class="affil-org">IIT Bombay</div>
+          <div class="affil-dates">2013 — 2017</div>
+        </div>
+      </div>
+      <div class="affil-item fade-in">
+        <a href="https://www.cmu.edu/" target="_blank" rel="noopener"><img src="icons/cmu-logo.webp" alt="CMU" class="affil-logo" loading="lazy" width="160" height="160" decoding="async"></a>
+        <div class="affil-info">
+          <div class="affil-role">Masters, Robotics</div>
+          <div class="affil-org">Carnegie Mellon University</div>
+          <div class="affil-dates">2017 — 2019</div>
+        </div>
+      </div>
+      <div class="affil-item fade-in">
+        <a href="https://www.cmu.edu/" target="_blank" rel="noopener"><img src="icons/cmu-logo.webp" alt="CMU" class="affil-logo" loading="lazy" width="160" height="160" decoding="async"></a>
+        <div class="affil-info">
+          <div class="affil-role">Ph.D., Robotics</div>
+          <div class="affil-org">Carnegie Mellon University</div>
+          <div class="affil-dates">2019 — 2023</div>
+        </div>
+      </div>
+      <div class="affil-item fade-in">
+        <a href="https://www.amazon.science/" target="_blank" rel="noopener"><img src="icons/amazon-logo.webp" alt="Amazon" class="affil-logo" loading="lazy" width="160" height="48" decoding="async"></a>
+        <div class="affil-info">
+          <div class="affil-role">Research Intern</div>
+          <div class="affil-org">Amazon</div>
+          <div class="affil-dates">2020, 2021</div>
+        </div>
+      </div>
+      <div class="affil-item fade-in">
+        <a href="https://research.facebook.com/" target="_blank" rel="noopener"><img src="icons/meta-logo.webp" alt="Meta" class="affil-logo" loading="lazy" width="160" height="160" decoding="async"></a>
+        <div class="affil-info">
+          <div class="affil-role">Research Intern</div>
+          <div class="affil-org">Meta</div>
+          <div class="affil-dates">2022</div>
+        </div>
+      </div>
+      <div class="affil-item fade-in">
+        <a href="https://research.facebook.com/" target="_blank" rel="noopener"><img src="icons/meta-logo.webp" alt="Meta" class="affil-logo" loading="lazy" width="160" height="160" decoding="async"></a>
+        <div class="affil-info">
+          <div class="affil-role">Research Scientist</div>
+          <div class="affil-org">Meta</div>
+          <div class="affil-dates">2023 — Present</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- ===== Selected Research ===== -->
+<section class="alt-bg" id="research">
+  <div class="container">
+    <h2 class="section-heading">Selected Research</h2>
+    <div class="research-grid">
+      <div class="research-item fade-in">
+        <a href="https://ai.meta.com/blog/sam-3d/" target="_blank" rel="noopener"><video src="images/sam_body.mp4" poster="posters/images_sam_body.jpg" class="research-video" loop muted playsinline preload="none"></video></a>
+        <a href="https://ai.meta.com/blog/sam-3d/" target="_blank" rel="noopener" class="research-label">MHR</a>
+      </div>
+      <div class="research-item fade-in">
+        <a href="https://rawalkhirodkar.github.io/sapiens/" target="_blank" rel="noopener"><video src="sapiens/sapiens.mp4" poster="posters/sapiens_sapiens.jpg" class="research-video" loop muted playsinline preload="none"></video></a>
+        <a href="https://rawalkhirodkar.github.io/sapiens/" target="_blank" rel="noopener" class="research-label">Sapiens</a>
+      </div>
+      <div class="research-item fade-in">
+        <a href="https://ego-exo4d-data.org/" target="_blank" rel="noopener"><video src="ego_exo4d/ego_exo4d.mp4" poster="posters/ego_exo4d_ego_exo4d.jpg" class="research-video" loop muted playsinline preload="none"></video></a>
+        <a href="https://ego-exo4d-data.org/" target="_blank" rel="noopener" class="research-label">Ego-Exo4D</a>
+      </div>
+      <div class="research-item fade-in">
+        <a href="https://junxuan-li.github.io/urgca-website/" target="_blank" rel="noopener"><video src="uravatar/uravatar.mp4" poster="posters/uravatar_uravatar.jpg" class="research-video" loop muted playsinline preload="none"></video></a>
+        <a href="https://junxuan-li.github.io/urgca-website/" target="_blank" rel="noopener" class="research-label">URAvatar</a>
+      </div>
+      <div class="research-item fade-in">
+        <a href="https://rawalkhirodkar.github.io/egohumans" target="_blank" rel="noopener"><video src="egohumans/files/egohumans.mp4" poster="posters/egohumans_files_egohumans.jpg" class="research-video" loop muted playsinline preload="none"></video></a>
+        <a href="https://rawalkhirodkar.github.io/egohumans" target="_blank" rel="noopener" class="research-label">EgoHumans</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-<table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
-  <tr><td><sectionheading>Professional Services</sectionheading></td></tr>
-  <tr>
-    <td width="33%" valign="top"><a href="images/cvf.jpg"><img src="images/cvf.jpg" alt="sym" width="90%" style="border-radius:15px"></a></td>
-    <td>
-      <ul>
-        <li>CVPR (2018, 2020, 2021, 2022, 2023, 2024, 2025)</li>
-        <li>ICCV (2019, 2021, 2023, 2025)</li>
-        <li>ECCV (2020, 2022, 2024)</li>
-        <li>NeurIPS (2022, 2023, 2024, 2025)</li>
-        <li>ICLR (2022, 2023, 2024, 2025, 2026)</li>
-        <li>IJCV (2022)</li>
-        <li>TPAMI (2023)</li>
-        <li>WACV (2021, 2022, 2023, 2024)</li>
-        <li>ACCV (2018, 2020, 2021)</li>
-      </ul>
-    </td>
-  </tr>
+<!-- ===== Publications ===== -->
+<section id="publications">
+  <div class="container">
+    <h2 class="section-heading">Publications</h2>
+    <div class="pub-list">
 
-</table>
+      <!-- 1. MHR -->
+      <div class="pub-card fade-in">
+        <a href="https://ai.meta.com/blog/sam-3d/" target="_blank" rel="noopener"><video src="images/sam_body.mp4" poster="posters/images_sam_body.jpg" class="pub-thumb" loop muted playsinline preload="none"></video></a>
+        <div>
+          <div class="pub-title"><a href="https://ai.meta.com/blog/sam-3d/">MHR: Momentum Human Rig</a></div>
+          <div class="pub-authors">Ferguson et al. Mesh representation used by SAM3D-Body.</div>
+          <div class="pub-venue"><em>Tech Report 2025</em></div>
+          <div class="pub-actions">
+            <a href="https://arxiv.org/abs/2511.15586" target="_blank" rel="noopener">paper</a>
+            <a href="https://github.com/facebookresearch/MHR">github</a>
+          </div>
+        </div>
+      </div>
 
+      <!-- 2. ATLAS -->
+      <div class="pub-card fade-in">
+        <a href="https://jindapark.github.io/projects/atlas/" target="_blank" rel="noopener"><video src="atlas/atlas.mp4" poster="posters/atlas_atlas.jpg" class="pub-thumb" loop muted playsinline preload="none"></video></a>
+        <div>
+          <div class="pub-title"><a href="https://jindapark.github.io/projects/atlas/">ATLAS: Decoupling Skeletal and Shape Parameters for Expressive Parametric Human Modeling</a></div>
+          <div class="pub-authors">Jinhyung Park, Javier Romero, Shunsuke Saito, Fabian Prada, Takaaki Shiratori, Yichen Xu, Federica Bogo, Shoou-I Yu, Kris Kitani, <strong>Rawal Khirodkar</strong></div>
+          <div class="pub-venue"><em>ICCV 2025</em></div>
+          <div class="pub-actions">
+            <a href="https://jindapark.github.io/projects/atlas/">project</a>
+            <a href="https://arxiv.org/abs/2508.15767" target="_blank" rel="noopener">paper</a>
+          </div>
+        </div>
+      </div>
 
-<table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
-    <tr><td><br><p align="right"><font size="1.5">
-    Template modified from <a href="http://www.cs.berkeley.edu/~barron/">here</a>
-    </font></p></td></tr>
-</table>
+      <!-- 3. Pippo -->
+      <div class="pub-card fade-in">
+        <a href="https://yashkant.github.io/pippo/" target="_blank" rel="noopener"><video src="pippo/pippo.mp4" poster="posters/pippo_pippo.jpg" class="pub-thumb" loop muted playsinline preload="none"></video></a>
+        <div>
+          <div class="pub-title"><a href="https://yashkant.github.io/pippo/">Pippo: High-Res Multi-View Humans from a Single Image</a></div>
+          <div class="pub-authors">Yash Kant, Ethan Weber, Jin Kyu Kim, <strong>Rawal Khirodkar</strong>, Su Zhaoen, Julieta Martinez, Igor Gilitschenski, Shunsuke Saito, Timur Bagautdinov</div>
+          <div class="pub-venue"><em>CVPR 2025</em></div>
+          <div class="pub-actions">
+            <a href="https://yashkant.github.io/pippo/">project</a>
+            <a href="https://arxiv.org/abs/2502.07785" target="_blank" rel="noopener">paper</a>
+            <a href="https://github.com/facebookresearch/pippo">github</a>
+          </div>
+        </div>
+      </div>
 
-  </td></tr>
-</table>
+      <!-- 4. Harmony4D -->
+      <div class="pub-card fade-in">
+        <a href="https://jyuntins.github.io/harmony4d/" target="_blank" rel="noopener"><video src="phd_thesis/grappling2.mp4" poster="posters/phd_thesis_grappling2.jpg" class="pub-thumb" loop muted playsinline preload="none"></video></a>
+        <div>
+          <div class="pub-title"><a href="https://jyuntins.github.io/harmony4d/">Harmony4D: A Video Dataset for In-The-Wild Close Human Interactions</a></div>
+          <div class="pub-authors"><strong>Rawal Khirodkar*</strong>, Jyun-Ting Song*, Jinkun Cao, Zen Luo, Kris Kitani</div>
+          <div class="pub-venue"><em>NeurIPS 2024, Datasets and Benchmarks Track</em></div>
+          <div class="pub-actions">
+            <a href="https://jyuntins.github.io/harmony4d/">project</a>
+            <a href="https://arxiv.org/abs/2410.20294" target="_blank" rel="noopener">paper</a>
+            <a href="https://github.com/jyuntins/harmony4d">github</a>
+            <a href="https://huggingface.co/datasets/Jyun-Ting/Harmony4D/tree/main">data</a>
+          </div>
+        </div>
+      </div>
 
+      <!-- 5. URAvatar -->
+      <div class="pub-card fade-in">
+        <a href="https://junxuan-li.github.io/urgca-website/" target="_blank" rel="noopener"><video src="uravatar/uravatar.mp4" poster="posters/uravatar_uravatar.jpg" class="pub-thumb" loop muted playsinline preload="none"></video></a>
+        <div>
+          <div class="pub-title"><a href="https://junxuan-li.github.io/urgca-website/">URAvatar: Universal Relightable Gaussian Codec Avatars</a></div>
+          <div class="pub-authors">Junxuan Li, Chen Cao, Gabriel Schwartz, <strong>Rawal Khirodkar</strong>, Christian Richardt, Tomas Simon, Yaser Sheikh, and Shunsuke Saito</div>
+          <div class="pub-venue"><em>SIGGRAPH Asia 2024</em></div>
+          <div class="pub-actions">
+            <a href="https://junxuan-li.github.io/urgca-website/" target="_blank" rel="noopener">project</a>
+            <a href="https://arxiv.org/abs/2410.24223" target="_blank" rel="noopener">paper</a>
+          </div>
+        </div>
+      </div>
 
+      <!-- 6. Sapiens -->
+      <div class="pub-card fade-in">
+        <a href="https://rawalkhirodkar.github.io/sapiens/" target="_blank" rel="noopener"><video src="sapiens/sapiens.mp4" poster="posters/sapiens_sapiens.jpg" class="pub-thumb" loop muted playsinline preload="none"></video></a>
+        <div>
+          <div class="pub-title"><a href="https://rawalkhirodkar.github.io/sapiens/">Sapiens: Foundation for Human Vision Models</a></div>
+          <div class="pub-authors"><strong>Rawal Khirodkar</strong>, Timur Bagautdinov, Julieta Martinez, Su Zhaoen, Austin James, Peter Selednik, Stuart Anderson, Shunsuke Saito</div>
+          <div class="pub-venue">
+            <em>ECCV 2024</em>
+            <span class="badge badge-amber">Oral</span>
+            <span class="badge badge-green">Best Paper Candidate (Top 15)</span>
+          </div>
+          <div class="pub-actions">
+            <a href="https://rawalkhirodkar.github.io/sapiens/">project</a>
+            <a href="https://arxiv.org/abs/2408.12569" target="_blank" rel="noopener">paper</a>
+            <a href="https://github.com/facebookresearch/sapiens">github</a>
+          </div>
+        </div>
+      </div>
 
-<script xml:space="preserve" language="JavaScript">
-hideallbibs();
-</script>
+      <!-- 7. Ego-Exo4D -->
+      <div class="pub-card fade-in">
+        <a href="https://ego-exo4d-data.org/" target="_blank" rel="noopener"><video src="ego_exo4d/ego_exo4d.mp4" poster="posters/ego_exo4d_ego_exo4d.jpg" class="pub-thumb" loop muted playsinline preload="none"></video></a>
+        <div>
+          <div class="pub-title"><a href="https://ego-exo4d-data.org/">Ego-Exo4D: Understanding Skilled Human Activity from First- and Third-Person Perspectives</a></div>
+          <div class="pub-authors">Kristen Grauman et al.</div>
+          <div class="pub-venue">
+            <em>CVPR 2024</em>
+            <span class="badge badge-amber">Oral</span>
+            <span class="badge badge-blue">Oral/Accepted: 3.3%</span>
+          </div>
+          <div class="pub-actions">
+            <a href="https://ego-exo4d-data.org/">project</a>
+            <a href="https://arxiv.org/abs/2311.18259" target="_blank" rel="noopener">paper</a>
+            <a href="https://ai.meta.com/blog/ego-exo4d-video-learning-perception/">blog</a>
+            <a href="https://www.youtube.com/watch?v=GdooXEBAnI8">video</a>
+          </div>
+        </div>
+      </div>
 
-<script xml:space="preserve" language="JavaScript">
-hideblock('mhr_abs');
-hideblock('atlas_abs');
-hideblock('pippo_abs');
-hideblock('harmony4d_abs');
-hideblock('uravatar_abs');
-hideblock('sapiens_abs');
-// hideblock('lidar_arxiv_2024_abs');
-hideblock('ego_exo_4d_abs');
-hideblock('egohumans_abs');
-hideblock('ocsort_abs');
-// hideblock('seq_ens_abs');
-hideblock('cvpr22_ochmr_abs');
-hideblock('iccv21_mip_abs');
-hideblock('iccv21_repose_abs');
-// hideblock('adr_abs');
-// hideblock('wacv19_dr_abs');
-</script>
+      <!-- 8. SimXR -->
+      <div class="pub-card fade-in">
+        <a href="https://www.zhengyiluo.com/SimXR/" target="_blank" rel="noopener"><video src="simxr/simxr.mp4" poster="posters/simxr_simxr.jpg" class="pub-thumb" loop muted playsinline preload="none"></video></a>
+        <div>
+          <div class="pub-title"><a href="https://arxiv.org/abs/2210.05387">Real-Time Simulated Avatar from Head-Mounted Sensors</a></div>
+          <div class="pub-authors">Zhengyi Luo, Jinkun Cao, <strong>Rawal Khirodkar</strong>, Alexander Winkler, Jing Huang, Kris Kitani, Weipeng Xu</div>
+          <div class="pub-venue">
+            <em>CVPR 2024</em>
+            <span class="badge badge-amber">Highlight</span>
+            <span class="badge badge-blue">Highlight/Accepted: 11.9%</span>
+          </div>
+          <div class="pub-actions">
+            <a href="https://www.zhengyiluo.com/SimXR/">project</a>
+            <a href="https://github.com/ZhengyiLuo/SimXR">github</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 9. PhD Thesis -->
+      <div class="pub-card fade-in">
+        <a href="https://www.ri.cmu.edu/publications/multi-human-3d-reconstruction-from-in-the-wild-videos/" target="_blank" rel="noopener"><video src="phd_thesis/grappling.mp4" poster="posters/phd_thesis_grappling.jpg" class="pub-thumb" loop muted playsinline preload="none"></video></a>
+        <div>
+          <div class="pub-title"><a href="https://www.ri.cmu.edu/publications/multi-human-3d-reconstruction-from-in-the-wild-videos/">Multi-Human 3D Reconstruction from In-the-Wild Videos</a></div>
+          <div class="pub-authors">Committee members: Kris Kitani, Deva Ramanan, Angjoo Kanazawa, Shubham Tulsiani</div>
+          <div class="pub-venue"><em>Ph.D. Thesis, Carnegie Mellon University, 2023</em></div>
+          <div class="pub-actions">
+            <a href="https://www.ri.cmu.edu/publications/multi-human-3d-reconstruction-from-in-the-wild-videos/">thesis</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 10. EgoHumans -->
+      <div class="pub-card fade-in">
+        <a href="https://rawalkhirodkar.github.io/egohumans" target="_blank" rel="noopener"><video src="egohumans/files/egohumans.mp4" poster="posters/egohumans_files_egohumans.jpg" class="pub-thumb" loop muted playsinline preload="none"></video></a>
+        <div>
+          <div class="pub-title"><a href="https://rawalkhirodkar.github.io/egohumans">EgoHumans: An Egocentric 3D Multi-Human Benchmark</a></div>
+          <div class="pub-authors"><strong>Rawal Khirodkar</strong>, Aayush Bansal, Lingni Ma, Richard Newcombe, Minh Vo, Kris Kitani</div>
+          <div class="pub-venue">
+            <em>ICCV 2023</em>
+            <span class="badge badge-amber">Oral</span>
+            <span class="badge badge-blue">Oral/Accepted: 9.0%</span>
+            <span class="badge badge-green">EgoVis 2023 Distinguished Paper Award</span>
+          </div>
+          <div class="pub-actions">
+            <a href="https://rawalkhirodkar.github.io/egohumans">project</a>
+            <a href="https://arxiv.org/abs/2305.16487" target="_blank" rel="noopener">paper</a>
+            <a href="https://github.com/rawalkhirodkar/egohumans">github</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 11. OC-SORT -->
+      <div class="pub-card fade-in">
+        <a href="https://arxiv.org/abs/2203.14360" target="_blank" rel="noopener"><video src="images/ocsort.mp4" poster="posters/images_ocsort.jpg" class="pub-thumb" loop muted playsinline preload="none"></video></a>
+        <div>
+          <div class="pub-title"><a href="https://arxiv.org/abs/2203.14360">Observation-Centric SORT: Rethinking SORT for Robust Multi-Object Tracking</a></div>
+          <div class="pub-authors">Jinkun Cao, Xinshuo Weng, <strong>Rawal Khirodkar</strong>, Jiangmiao Pang, Kris Kitani</div>
+          <div class="pub-venue"><em>CVPR 2023</em></div>
+          <div class="pub-actions">
+            <a href="https://arxiv.org/abs/2203.14360" target="_blank" rel="noopener">paper</a>
+            <a href="https://github.com/noahcao/OC_SORT">github</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 12. OCHMR -->
+      <div class="pub-card fade-in">
+        <a href="https://rawalkhirodkar.github.io/ochmr/" target="_blank" rel="noopener"><img src="images/cvpr22_ochmr.jpg" alt="OCHMR" class="pub-thumb" width="480" height="192" decoding="async"></a>
+        <div>
+          <div class="pub-title"><a href="https://rawalkhirodkar.github.io/ochmr/">Occluded Human Mesh Recovery</a></div>
+          <div class="pub-authors"><strong>Rawal Khirodkar</strong>, Shashank Tripathi, Kris Kitani</div>
+          <div class="pub-venue"><em>CVPR 2022</em></div>
+          <div class="pub-actions">
+            <a href="https://rawalkhirodkar.github.io/ochmr/">project</a>
+            <a href="https://arxiv.org/abs/2203.13349" target="_blank" rel="noopener">paper</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 13. MIPNet -->
+      <div class="pub-card fade-in">
+        <a href="https://rawalkhirodkar.github.io/mipnet/" target="_blank" rel="noopener"><video src="images/mipnet.mp4" poster="posters/images_mipnet.jpg" class="pub-thumb" loop muted playsinline preload="none"></video></a>
+        <div>
+          <div class="pub-title"><a href="https://rawalkhirodkar.github.io/mipnet/">Multi-Instance Pose Networks: Rethinking Top-Down Pose Estimation</a></div>
+          <div class="pub-authors"><strong>Rawal Khirodkar</strong>, Visesh Chari, Amit Agrawal, Ambrish Tyagi</div>
+          <div class="pub-venue"><em>ICCV 2021</em></div>
+          <div class="pub-actions">
+            <a href="https://rawalkhirodkar.github.io/mipnet/">project</a>
+            <a href="https://arxiv.org/abs/2101.11223" target="_blank" rel="noopener">paper</a>
+            <a href="https://github.com/rawalkhirodkar/MIPNet">github</a>
+            <a href="https://www.amazon.science/publications/multi-instance-pose-networks-rethinking-top-down-pose-estimation">blog</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 14. RePOSE -->
+      <div class="pub-card fade-in">
+        <a href="https://arxiv.org/abs/2104.00633" target="_blank" rel="noopener"><img src="images/iccv21_repose.jpg" alt="RePOSE" class="pub-thumb" width="480" height="255" decoding="async"></a>
+        <div>
+          <div class="pub-title"><a href="https://arxiv.org/pdf/2104.00633">RePOSE: Fast 6D Object Pose Refinement via Deep Texture Rendering</a></div>
+          <div class="pub-authors">Shun Iwase, Xingyu Liu, <strong>Rawal Khirodkar</strong>, Rio Yokota, Kris M. Kitani</div>
+          <div class="pub-venue"><em>ICCV 2021</em></div>
+          <div class="pub-actions">
+            <a href="https://arxiv.org/abs/2104.00633" target="_blank" rel="noopener">paper</a>
+            <a href="https://github.com/sh8/RePOSE">github</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== Media Coverage ===== -->
+<section class="alt-bg" id="media">
+  <div class="container">
+    <h2 class="section-heading">Media Coverage</h2>
+    <div class="media-cloud fade-in">
+      <a href="https://www.marktechpost.com/2024/08/23/meta-presents-sapiens-foundation-for-human-vision-models/" target="_blank" rel="noopener" class="media-logo" title="MarkTechPost">
+        <img src="images/media/marktechpost.png" alt="MarkTechPost" loading="lazy" decoding="async">
+      </a>
+      <a href="https://syncedreview.com/2024/08/27/metas-sapiens-revolutionizing-human-pose-segmentation-and-depth-estimation-with-vision-transformers/" target="_blank" rel="noopener" class="media-logo" title="Synced Review">
+        <img src="images/media/synced.png" alt="Synced Review" loading="lazy" decoding="async">
+      </a>
+      <a href="https://the-decoder.com/metas-new-sapiens-ai-models-can-analyze-human-images-with-unprecedented-accuracy/" target="_blank" rel="noopener" class="media-logo" title="The Decoder">
+        <img src="images/media/thedecoder.png" alt="The Decoder" loading="lazy" decoding="async">
+      </a>
+      <a href="https://en.teqnoverse.com/others/meta-sapiens-models-enhancing-visual-data-understanding/" target="_blank" rel="noopener" class="media-logo" title="TeqnoVerse">
+        <img src="images/media/teqnoverse.png" alt="TeqnoVerse" loading="lazy" decoding="async">
+      </a>
+      <a href="https://www.unite.ai/sapiens-foundation-for-human-vision-models/" target="_blank" rel="noopener" class="media-logo" title="Unite AI">
+        <img src="images/media/uniteai.svg" alt="Unite AI" loading="lazy" decoding="async">
+      </a>
+      <a href="https://www.bristol.ac.uk/news/2023/december/ai-window-into-complex-human-activity.html" target="_blank" rel="noopener" class="media-logo" title="University of Bristol">
+        <img src="images/media/bristol.webp" alt="University of Bristol" loading="lazy" decoding="async">
+      </a>
+      <a href="https://www.cc.gatech.edu/news/new-video-dataset-aims-teach-human-skills-ai-agents" target="_blank" rel="noopener" class="media-logo" title="Georgia Tech">
+        <img src="images/media/gatech.png" alt="Georgia Tech" loading="lazy" decoding="async">
+      </a>
+      <a href="https://btw.media/all/social-platform/meta-launches-ego-exo4d-video-learning-and-multimodal-perception-research/" target="_blank" rel="noopener" class="media-logo" title="BTW Media">
+        <img src="images/media/btw.png" alt="BTW Media" loading="lazy" decoding="async">
+      </a>
+      <a href="https://learnopencv.com/sapiens-human-vision-models/" target="_blank" rel="noopener" class="media-logo" title="LearnOpenCV">
+        <img src="images/media/learnopencv.png" alt="LearnOpenCV" loading="lazy" decoding="async">
+      </a>
+      <a href="https://www.sentisight.ai/meta-enlarges-its-contribution-to-foundation-models-for-computer-vision-with-sapiens/" target="_blank" rel="noopener" class="media-logo" title="SentiSight">
+        <img src="images/media/sentisight.png" alt="SentiSight" loading="lazy" decoding="async">
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Service ===== -->
+<section id="service">
+  <div class="container">
+    <h2 class="section-heading">Service</h2>
+    <div class="service-list">
+      <div class="service-row fade-in"><span class="service-name">CVPR</span><span class="service-years">2018, 2020, 2021, 2022, 2023, 2024, 2025, 2026</span></div>
+      <div class="service-row fade-in"><span class="service-name">ICCV</span><span class="service-years">2019, 2021, 2023, 2025</span></div>
+      <div class="service-row fade-in"><span class="service-name">ECCV</span><span class="service-years">2020, 2022, 2024</span></div>
+      <div class="service-row fade-in"><span class="service-name">NeurIPS</span><span class="service-years">2022, 2023, 2024, 2025</span></div>
+      <div class="service-row fade-in"><span class="service-name">ICLR</span><span class="service-years">2022, 2023, 2024, 2025, 2026</span></div>
+      <div class="service-row fade-in"><span class="service-name">IJCV</span><span class="service-years">2022</span></div>
+      <div class="service-row fade-in"><span class="service-name">TPAMI</span><span class="service-years">2023</span></div>
+      <div class="service-row fade-in"><span class="service-name">WACV</span><span class="service-years">2021, 2022, 2023, 2024</span></div>
+      <div class="service-row fade-in"><span class="service-name">ACCV</span><span class="service-years">2018, 2020, 2021</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Visitors Globe ===== -->
+<section id="visitors" class="globe-section alt-bg">
+  <div class="container">
+    <h2 class="section-heading">Visitors</h2>
+    <div class="globe-wrapper fade-in">
+      <canvas id="globe-canvas" class="globe-canvas"></canvas>
+      <p id="globe-stats" class="globe-stats"></p>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===== Scripts ===== -->
+<script src="js/main.js" defer></script>
+<script type="module" src="js/globe.js"></script>
+
+<!-- GoatCounter analytics (privacy-friendly, no cookies) -->
+<script data-goatcounter="https://rawalkhirodkar.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
 
 </body>
-
 </html>

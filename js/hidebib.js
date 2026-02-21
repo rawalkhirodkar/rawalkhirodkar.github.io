@@ -1,31 +1,3 @@
-// from: http://www.robots.ox.ac.uk/~vedaldi/assets/hidebib.js
-function hideallbibs()
-{
-    var el = document.getElementsByTagName("div") ;
-    for (var i = 0 ; i < el.length ; ++i) {
-        if (el[i].className == "paper") {
-            var bib = el[i].getElementsByTagName("pre") ;
-            if (bib.length > 0) {
-                bib [0] .style.display = 'none' ;
-            }
-        }
-    }
-}
-
-
-function hideallblocks()
-{
-    var el = document.getElementsByTagName("div") ;
-    for (var i = 0 ; i < el.length ; ++i) {
-        if (el[i].className == "paper") {
-            var bib = el[i].getElementsByTagName("i") ;
-            if (bib.length > 0) {
-                bib [0] .style.display = 'none' ;
-            }
-        }
-    }
-}
-
 function togglebib(paperid)
 {
     var paper = document.getElementById(paperid) ;
@@ -37,21 +9,4 @@ function togglebib(paperid)
             bib [0] .style.display = 'none' ;
         }
     }
-}
-
-function toggleblock(blockId)
-{
-   var block = document.getElementById(blockId);
-
-   if (block.style.display == 'none') {
-    block.style.display = 'block' ;
-   } else {
-    block.style.display = 'none' ;
-   }
-}
-
-function hideblock(blockId)
-{
-   var block = document.getElementById(blockId);
-   block.style.display = 'none' ;
 }
