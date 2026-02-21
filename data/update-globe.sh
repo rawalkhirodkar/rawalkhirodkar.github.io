@@ -12,7 +12,7 @@ OUTFILE="$SCRIPT_DIR/globe-data.json"
 : "${GOATCOUNTER_TOKEN:?Set GOATCOUNTER_TOKEN env var}"
 : "${GOATCOUNTER_SITE:?Set GOATCOUNTER_SITE env var (e.g. rawalkhirodkar)}"
 
-API_URL="https://${GOATCOUNTER_SITE}.goatcounter.com/api/v0/stats/locations?limit=50&period-start=2020-01-01&period-end=$(date +%Y-%m-%d)"
+API_URL="https://${GOATCOUNTER_SITE}.goatcounter.com/api/v0/stats/locations?limit=100"
 
 response=$(curl -sf -H "Authorization: Bearer $GOATCOUNTER_TOKEN" "$API_URL")
 
