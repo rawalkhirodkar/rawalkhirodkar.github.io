@@ -1,6 +1,19 @@
 {
-  "period": "3 months",
-  "updated": "2026-02-20",
-  "total_visitors": 0,
-  "locations": []
+  "period": "30 days",
+  "updated": "2026-02-21",
+  "total_visitors": 7,
+  "locations": [
+    {
+      "country": "US",
+      "count": 4
+    },
+    {
+      "country": "IN",
+      "count": 2
+    },
+    {
+      "country": "PK",
+      "count": 1
+    }
+  ]
 }
