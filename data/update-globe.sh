@@ -19,8 +19,8 @@ response=$(curl -sf -H "Authorization: Bearer $GOATCOUNTER_TOKEN" "$API_URL")
 echo "$response" | jq '{
   period: "30 days",
   updated: (now | strftime("%Y-%m-%d")),
-  total_visitors: ([.locations[].count] | add // 0),
-  locations: [.locations[] | {country: .country, count: .count}]
+  total_visitors: ([.stats[]?.count] | add // 0),
+  locations: [.stats[]? | {country: .id, count: .count}]
 }' > "$OUTFILE"
 
-echo "Updated $OUTFILE with $(echo "$response" | jq '.locations | length') locations."
+echo "Updated $OUTFILE with $(echo "$response" | jq '(.stats // []) | length') locations."
