@@ -511,7 +511,7 @@ section.alt-bg {
 
 .service-row {
   display: grid;
-  grid-template-columns: 90px 1fr;
+  grid-template-columns: auto 1fr;
   gap: 8px;
   padding: 2px 0;
   border-bottom: 1px solid var(--border-subtle);
@@ -525,9 +525,10 @@ section.alt-bg {
 .service-name {
   font-weight: 600;
   color: var(--text-primary);
+  white-space: nowrap;
 }
 
-.service-years {
+.service-values {
   color: var(--text-secondary);
 }
 
