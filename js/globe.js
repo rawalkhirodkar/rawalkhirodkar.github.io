@@ -19,6 +19,19 @@ const COORDS = {
   BE: [50.5, 4.5]
 };
 
+// Animate a number counting up from 0 to target
+function animateCount(el, target, duration) {
+  if (target <= 0) return;
+  var start = performance.now();
+  function tick(now) {
+    var t = Math.min((now - start) / duration, 1);
+    var eased = 1 - Math.pow(1 - t, 3); // ease-out cubic
+    el.textContent = Math.round(target * eased).toLocaleString();
+    if (t < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+
 (async function () {
   var canvas = document.getElementById('globe-canvas');
   if (!canvas) return;
@@ -35,7 +48,7 @@ const COORDS = {
   if (ext) ext.loseContext();
   testCanvas = null;
 
-  // Load visitor data
+  // Load visitor data from static JSON (for location markers)
   var markers = [];
   var totalVisitors = 0;
   var countryCount = 0;
@@ -63,12 +76,43 @@ const COORDS = {
     // No data yet — globe renders without markers
   }
 
-  // Update stats display
+  // Try live visitor count from GoatCounter public counter API.
+  // This endpoint works without authentication when "Allow adding visitor
+  // counts on your website" is enabled in GoatCounter site settings.
+  try {
+    var liveRes = await fetch('https://rawalkhirodkar.goatcounter.com/counter/%2F.json');
+    if (liveRes.ok) {
+      var liveData = await liveRes.json();
+      var liveCount = parseInt((liveData.count || '0').replace(/,/g, ''), 10);
+      if (liveCount > totalVisitors) {
+        totalVisitors = liveCount;
+      }
+    }
+  } catch (e) {
+    // Public counter not available — use static data
+  }
+
+  // Update stats display with animated count
   var statsEl = document.getElementById('globe-stats');
   if (statsEl && totalVisitors > 0) {
-    statsEl.innerHTML =
-      '<span class="globe-stats-number">' + totalVisitors.toLocaleString() + '</span> visitors from ' +
-      '<span class="globe-stats-number">' + countryCount + '</span> countries in the last 3 months';
+    var visitorSpan = document.createElement('span');
+    visitorSpan.className = 'globe-stats-number';
+    visitorSpan.textContent = '0';
+
+    statsEl.appendChild(visitorSpan);
+
+    if (countryCount > 0) {
+      var countrySpan = document.createElement('span');
+      countrySpan.className = 'globe-stats-number';
+      countrySpan.textContent = '0';
+
+      statsEl.append(' visitors from ', countrySpan, ' countries');
+      animateCount(countrySpan, countryCount, 1200);
+    } else {
+      statsEl.append(' visitors');
+    }
+
+    animateCount(visitorSpan, totalVisitors, 1500);
   }
 
   // Responsive sizing
