@@ -219,12 +219,8 @@ section.alt-bg {
 }
 
 /* ===== News ===== */
-#news {
-  padding: 24px 0;
-}
-
 #news .section-heading {
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
 .news-list {
@@ -233,26 +229,36 @@ section.alt-bg {
 
 .news-item {
   display: grid;
-  grid-template-columns: 110px 1fr;
-  gap: 8px;
-  padding: 8px 0;
-  border-bottom: 1px solid var(--border-subtle);
-  font-size: 12px;
+  grid-template-columns: 100px 1fr;
+  gap: 12px;
+  padding: 10px 0 10px 16px;
+  border-left: 2px solid var(--border-subtle);
+  font-size: 14px;
+  transition: border-color 0.2s;
 }
 
-.news-item:last-child {
-  border-bottom: none;
+.news-item:hover {
+  border-left-color: var(--accent);
+}
+
+.news-extra {
+  display: none;
+}
+
+.news-list.expanded .news-extra {
+  display: grid;
 }
 
 .news-date {
   font-weight: 600;
   color: var(--accent);
-  font-size: 12px;
+  font-size: 13px;
   white-space: nowrap;
 }
 
 .news-text {
   color: var(--text-secondary);
+  line-height: 1.5;
 }
 
 .news-text a {
@@ -261,17 +267,33 @@ section.alt-bg {
 
 .news-new {
   display: inline-block;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
   text-transform: uppercase;
   color: var(--award-amber);
+  background: var(--award-amber-bg);
+  padding: 1px 6px;
+  border-radius: 4px;
   letter-spacing: 0.05em;
-  animation: pulse-new 1.5s ease-in-out infinite;
+  vertical-align: middle;
 }
 
-@keyframes pulse-new {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.3; }
+.news-toggle {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 6px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.news-toggle:hover {
+  background: rgba(37,99,235,0.12);
 }
 
 /* ===== Affiliations ===== */
@@ -693,8 +715,9 @@ section.alt-bg {
   }
 
   .news-item {
-    grid-template-columns: 1fr;
-    gap: 4px;
+    grid-template-columns: 80px 1fr;
+    gap: 8px;
+    padding: 8px 0 8px 12px;
   }
 
   section {
@@ -792,8 +815,8 @@ button:focus-visible {
     transition: none;
   }
 
-  .news-new {
-    animation: none;
+  .news-item {
+    transition: none;
   }
 
   a, .hero-links a, .pub-actions a {

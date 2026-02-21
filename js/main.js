@@ -103,4 +103,23 @@
       a.setAttribute('rel', 'noopener');
     }
   });
+
+  // News "Show more / Show less" toggle
+  var newsToggle = document.getElementById('news-toggle');
+  var newsList = document.querySelector('.news-list');
+  if (newsToggle && newsList) {
+    newsToggle.addEventListener('click', function () {
+      var expanded = newsList.classList.toggle('expanded');
+      newsToggle.textContent = expanded ? 'Show less' : 'Show more';
+      newsToggle.setAttribute('aria-expanded', expanded);
+      // Observe newly-revealed items for fade-in
+      if (expanded) {
+        newsList.querySelectorAll('.news-extra').forEach(function (el) {
+          if (!el.classList.contains('visible')) {
+            fadeObserver.observe(el);
+          }
+        });
+      }
+    });
+  }
 })();
