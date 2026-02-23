@@ -560,6 +560,11 @@ section.alt-bg {
   color: var(--text-secondary);
 }
 
+.globe-stats-link {
+  text-decoration: none;
+  color: inherit;
+}
+
 .globe-stats-number {
   font-weight: 600;
   color: var(--accent);
