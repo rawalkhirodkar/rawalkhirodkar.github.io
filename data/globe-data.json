@@ -1,19 +1,19 @@
 {
   "period": "all time",
   "updated": "2026-02-24",
-  "total_visitors": 87,
+  "total_visitors": 92,
   "locations": [
     {
       "country": "US",
-      "count": 41
+      "count": 43
+    },
+    {
+      "country": "IN",
+      "count": 20
     },
     {
       "country": "IL",
       "count": 18
-    },
-    {
-      "country": "IN",
-      "count": 17
     },
     {
       "country": "AL",
