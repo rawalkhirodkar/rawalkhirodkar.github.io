@@ -1,27 +1,35 @@
 {
   "period": "all time",
-  "updated": "2026-02-27",
-  "total_visitors": 247,
+  "updated": "2026-02-28",
+  "total_visitors": 385,
   "locations": [
     {
       "country": "US",
-      "count": 121
+      "count": 125
     },
     {
       "country": "IN",
       "count": 82
     },
     {
+      "country": "DE",
+      "count": 68
+    },
+    {
+      "country": "KR",
+      "count": 52
+    },
+    {
       "country": "IL",
       "count": 18
     },
     {
-      "country": "CA",
-      "count": 13
+      "country": "ZA",
+      "count": 16
     },
     {
-      "country": "KR",
-      "count": 2
+      "country": "CA",
+      "count": 13
     },
     {
       "country": "AL",
