@@ -1,11 +1,11 @@
 {
   "period": "all time",
-  "updated": "2026-04-14",
-  "total_visitors": 75,
+  "updated": "2026-04-16",
+  "total_visitors": 71,
   "locations": [
     {
       "country": "US",
-      "count": 33
+      "count": 31
     },
     {
       "country": "IN",
@@ -13,11 +13,7 @@
     },
     {
       "country": "KR",
-      "count": 8
-    },
-    {
-      "country": "CA",
-      "count": 3
+      "count": 7
     },
     {
       "country": "SG",
@@ -28,7 +24,7 @@
       "count": 3
     },
     {
-      "country": "DE",
+      "country": "CA",
       "count": 2
     },
     {
@@ -40,15 +36,19 @@
       "count": 2
     },
     {
-      "country": "LT",
-      "count": 1
-    },
-    {
-      "country": "ES",
-      "count": 1
-    },
-    {
       "country": "CH",
+      "count": 2
+    },
+    {
+      "country": "CN",
+      "count": 1
+    },
+    {
+      "country": "DE",
+      "count": 1
+    },
+    {
+      "country": "LT",
       "count": 1
     }
   ]
