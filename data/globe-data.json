@@ -1,38 +1,22 @@
 {
   "period": "all time",
-  "updated": "2026-04-16",
-  "total_visitors": 71,
+  "updated": "2026-04-18",
+  "total_visitors": 54,
   "locations": [
     {
       "country": "US",
-      "count": 31
+      "count": 22
     },
     {
       "country": "IN",
-      "count": 16
-    },
-    {
-      "country": "KR",
-      "count": 7
-    },
-    {
-      "country": "SG",
-      "count": 3
-    },
-    {
-      "country": "GB",
-      "count": 3
-    },
-    {
-      "country": "CA",
-      "count": 2
-    },
-    {
-      "country": "HK",
-      "count": 2
+      "count": 18
     },
     {
       "country": "JP",
+      "count": 2
+    },
+    {
+      "country": "KR",
       "count": 2
     },
     {
@@ -40,11 +24,27 @@
       "count": 2
     },
     {
+      "country": "GB",
+      "count": 2
+    },
+    {
+      "country": "BD",
+      "count": 1
+    },
+    {
       "country": "CN",
       "count": 1
     },
     {
       "country": "DE",
+      "count": 1
+    },
+    {
+      "country": "HK",
+      "count": 1
+    },
+    {
+      "country": "NL",
       "count": 1
     },
     {
