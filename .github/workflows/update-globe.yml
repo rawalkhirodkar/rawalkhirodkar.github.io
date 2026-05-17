@@ -2,7 +2,7 @@ name: Update Globe Visitor Data
 
 on:
   schedule:
-    - cron: '0 6 * * *'    # Every day at 06:00 UTC
+    - cron: '0 13 * * *'   # Every day at 13:00 UTC = 8 AM EST (9 AM EDT in summer)
   workflow_dispatch:        # Allow manual trigger
 
 jobs:
