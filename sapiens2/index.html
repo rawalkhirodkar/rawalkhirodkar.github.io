@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#f6f6f6" />
+  <title>Sapiens2</title>
+
+  <meta name="description" content="Sapiens2 — a family of high-resolution transformers for human-centric vision. ICLR 2026, Meta Reality Labs." />
+  <meta name="keywords" content="Sapiens2, Foundation Model, Human Vision, Pose Estimation, Segmentation, Normals, Albedo, Pointmap, ICLR 2026, Meta Reality Labs" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sapiens2 | Foundation Models for Human Vision at High Resolution" />
+  <meta property="og:description" content="A family of 0.4B–5B-parameter transformers for human-centric vision, pretrained on 1B human images, with native 1K and hierarchical 4K variants." />
+  <meta property="og:image" content="https://rawalkhirodkar.github.io/posters/sapiens2_sapiens2.jpg" />
+  <meta property="og:url" content="https://rawalkhirodkar.github.io/sapiens2/" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sapiens2 | Foundation Models for Human Vision at High Resolution" />
+  <meta name="twitter:description" content="A family of 0.4B–5B-parameter transformers for human-centric vision. ICLR 2026, Meta Reality Labs." />
+  <meta name="twitter:image" content="https://rawalkhirodkar.github.io/posters/sapiens2_sapiens2.jpg" />
+
+  <link rel="shortcut icon" type="image/svg+xml" href="assets/meta-logo.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZHJY71D184"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZHJY71D184');
+  </script>
+</head>
+
+<body>
+
+<!-- Scroll-spy section nav -->
+<nav class="scroll-nav" id="scrollNav" aria-label="Section navigation">
+  <a class="scroll-dot is-active" href="#top"          data-target="top"          aria-label="Top"><span>00</span></a>
+  <a class="scroll-dot"           href="#models"       data-target="models"       aria-label="Model Family"><span>01</span></a>
+  <a class="scroll-dot"           href="#pretraining"  data-target="pretraining"  aria-label="Pretraining"><span>02</span></a>
+  <a class="scroll-dot"           href="#emergent"     data-target="emergent"     aria-label="Emergent Capabilities"><span>03</span></a>
+  <a class="scroll-dot"           href="#segmentation" data-target="segmentation" aria-label="Segmentation"><span>04</span></a>
+  <a class="scroll-dot"           href="#normals"      data-target="normals"      aria-label="Normals"><span>05</span></a>
+</nav>
+
+
+<!-- ============================================================
+     Hero
+     ============================================================ -->
+<section class="hero" id="top">
+  <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="">
+    <source src="sapiens2.mp4" type="video/mp4" />
+  </video>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <h1 class="hero-title">Sapiens<span class="hero-title-num">2</span></h1>
+    <p class="hero-tagline">ICLR 2026</p>
+    <p class="hero-authors">
+      <a href="https://rawalkhirodkar.github.io/" target="_blank" rel="noopener">Rawal Khirodkar</a> &nbsp;·&nbsp;
+      <a href="https://www.linkedin.com/in/hewen/" target="_blank" rel="noopener">He Wen</a> &nbsp;·&nbsp;
+      <a href="https://una-dinosauria.github.io/" target="_blank" rel="noopener">Julieta Martinez</a> &nbsp;·&nbsp;
+      <a href="https://www.linkedin.com/in/ydong142857/" target="_blank" rel="noopener">Yuan Dong</a> &nbsp;·&nbsp;
+      <a href="https://about.meta.com/realitylabs/" target="_blank" rel="noopener">Su Zhaoen</a> &nbsp;·&nbsp;
+      <a href="https://shunsukesaito.github.io/" target="_blank" rel="noopener">Shunsuke Saito</a>
+      <br />
+      <span class="affiliation">Meta</span>
+    </p>
+    <div class="hero-actions">
+      <a class="btn" href="https://arxiv.org/abs/2604.21681" target="_blank" rel="noopener">Paper</a>
+      <a class="btn" href="https://github.com/facebookresearch/sapiens2" target="_blank" rel="noopener">Code</a>
+      <a class="btn" href="https://huggingface.co/facebook/sapiens2" target="_blank" rel="noopener">Models</a>
+      <a class="btn" href="https://huggingface.co/collections/facebook/sapiens2" target="_blank" rel="noopener">Demo</a>
+    </div>
+  </div>
+
+  <a class="scroll-hint" href="#segmentation" aria-label="Scroll to results">Scroll</a>
+</section>
+
+<!-- ============================================================
+     Models
+     ============================================================ -->
+<main>
+<section class="section" id="models">
+  <div class="section-header">
+    <span class="section-num">01 / 05</span>
+    <h2>Model Family</h2>
+  </div>
+
+  <div class="models-grid" id="models-grid"></div>
+</section>
+
+<hr class="divider" />
+
+<!-- ============================================================
+     Pretraining
+     ============================================================ -->
+<section class="section" id="pretraining">
+  <div class="section-header">
+    <span class="section-num">02 / 05</span>
+    <h2>Pretraining</h2>
+  </div>
+
+
+  <p class="res-caption" style="text-align: center;">
+    Sapiens2 is pretrained on a curated corpus of <strong>1 billion</strong> human images
+    covering broad demographics, poses, and contexts.
+  </p>
+
+  <div class="ds-globes" id="ds-globes">
+    <div class="ds-globe-wrap" data-set="v1" data-count="500" data-radius="160">
+      <svg class="ds-globe" width="346" height="346" viewBox="-173 -173 346 346" aria-hidden="true">
+        <defs>
+          <radialGradient id="ds-sphere-v1" cx="35%" cy="30%" r="80%">
+            <stop offset="0%"   stop-color="#f8efed"/>
+            <stop offset="55%"  stop-color="#e4cdc8"/>
+            <stop offset="100%" stop-color="#b89a93"/>
+          </radialGradient>
+          <radialGradient id="ds-spec-v1" cx="50%" cy="50%" r="50%">
+            <stop offset="0%"   stop-color="rgba(255,255,255,0.85)"/>
+            <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+          </radialGradient>
+        </defs>
+        <circle class="ds-sphere" cx="0" cy="0" r="160" fill="url(#ds-sphere-v1)"/>
+        <ellipse class="ds-specular" cx="-51" cy="-64" rx="59" ry="32"
+                 fill="url(#ds-spec-v1)" opacity="0.6"/>
+        <g class="ds-dots"></g>
+      </svg>
+      <div class="ds-globe-label">
+        <span class="ds-globe-name">Sapiens</span>
+        <span class="ds-globe-count">300 M images</span>
+      </div>
+    </div>
+
+    <div class="ds-globe-wrap" data-set="v2" data-count="1500" data-radius="293">
+      <svg class="ds-globe" width="633" height="633" viewBox="-317 -317 633 633" aria-hidden="true">
+        <defs>
+          <radialGradient id="ds-sphere-v2" cx="35%" cy="30%" r="80%">
+            <stop offset="0%"   stop-color="#eef2f6"/>
+            <stop offset="55%"  stop-color="#c5d0db"/>
+            <stop offset="100%" stop-color="#90a0b0"/>
+          </radialGradient>
+          <radialGradient id="ds-spec-v2" cx="50%" cy="50%" r="50%">
+            <stop offset="0%"   stop-color="rgba(255,255,255,0.85)"/>
+            <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+          </radialGradient>
+        </defs>
+        <circle class="ds-sphere" cx="0" cy="0" r="293" fill="url(#ds-sphere-v2)"/>
+        <ellipse class="ds-specular" cx="-94" cy="-117" rx="107" ry="59"
+                 fill="url(#ds-spec-v2)" opacity="0.6"/>
+        <g class="ds-dots"></g>
+      </svg>
+      <div class="ds-globe-label">
+        <span class="ds-globe-name">Sapiens 2</span>
+        <span class="ds-globe-count">1 Billion images</span>
+      </div>
+    </div>
+
+    <div class="ds-tooltip" id="ds-tooltip" aria-hidden="true">
+      <img id="ds-tooltip-img" src="" alt=""/>
+    </div>
+  </div>
+
+  <p class="ptfig-intro">
+    Sapiens2 adopts a unified pretraining objective that combines
+    <strong>dense and sparse contrastive losses</strong> with
+    <strong>masked pixel reconstruction</strong> — yielding human
+    representations that are simultaneously semantic and faithful to fine image detail.
+  </p>
+
+  <div class="ptfig">
+    <svg viewBox="0 0 920 380" class="ptfig-svg" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="ptArr" viewBox="0 0 10 10" refX="9" refY="5"
+                markerWidth="7" markerHeight="7" orient="auto">
+          <path d="M0,0 L10,5 L0,10 z" fill="#4a4a4a" />
+        </marker>
+        <clipPath id="ptClipImg"><rect x="0" y="0" width="100" height="130" /></clipPath>
+        <clipPath id="ptClipView"><rect x="0" y="0" width="140" height="100" /></clipPath>
+        <clipPath id="ptClipRecon"><rect x="0" y="0" width="80" height="80" /></clipPath>
+      </defs>
+
+      <!-- Input image -->
+      <g transform="translate(10,140)" clip-path="url(#ptClipImg)">
+        <image href="assets/pretrain-imgs/50.jpg" x="-10" y="-22" width="120" height="160"
+               preserveAspectRatio="xMidYMid slice" />
+      </g>
+      <text x="60" y="290" text-anchor="middle" class="ptfig-lbl">Image</text>
+
+      <!-- View1 (top): image + 4x4 patch grid + blue label -->
+      <g transform="translate(140,30)" clip-path="url(#ptClipView)">
+        <image href="assets/pretrain-imgs/50.jpg" x="-5" y="-15" width="150" height="130"
+               preserveAspectRatio="xMidYMid slice" />
+      </g>
+      <g transform="translate(140,30)" stroke="#ffffff" stroke-width="1.2" fill="none" opacity="0.85">
+        <line x1="35"  y1="0" x2="35"  y2="100" />
+        <line x1="70"  y1="0" x2="70"  y2="100" />
+        <line x1="105" y1="0" x2="105" y2="100" />
+        <line x1="0"   y1="25" x2="140" y2="25" />
+        <line x1="0"   y1="50" x2="140" y2="50" />
+        <line x1="0"   y1="75" x2="140" y2="75" />
+      </g>
+      <text x="210" y="148" text-anchor="middle" class="ptfig-view-lbl" fill="#3a78b8">View1</text>
+
+      <!-- View2 (bottom) -->
+      <g transform="translate(140,240)" clip-path="url(#ptClipView)">
+        <image href="assets/pretrain-imgs/50.jpg" x="-5" y="-65" width="150" height="160"
+               preserveAspectRatio="xMidYMid slice" />
+      </g>
+      <g transform="translate(140,240)" stroke="#ffffff" stroke-width="1.2" fill="none" opacity="0.85">
+        <line x1="35"  y1="0" x2="35"  y2="100" />
+        <line x1="70"  y1="0" x2="70"  y2="100" />
+        <line x1="105" y1="0" x2="105" y2="100" />
+        <line x1="0"   y1="25" x2="140" y2="25" />
+        <line x1="0"   y1="50" x2="140" y2="50" />
+        <line x1="0"   y1="75" x2="140" y2="75" />
+      </g>
+      <text x="210" y="358" text-anchor="middle" class="ptfig-view-lbl" fill="#d97a55">View2</text>
+
+      <!-- Token strip 1 (blue, View1 → Encoder1) -->
+      <g transform="translate(303,30)">
+        <rect x="0"  y="0"  width="11" height="22" rx="1" fill="#c4dcef" />
+        <rect x="13" y="0"  width="11" height="22" rx="1" fill="#c4dcef" />
+        <rect x="0"  y="24" width="11" height="22" rx="1" fill="#c4dcef" />
+        <rect x="13" y="24" width="11" height="22" rx="1" fill="#c4dcef" />
+        <rect x="0"  y="48" width="11" height="22" rx="1" fill="#c4dcef" />
+        <rect x="13" y="48" width="11" height="22" rx="1" fill="#c4dcef" />
+        <rect x="0"  y="72" width="11" height="22" rx="1" fill="#c4dcef" />
+        <rect x="13" y="72" width="11" height="22" rx="1" fill="#c4dcef" />
+      </g>
+
+      <!-- Token strip 2 (orange, View2 → Encoder2) -->
+      <g transform="translate(303,240)">
+        <rect x="0"  y="0"  width="11" height="22" rx="1" fill="#f5b89e" />
+        <rect x="13" y="0"  width="11" height="22" rx="1" fill="#f5b89e" />
+        <rect x="0"  y="24" width="11" height="22" rx="1" fill="#f5b89e" />
+        <rect x="13" y="24" width="11" height="22" rx="1" fill="#f5b89e" />
+        <rect x="0"  y="48" width="11" height="22" rx="1" fill="#f5b89e" />
+        <rect x="13" y="48" width="11" height="22" rx="1" fill="#f5b89e" />
+        <rect x="0"  y="72" width="11" height="22" rx="1" fill="#f5b89e" />
+        <rect x="13" y="72" width="11" height="22" rx="1" fill="#f5b89e" />
+      </g>
+
+      <!-- Encoder 1 (student, pink) -->
+      <g class="ptfig-mod" data-tip="Student Encoder · trained by gradients from both losses">
+        <rect x="350" y="15"  width="190" height="130" rx="20" fill="#f3cccc" />
+        <text x="445" y="86" text-anchor="middle" class="ptfig-box-lbl">Encoder</text>
+        <title>Student Encoder — receives the masked View1 and is updated by ℒ_mae + ℒ_cl</title>
+      </g>
+
+      <!-- Encoder 2 (teacher, blue) -->
+      <g class="ptfig-mod" data-tip="Teacher Encoder · EMA of the student, no gradients">
+        <rect x="350" y="225" width="190" height="130" rx="20" fill="#c8d6ec" />
+        <text x="445" y="296" text-anchor="middle" class="ptfig-box-lbl">Encoder</text>
+        <title>Teacher Encoder — EMA-updated from the student; provides contrastive targets</title>
+      </g>
+
+      <!-- EMA vertical arrow between encoders -->
+      <line class="ptfig-ema" x1="445" y1="145" x2="445" y2="225"
+            stroke="#4a4a4a" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#ptArr)" />
+      <text x="453" y="190" class="ptfig-small">EMA</text>
+
+      <!-- MAE branch group -->
+      <g class="ptfig-mae">
+        <!-- Patch Decoder (top right) -->
+        <g class="ptfig-mod">
+          <rect x="582" y="30" width="100" height="80" rx="14" fill="#f3cccc" />
+          <text x="632" y="65" text-anchor="middle" class="ptfig-box-lbl-sm">Patch</text>
+          <text x="632" y="83" text-anchor="middle" class="ptfig-box-lbl-sm">Decoder</text>
+          <title>Patch Decoder — reconstructs masked patches in pixel space (MAE objective)</title>
+        </g>
+
+        <!-- Patch decoder output tokens (mixed blue/orange) -->
+        <g transform="translate(705,30)">
+          <rect x="0"  y="0"  width="11" height="20" rx="1" fill="#c4dcef" />
+          <rect x="13" y="0"  width="11" height="20" rx="1" fill="#f5b89e" />
+          <rect x="0"  y="22" width="11" height="20" rx="1" fill="#f5b89e" />
+          <rect x="13" y="22" width="11" height="20" rx="1" fill="#c4dcef" />
+          <rect x="0"  y="44" width="11" height="20" rx="1" fill="#c4dcef" />
+          <rect x="13" y="44" width="11" height="20" rx="1" fill="#f5b89e" />
+          <rect x="0"  y="66" width="11" height="20" rx="1" fill="#f5b89e" />
+          <rect x="13" y="66" width="11" height="20" rx="1" fill="#c4dcef" />
+        </g>
+
+        <!-- Reconstructed image patches (mini image preview) -->
+        <g transform="translate(754,30)" clip-path="url(#ptClipRecon)">
+          <image href="assets/pretrain-imgs/50.jpg" x="-5" y="-20" width="100" height="120"
+                 preserveAspectRatio="xMidYMid slice" />
+          <g stroke="#ffffff" stroke-width="0.8" fill="none" opacity="0.85">
+            <line x1="20" y1="0" x2="20" y2="80" />
+            <line x1="40" y1="0" x2="40" y2="80" />
+            <line x1="60" y1="0" x2="60" y2="80" />
+            <line x1="0"  y1="20" x2="80" y2="20" />
+            <line x1="0"  y1="40" x2="80" y2="40" />
+            <line x1="0"  y1="60" x2="80" y2="60" />
+          </g>
+        </g>
+
+        <!-- ℒ_mae dashed bracket above -->
+        <path d="M746,18 L839,18 M746,18 L746,28 M839,18 L839,28"
+              stroke="#4a4a4a" stroke-width="1" stroke-dasharray="3,3" fill="none" />
+        <text x="854" y="22" class="ptfig-loss-lbl"><tspan font-style="italic">ℒ</tspan><tspan baseline-shift="-30%" font-size="10">mae</tspan></text>
+      </g>
+
+      <!-- Contrastive branch group -->
+      <g class="ptfig-cl">
+        <!-- CLS Decoder (top, from Encoder 1) -->
+        <g class="ptfig-mod">
+          <rect x="582" y="155" width="100" height="62" rx="12" fill="#f3cccc" />
+          <text x="632" y="180" text-anchor="middle" class="ptfig-box-lbl-sm">CLS</text>
+          <text x="632" y="198" text-anchor="middle" class="ptfig-box-lbl-sm">Decoder</text>
+          <title>Student CLS Decoder — projects to the contrastive embedding</title>
+        </g>
+
+        <!-- CLS Decoder (bottom, from Encoder 2) -->
+        <g class="ptfig-mod">
+          <rect x="582" y="248" width="100" height="62" rx="12" fill="#c8d6ec" />
+          <text x="632" y="273" text-anchor="middle" class="ptfig-box-lbl-sm">CLS</text>
+          <text x="632" y="291" text-anchor="middle" class="ptfig-box-lbl-sm">Decoder</text>
+          <title>Teacher CLS Decoder — EMA-updated target for the student</title>
+        </g>
+
+        <!-- EMA arrow between CLS Decoders -->
+        <line class="ptfig-ema" x1="632" y1="217" x2="632" y2="248"
+              stroke="#4a4a4a" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#ptArr)" />
+        <text x="640" y="237" class="ptfig-small">EMA</text>
+
+        <!-- CLS output 1 (blue token) -->
+        <rect x="705" y="174" width="22" height="22" rx="2" fill="#c4dcef" />
+        <!-- CLS output 2 (orange token) -->
+        <rect x="705" y="268" width="22" height="22" rx="2" fill="#f5b89e" />
+
+        <!-- stop grad label -->
+        <text x="678" y="293" text-anchor="end" class="ptfig-small">stop</text>
+        <text x="678" y="304" text-anchor="end" class="ptfig-small">grad</text>
+
+        <!-- ℒ_cl dashed bracket on right (top output ↔ bottom output) -->
+        <path d="M759,185 L831,185 L831,279 L759,279"
+              stroke="#4a4a4a" stroke-width="1" stroke-dasharray="3,3" fill="none" />
+        <text x="844" y="237" class="ptfig-loss-lbl"><tspan font-style="italic">ℒ</tspan><tspan baseline-shift="-30%" font-size="10">cl</tspan></text>
+      </g>
+
+      <!-- Connecting arrows -->
+      <g stroke="#4a4a4a" stroke-width="1.2" fill="none">
+        <g>
+          <!-- Image → View1 / View2 (symmetric curves) -->
+          <path d="M110,185 C130,185 130,90 140,80"   marker-end="url(#ptArr)" />
+          <path d="M110,225 C130,225 130,280 140,290" marker-end="url(#ptArr)" />
+          <!-- View → tokens → Encoder (both arrows = 21px, symmetric around token strip) -->
+          <line x1="281" y1="80"  x2="302" y2="80"  marker-end="url(#ptArr)" />
+          <line x1="328" y1="80"  x2="349" y2="80"  marker-end="url(#ptArr)" />
+          <line x1="281" y1="290" x2="302" y2="290" marker-end="url(#ptArr)" />
+          <line x1="328" y1="290" x2="349" y2="290" marker-end="url(#ptArr)" />
+        </g>
+        <g class="ptfig-mae">
+          <!-- Encoder1 → Patch Decoder (40px inter-module) -->
+          <line x1="540" y1="65"  x2="580" y2="65"  marker-end="url(#ptArr)" />
+          <!-- Patch Decoder → tokens out → recon (both 21px to match left side) -->
+          <line x1="682" y1="65"  x2="703" y2="65"  marker-end="url(#ptArr)" />
+          <line x1="731" y1="65"  x2="752" y2="65"  marker-end="url(#ptArr)" />
+        </g>
+        <g class="ptfig-cl">
+          <!-- Encoder1 → CLS Decoder top (diagonal) -->
+          <line x1="540" y1="100" x2="580" y2="185" marker-end="url(#ptArr)" />
+          <!-- Encoder2 → CLS Decoder bottom (40px) -->
+          <line x1="540" y1="275" x2="580" y2="278" marker-end="url(#ptArr)" />
+          <!-- CLS Decoders → CLS tokens (both 21px) -->
+          <line x1="682" y1="185" x2="703" y2="185" marker-end="url(#ptArr)" />
+          <line x1="682" y1="278" x2="703" y2="278" marker-end="url(#ptArr)" />
+        </g>
+      </g>
+    </svg>
+  </div>
+
+</section>
+
+<hr class="divider" />
+
+<!-- ============================================================
+     Emergent Capabilities
+     ============================================================ -->
+<section class="section" id="emergent">
+  <div class="section-header">
+    <span class="section-num">03 / 05</span>
+    <h2>Emergent Capabilities</h2>
+  </div>
+
+  <p class="res-caption" id="cross-caption">
+    Without any task supervision, <strong>Sapiens2</strong> learns dense features that align
+    semantically across subjects — hover a patch on any subject and cosine similarity lights up
+    the corresponding patches on the others.
+  </p>
+
+  <div class="cross-showcase" id="cross-showcase">
+    <div class="cross-subject" data-idx="0">
+      <div class="cross-img" id="cross-img-0">
+        <img src="assets/cross/0.jpg" draggable="false" alt="" loading="lazy" />
+        <div class="cross-grid-overlay" aria-hidden="true"></div>
+        <div class="cross-cell" id="cross-cell-0" aria-hidden="true"></div>
+      </div>
+      <canvas class="cross-hm" id="cross-hm-0" width="48" height="64" aria-hidden="true"></canvas>
+    </div>
+    <div class="cross-subject" data-idx="1">
+      <div class="cross-img" id="cross-img-1">
+        <img src="assets/cross/1.jpg" draggable="false" alt="" loading="lazy" />
+        <div class="cross-grid-overlay" aria-hidden="true"></div>
+        <div class="cross-cell" id="cross-cell-1" aria-hidden="true"></div>
+      </div>
+      <canvas class="cross-hm" id="cross-hm-1" width="48" height="64" aria-hidden="true"></canvas>
+    </div>
+    <div class="cross-subject" data-idx="2">
+      <div class="cross-img" id="cross-img-2">
+        <img src="assets/cross/2.jpg" draggable="false" alt="" loading="lazy" />
+        <div class="cross-grid-overlay" aria-hidden="true"></div>
+        <div class="cross-cell" id="cross-cell-2" aria-hidden="true"></div>
+      </div>
+      <canvas class="cross-hm" id="cross-hm-2" width="48" height="64" aria-hidden="true"></canvas>
+    </div>
+    <div class="cross-subject" data-idx="3">
+      <div class="cross-img" id="cross-img-3">
+        <img src="assets/cross/3.jpg" draggable="false" alt="" loading="lazy" />
+        <div class="cross-grid-overlay" aria-hidden="true"></div>
+        <div class="cross-cell" id="cross-cell-3" aria-hidden="true"></div>
+      </div>
+      <canvas class="cross-hm" id="cross-hm-3" width="48" height="64" aria-hidden="true"></canvas>
+    </div>
+    <div class="cross-zoom-card">
+      <div class="cross-zoom" id="cross-zoom" aria-hidden="true"></div>
+      <p class="cross-zoom-coord" id="cross-coord">Subject A · (24, 22)</p>
+    </div>
+  </div>
+
+  <!-- TEMP HIDDEN: sparse CLS nearest-neighbor retrieval section
+  <hr class="divider" />
+
+  <p class="res-caption" style="text-align: center;">
+      Top-5 nearest neighbors of each query computed from the
+      <strong>Sapiens2 5B CLS token</strong> over the 64-sample preview gallery
+      using cosine similarity.
+    </p>
+
+  <div class="retrieval">
+    <div class="retrieval-grid" id="retrieval-grid">
+      <div class="retrieval-head retrieval-head--q">Query</div>
+      <div class="retrieval-head retrieval-head--r">Top-5 nearest neighbors  ·  cosine on CLS token</div>
+
+      <img class="retrieval-q" src="assets/pretrain-imgs/0.jpg"  alt="" />
+      <div class="retrieval-r">
+        <img src="assets/pretrain-imgs/38.jpg" alt="" />
+        <img src="assets/pretrain-imgs/28.jpg" alt="" />
+        <img src="assets/pretrain-imgs/47.jpg" alt="" />
+        <img src="assets/pretrain-imgs/61.jpg" alt="" />
+        <img src="assets/pretrain-imgs/41.jpg" alt="" />
+      </div>
+
+      <img class="retrieval-q" src="assets/pretrain-imgs/35.jpg" alt="" />
+      <div class="retrieval-r">
+        <img src="assets/pretrain-imgs/61.jpg" alt="" />
+        <img src="assets/pretrain-imgs/9.jpg"  alt="" />
+        <img src="assets/pretrain-imgs/3.jpg"  alt="" />
+        <img src="assets/pretrain-imgs/57.jpg" alt="" />
+        <img src="assets/pretrain-imgs/28.jpg" alt="" />
+      </div>
+
+      <img class="retrieval-q" src="assets/pretrain-imgs/52.jpg" alt="" />
+      <div class="retrieval-r">
+        <img src="assets/pretrain-imgs/28.jpg" alt="" />
+        <img src="assets/pretrain-imgs/9.jpg"  alt="" />
+        <img src="assets/pretrain-imgs/57.jpg" alt="" />
+        <img src="assets/pretrain-imgs/61.jpg" alt="" />
+        <img src="assets/pretrain-imgs/3.jpg"  alt="" />
+      </div>
+
+      <img class="retrieval-q" src="assets/pretrain-imgs/42.jpg" alt="" />
+      <div class="retrieval-r">
+        <img src="assets/pretrain-imgs/61.jpg" alt="" />
+        <img src="assets/pretrain-imgs/22.jpg" alt="" />
+        <img src="assets/pretrain-imgs/17.jpg" alt="" />
+        <img src="assets/pretrain-imgs/3.jpg"  alt="" />
+        <img src="assets/pretrain-imgs/6.jpg"  alt="" />
+      </div>
+
+      <img class="retrieval-q" src="assets/pretrain-imgs/8.jpg"  alt="" />
+      <div class="retrieval-r">
+        <img src="assets/pretrain-imgs/62.jpg" alt="" />
+        <img src="assets/pretrain-imgs/2.jpg"  alt="" />
+        <img src="assets/pretrain-imgs/61.jpg" alt="" />
+        <img src="assets/pretrain-imgs/6.jpg"  alt="" />
+        <img src="assets/pretrain-imgs/41.jpg" alt="" />
+      </div>
+    </div>
+  </div>
+  -->
+</section>
+
+<hr class="divider" />
+
+<!-- ============================================================
+     Results — Segmentation
+     ============================================================ -->
+<section class="section" id="segmentation">
+  <div class="section-header">
+    <span class="section-num">04 / 05</span>
+    <h2>Segmentation</h2>
+  </div>
+
+  <div class="gallery-grid" id="seg-grid">
+    <!-- pairs injected -->
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- ============================================================
+     Results — Surface Normals
+     ============================================================ -->
+<section class="section" id="normals">
+  <div class="section-header">
+    <span class="section-num">05 / 05</span>
+    <h2>Normal</h2>
+  </div>
+
+  <div class="gallery-grid" id="normal-grid">
+    <!-- pairs injected -->
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- ============================================================
+     Citation (copyable)
+     ============================================================ -->
+<section class="cite" id="citation">
+  <div class="cite-card">
+    <button class="copy-btn" id="copy-bibtex" type="button" aria-label="Copy BibTeX">Copy</button>
+<pre id="bibtex">@inproceedings{khirodkar2026sapiens2,
+  title     = {Sapiens2: Foundation for Human Vision},
+  author    = {Khirodkar, Rawal and Wen, He and Martinez, Julieta and Dong, Yuan and Zhaoen, Su and Saito, Shunsuke},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2026}
+}</pre>
+  </div>
+</section>
+</main>
+
+<!-- ============================================================
+     Behavior
+     ============================================================ -->
+<script>
+(function () {
+  'use strict';
+
+  // ---------- Hero video: belt-and-suspenders loop guard ----------
+  (function ensureHeroLoop() {
+    const v = document.querySelector('.hero-video');
+    if (!v) return;
+    const replay = () => { v.currentTime = 0; v.play().catch(() => {}); };
+    v.addEventListener('ended', replay);
+    v.addEventListener('pause', () => {
+      // some browsers fire pause at loop-end; re-arm playback
+      if (!v.ended && document.visibilityState === 'visible') {
+        v.play().catch(() => {});
+      }
+    });
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible' && v.paused) replay();
+    });
+  })();
+
+  // ---------- Scroll-spy nav (dot strip on right) ----------
+  (function scrollSpy() {
+    const dots = Array.from(document.querySelectorAll('.scroll-dot'));
+    if (!dots.length || !('IntersectionObserver' in window)) return;
+    const map = new Map();
+    dots.forEach(d => {
+      const target = document.getElementById(d.dataset.target);
+      if (target) map.set(target, d);
+    });
+    if (!map.size) return;
+
+    // Activate the section whose top is closest to the viewport top.
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        const dot = map.get(e.target);
+        if (!dot) return;
+        if (e.isIntersecting) dot.dataset.io = '1';
+        else                  dot.dataset.io = '0';
+      });
+      // Choose the active = first currently-intersecting, else the previous one.
+      let activeDot = null;
+      for (const d of dots) { if (d.dataset.io === '1') { activeDot = d; break; } }
+      if (activeDot) {
+        dots.forEach(d => d.classList.toggle('is-active', d === activeDot));
+      }
+    }, { rootMargin: '-30% 0px -60% 0px', threshold: 0 });
+    map.forEach((dot, sec) => io.observe(sec));
+  })();
+
+  // ---------- Gallery data ----------
+  const SEG_IDS    = ['01','08','09','11','12','14','28','32'];
+  const NORMAL_IDS = ['05','08','11','14','22','28','29','32'];
+
+  function pairCard(id, kind) {
+    // kind: 'seg' | 'normal'  — single stacked video drawn to canvas with a draggable slider
+    const right = kind === 'seg' ? 'Segmentation' : 'Normals';
+    return `
+      <article class="pair cmp" data-id="${id}" data-kind="${kind}">
+        <figure class="cmp-stack">
+          <canvas class="cmp-canvas"></canvas>
+          <video muted loop playsinline preload="none" data-src="assets/gallery/${kind}/${id}_pair.mp4"></video>
+          <div class="cmp-divider"><div class="cmp-handle" aria-label="Compare slider"></div></div>
+          <figcaption class="cap-left">Input</figcaption>
+          <figcaption class="cap-right">${right}</figcaption>
+        </figure>
+      </article>`;
+  }
+
+  function buildGrid(containerId, ids, kind) {
+    const el = document.getElementById(containerId);
+    if (!el) return;
+    el.innerHTML = ids.map(id => pairCard(id, kind)).join('');
+  }
+
+  buildGrid('seg-grid',    SEG_IDS,    'seg');
+  buildGrid('normal-grid', NORMAL_IDS, 'normal');
+
+  // ---------- Compare slider: one stacked video → canvas, draggable divider ----------
+  function initCompare(pair) {
+    const video    = pair.querySelector('video');
+    const canvas   = pair.querySelector('.cmp-canvas');
+    const divider  = pair.querySelector('.cmp-divider');
+    if (!video || !canvas || !divider) return;
+
+    const ctx = canvas.getContext('2d');
+    let dividerPos = 0.5;   // normalized 0..1 (left of divider = INPUT, right = OUTPUT)
+    let rafId = null;
+
+    function sizeCanvas() {
+      const sw = video.videoWidth  || 2560;
+      const sh = video.videoHeight || 720;
+      const halfW = sw / 2;
+      if (canvas.width !== halfW || canvas.height !== sh) {
+        canvas.width  = halfW;
+        canvas.height = sh;
+      }
+    }
+
+    function render() {
+      if (video.readyState >= 2) {
+        sizeCanvas();
+        const halfW = canvas.width;
+        const h     = canvas.height;
+        const divX  = Math.round(dividerPos * halfW);
+        // Left of divider: INPUT (source x = 0..divX)
+        if (divX > 0) {
+          ctx.drawImage(video, 0, 0, divX, h, 0, 0, divX, h);
+        }
+        // Right of divider: OUTPUT (source x = halfW+divX..2*halfW)
+        if (divX < halfW) {
+          ctx.drawImage(video, halfW + divX, 0, halfW - divX, h, divX, 0, halfW - divX, h);
+        }
+      }
+      rafId = requestAnimationFrame(render);
+    }
+
+    function setDivider(p) {
+      dividerPos = Math.max(0, Math.min(1, p));
+      divider.style.left = (dividerPos * 100) + '%';
+      pair.setAttribute('aria-valuenow', Math.round(dividerPos * 100));
+    }
+    function setDivFromEvent(e) {
+      const rect = canvas.getBoundingClientRect();
+      const x = (e.clientX != null ? e.clientX : (e.touches && e.touches[0].clientX) || 0) - rect.left;
+      setDivider(x / rect.width);
+    }
+
+    let dragging = false;
+    pair.addEventListener('pointerdown', (e) => {
+      dragging = true;
+      setDivFromEvent(e);
+      try { pair.setPointerCapture(e.pointerId); } catch {}
+      e.preventDefault();
+    });
+    pair.addEventListener('pointermove', (e) => { if (dragging) setDivFromEvent(e); });
+    pair.addEventListener('pointerup',   () => { dragging = false; });
+    pair.addEventListener('pointercancel', () => { dragging = false; });
+
+    // Keyboard a11y: arrow keys move ±2% (±10% with Shift), Home/End snap.
+    pair.tabIndex = 0;
+    pair.setAttribute('role', 'slider');
+    pair.setAttribute('aria-label', 'Compare input and output');
+    pair.setAttribute('aria-valuemin', '0');
+    pair.setAttribute('aria-valuemax', '100');
+    pair.setAttribute('aria-valuenow', '50');
+    pair.addEventListener('keydown', (e) => {
+      const step = e.shiftKey ? 0.10 : 0.02;
+      switch (e.key) {
+        case 'ArrowLeft':  setDivider(dividerPos - step); e.preventDefault(); break;
+        case 'ArrowRight': setDivider(dividerPos + step); e.preventDefault(); break;
+        case 'Home':       setDivider(0); e.preventDefault(); break;
+        case 'End':        setDivider(1); e.preventDefault(); break;
+      }
+    });
+
+    video.addEventListener('loadedmetadata', () => {
+      sizeCanvas();
+      video.play().catch(() => {});
+      if (!rafId) render();
+    }, { once: true });
+
+    pair._stopCmp = () => {
+      if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
+    };
+  }
+
+  // ---------- Lazy mount videos ----------
+  function mount(pair) {
+    if (pair.dataset.mounted === '1') return;
+    pair.dataset.mounted = '1';
+    pair.querySelectorAll('video[data-src]').forEach(v => {
+      v.src = v.dataset.src;
+      v.removeAttribute('data-src');
+      v.load();
+    });
+    initCompare(pair);
+  }
+
+  function unmount(pair) {
+    if (pair.dataset.mounted !== '1') return;
+    pair.dataset.mounted = '0';
+    if (pair._stopCmp) pair._stopCmp();
+    pair.querySelectorAll('video').forEach(v => {
+      v.pause();
+      v.removeAttribute('src');
+      v.load();
+    });
+  }
+
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) mount(e.target);
+        // optional: keep mounted once visible to avoid re-loading; comment out
+        // the unmount below if you want them to stay loaded after first view.
+        // else unmount(e.target);
+      });
+    }, { rootMargin: '200px 0px' });
+
+    document.querySelectorAll('.pair').forEach(p => io.observe(p));
+  } else {
+    document.querySelectorAll('.pair').forEach(mount);
+  }
+
+  // ---------- Models spec sheet ----------
+  const MODELS = [
+    { name:'0.4B', size:'0.4b', params:0.398, flops:1.260, hidden:1024, depth:24, heads:16,
+      pose:76.9, seg:79.5, normal:8.63, albedo:0.01825 },
+    { name:'0.8B', size:'0.8b', params:0.818, flops:2.592, hidden:1280, depth:32, heads:16,
+      pose:79.4, seg:80.6, normal:8.49, albedo:0.01602 },
+    { name:'1B',   size:'1b',   params:1.462, flops:4.715, hidden:1536, depth:40, heads:24,
+      pose:80.4, seg:81.7, normal:7.12, albedo:0.01224 },
+    { name:'5B',   size:'5b',   params:5.071, flops:15.722, hidden:2432, depth:56, heads:32,
+      pose:82.3, seg:82.5, normal:6.73, albedo:0.01191 }
+  ];
+  const TASK_HAS_WEIGHTS = { pose:true, seg:true, normal:true, albedo:false };
+  const HF = 'https://huggingface.co/facebook/sapiens2';
+  const RANGES = {
+    pose:   { min:70,    max:85,    dir:'up'   },
+    seg:    { min:75,    max:85,    dir:'up'   },
+    normal: { min:5,     max:10,    dir:'down' },
+    albedo: { min:0.010, max:0.025, dir:'down' }
+  };
+  const UNIT   = { pose:'mAP', seg:'mIoU', normal:'°', albedo:'MAE' };
+  const LABEL  = { pose:'Pose', seg:'Seg', normal:'Normal', albedo:'Albedo' };
+  const FORMAT = {
+    pose:   v => v.toFixed(1),
+    seg:    v => v.toFixed(1),
+    normal: v => v.toFixed(2),
+    albedo: v => v.toFixed(4)
+  };
+  const TASKS = ['pose','seg','normal','albedo'];
+  const MAX_PARAMS = Math.max(...MODELS.map(m => m.params));
+  const HIDDEN_MIN = Math.min(...MODELS.map(m => m.hidden));
+  const HIDDEN_MAX = Math.max(...MODELS.map(m => m.hidden));
+  const STACK_W_MIN = 50, STACK_W_MAX = 95;
+
+  function fillPct(key, value) {
+    const { min, max, dir } = RANGES[key];
+    const c = Math.max(min, Math.min(max, value));
+    const r = (c - min) / (max - min);
+    return Math.round((dir === 'up' ? r : 1 - r) * 100);
+  }
+
+  function modelCardHTML(m, i) {
+    const pretrainHref = `${HF}-pretrain-${m.size}`;
+    const metrics = TASKS.map(k => {
+      const inner = `
+        <div class="model-card__metric-head">
+          <span class="model-card__metric-label">${LABEL[k]}</span>
+          <span class="model-card__metric-value">${FORMAT[k](m[k])}<span class="model-card__metric-unit"> ${UNIT[k]}</span></span>
+        </div>
+        <div class="model-card__bar"><div class="model-card__bar-fill" style="width:${fillPct(k, m[k])}%"></div></div>`;
+      if (TASK_HAS_WEIGHTS[k]) {
+        const taskHref = `${HF}-${k}-${m.size}`;
+        return `<a class="model-card__metric model-card__metric--linked"
+                   style="--bar-color: var(--task-${k})"
+                   href="${taskHref}" target="_blank" rel="noopener"
+                   aria-label="Sapiens2 ${m.name} ${LABEL[k]} weights">${inner}</a>`;
+      }
+      return `<div class="model-card__metric" style="--bar-color: var(--task-${k})">${inner}</div>`;
+    }).join('');
+    return `
+      <article class="model-card" style="--accent: var(--model-${i})">
+        <a class="model-card__head" href="${pretrainHref}" target="_blank" rel="noopener"
+           aria-label="Sapiens2 ${m.name} pretrained weights">
+          <div class="model-card__params">${m.params.toFixed(2)}<span class="model-card__params-suffix">B</span></div>
+          <div class="model-card__stack-wrap">
+            <svg class="model-card__svg3d" data-stack-idx="${i}" viewBox="-70 -100 140 180" aria-hidden="true">
+              <defs>
+                <filter id="shadow-${i}" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="4.5" />
+                </filter>
+              </defs>
+              <g class="svg3d-faces"></g>
+            </svg>
+          </div>
+          <div class="model-card__arch">
+            <div class="model-card__arch-flops">${m.flops.toFixed(2)} TFLOPs</div>
+            <div class="model-card__arch-spec">${m.hidden} · ${m.depth} · ${m.heads}</div>
+          </div>
+        </a>
+        <div class="model-card__divider"></div>
+        <div class="model-card__metrics">${metrics}</div>
+      </article>`;
+  }
+
+  const modelsGrid = document.getElementById('models-grid');
+  if (modelsGrid) modelsGrid.innerHTML = MODELS.map((m, i) => modelCardHTML(m, i)).join('');
+
+  // ---------- SVG 3D rotating model stack (rectangular cuboids) ----------
+  (function setup3DStacks() {
+    const svgs = document.querySelectorAll('.model-card__svg3d');
+    if (!svgs.length) return;
+    const TRUNK_N = { '0.4B': 4, '0.8B': 6, '1B': 8, '5B': 12 };
+    const TOTAL_H = 100, GAP = 1.8, BOX_D = 28;          // constant depth (Z-thickness)
+    const cssRoot = getComputedStyle(document.documentElement);
+    const LIGHT = (() => {
+      const v = [-0.45, -0.85, 0.35];
+      const n = Math.hypot(v[0], v[1], v[2]);
+      return [v[0]/n, v[1]/n, v[2]/n];
+    })();
+    const TILT = -16 * Math.PI / 180;
+    const COS_T = Math.cos(TILT), SIN_T = Math.sin(TILT);
+
+    function hexToRGB(hex) {
+      hex = hex.replace('#', '').trim();
+      return [parseInt(hex.slice(0,2),16), parseInt(hex.slice(2,4),16), parseInt(hex.slice(4,6),16)];
+    }
+    function mix(rgb, t, target) {
+      return rgb.map((c, k) => Math.round(c + (target[k] - c) * t));
+    }
+    function shade(rgb, intensity) {
+      // Hue-preserving lighting:
+      //  - lit faces blend toward white mildly so the accent never washes out
+      //  - shadow faces MULTIPLY the accent (no muddy gray blend)
+      if (intensity >= 0.55) {
+        const t = (intensity - 0.55) * 0.80;       // max 0..0.36
+        return mix(rgb, t, [255, 255, 255]);
+      }
+      const dim = 0.30 + (intensity / 0.55) * 0.70; // 0.30..1.00
+      return rgb.map(c => Math.round(c * dim));
+    }
+    function rgbStr(rgb) { return `rgb(${rgb[0]},${rgb[1]},${rgb[2]})`; }
+
+    const BASELINE_Y = 75;     // bottom of each tower sits at this y in viewBox
+    const BOX_H_FIXED = 9;     // constant per-layer height → bigger model = taller tower
+
+    const stacks = Array.from(svgs).map(svg => {
+      const i = +svg.dataset.stackIdx;
+      const m = MODELS[i];
+      const trunkW = STACK_W_MIN + (m.hidden - HIDDEN_MIN) / (HIDDEN_MAX - HIDDEN_MIN) * (STACK_W_MAX - STACK_W_MIN);
+      const trunkN = TRUNK_N[m.name] || 6;
+      const widths = [...Array(trunkN).fill(trunkW), trunkW * 0.7, trunkW * 0.35];
+      const N = widths.length;
+      // Bottom-anchored: box k=0 (top) is highest, box k=N-1 sits at BASELINE_Y
+      const boxes = widths.map((w, k) => ({
+        cy: BASELINE_Y - (N - 1 - k) * (BOX_H_FIXED + GAP) - BOX_H_FIXED / 2,
+        w, h: BOX_H_FIXED, d: BOX_D,
+      }));
+      const accentHex = cssRoot.getPropertyValue(`--model-${i}`).trim();
+      const accent = hexToRGB(accentHex || '#7c8fa8');
+      const stroke = rgbStr(shade(accent, 0.42));   // lighter outline
+      const card = svg.closest('.model-card');
+      const groundRx = Math.max(...widths) * 0.55;
+      return {
+        svg,
+        faces: svg.querySelector('.svg3d-faces'),
+        boxes, accent, stroke, card, idx: i,
+        groundRx,
+      };
+    });
+
+    // 6 face definitions over 8 box corners.
+    // Corner indexing: yi*4 + zi*2 + xi (each in {-1,+1}).
+    //  0: -y -z -x  (top-back-left)     4: +y -z -x  (bot-back-left)
+    //  1: -y -z +x  (top-back-right)    5: +y -z +x  (bot-back-right)
+    //  2: -y +z -x  (top-front-left)    6: +y +z -x  (bot-front-left)
+    //  3: -y +z +x  (top-front-right)   7: +y +z +x  (bot-front-right)
+    const FACES = [
+      { idx: [0,1,3,2], n: [0,-1,0] }, // top
+      { idx: [4,6,7,5], n: [0, 1,0] }, // bottom
+      { idx: [2,3,7,6], n: [0, 0, 1] }, // front
+      { idx: [0,4,5,1], n: [0, 0,-1] }, // back
+      { idx: [0,2,6,4], n: [-1,0, 0] }, // left
+      { idx: [1,5,7,3], n: [ 1,0, 0] }, // right
+    ];
+
+    function renderStack(s, alpha, hover) {
+      const cosA = Math.cos(alpha), sinA = Math.sin(alpha);
+      const out = [];
+      const boost = hover ? 0.12 : 0;
+
+      for (const box of s.boxes) {
+        const hw = box.w * 0.5, hh = box.h * 0.5, hd = box.d * 0.5;
+        const verts = [];
+        for (const yi of [-1, 1]) for (const zi of [-1, 1]) for (const xi of [-1, 1]) {
+          const x0 = xi * hw, y0 = yi * hh + box.cy, z0 = zi * hd;
+          const xr =  x0 * cosA + z0 * sinA;
+          const zr = -x0 * sinA + z0 * cosA;
+          const ys = y0 * COS_T - zr * SIN_T;
+          const zs = y0 * SIN_T + zr * COS_T;
+          verts.push([xr, ys, zs]);
+        }
+
+        for (const f of FACES) {
+          const [nx, ny, nz] = f.n;
+          const nxr =  nx * cosA + nz * sinA;
+          const nzr = -nx * sinA + nz * cosA;
+          const nzs = ny * SIN_T + nzr * COS_T;
+          if (nzs <= 0.01) continue;
+          const lightDot = nxr * LIGHT[0] + ny * LIGHT[1] + nzr * LIGHT[2];
+          // Tighter range — soften both extremes for a refined, not-harsh look.
+          const intensity = Math.max(0.40, Math.min(0.95, 0.58 - 0.42 * lightDot + boost));
+          const v = f.idx.map(i => verts[i]);
+          const avgZ = (v[0][2] + v[1][2] + v[2][2] + v[3][2]) * 0.25;
+          out.push({ v, intensity, avgZ });
+        }
+      }
+
+      out.sort((a, b) => a.avgZ - b.avgZ);
+      // ground shadow first (bottom-most z so it draws behind everything)
+      let html = `<ellipse cx="0" cy="${(BASELINE_Y + 7).toFixed(1)}" rx="${s.groundRx.toFixed(1)}" ry="${(s.groundRx * 0.16).toFixed(1)}" fill="rgba(20,24,34,${hover ? 0.13 : 0.08})" filter="url(#shadow-${s.idx})" />`;
+      for (const p of out) {
+        const pts = p.v.map(([x, y]) => `${x.toFixed(1)},${y.toFixed(1)}`).join(' ');
+        html += `<polygon points="${pts}" fill="${rgbStr(shade(s.accent, p.intensity))}" stroke="${s.stroke}" stroke-width="0.5" stroke-linejoin="round" />`;
+      }
+      s.faces.innerHTML = html;
+    }
+
+    // Shared rotation angle — all 4 towers always rotate in perfect sync.
+    let SHARED_ALPHA = 0;
+    const SPIN_PERIOD = 18;  // seconds per revolution
+
+    let modelsVisible = true;     // assume true until IO says otherwise
+    let tickScheduled = false;
+    let last = performance.now();
+
+    function tick(t) {
+      tickScheduled = false;
+      const dt = Math.min(0.05, (t - last) / 1000);
+      last = t;
+      SHARED_ALPHA = (SHARED_ALPHA + (2 * Math.PI / SPIN_PERIOD) * dt) % (Math.PI * 2);
+      for (const s of stacks) {
+        const hover = s.card.matches(':hover');
+        renderStack(s, SHARED_ALPHA, hover);
+      }
+      if (modelsVisible) {
+        tickScheduled = true;
+        requestAnimationFrame(tick);
+      }
+    }
+    function startTick() {
+      if (tickScheduled) return;
+      tickScheduled = true;
+      last = performance.now();
+      requestAnimationFrame(tick);
+    }
+
+    // Pause RAF when models section is off-screen (CPU saver).
+    const modelsRoot = document.getElementById('models');
+    if (modelsRoot && 'IntersectionObserver' in window) {
+      modelsVisible = false;
+      const ioMod = new IntersectionObserver((entries) => {
+        modelsVisible = entries[0].isIntersecting;
+        if (modelsVisible) startTick();
+      }, { rootMargin: '120px 0px' });
+      ioMod.observe(modelsRoot);
+    } else {
+      startTick();
+    }
+  })();
+
+  // ---------- BibTeX copy ----------
+  const copyBtn = document.getElementById('copy-bibtex');
+  const bibtex  = document.getElementById('bibtex');
+  if (copyBtn && bibtex) {
+    copyBtn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(bibtex.textContent.trim());
+        const orig = copyBtn.textContent;
+        copyBtn.textContent = 'Copied';
+        copyBtn.classList.add('copied');
+        setTimeout(() => {
+          copyBtn.textContent = orig;
+          copyBtn.classList.remove('copied');
+        }, 1600);
+      } catch (e) { /* clipboard blocked */ }
+    });
+  }
+
+  // ---------- Cross-image patch similarity (3 subjects + zoom) ----------
+  (function () {
+    const COLS = 48, ROWS = 64, N = COLS * ROWS, DIM = 256, NUM = 4;
+    const LETTER = ['A', 'B', 'C', 'D'];
+    const A = 12;
+    const INFERNO = [
+      [  0,   0,   4],
+      [ 87,  16, 110],
+      [188,  55,  84],
+      [249, 142,   9],
+      [252, 255, 164],
+    ];
+    const SCORES = new Float32Array(N);
+    const statusEl = document.getElementById('cross-status');
+    const zoomEl   = document.getElementById('cross-zoom');
+    const coordEl  = document.getElementById('cross-coord');
+
+    const SAMPLES = [];
+    for (let i = 0; i < NUM; i++) {
+      const wrap = document.getElementById('cross-img-' + i);
+      const cell = document.getElementById('cross-cell-' + i);
+      const cnv  = document.getElementById('cross-hm-' + i);
+      if (!wrap || !cell || !cnv) return;
+      const ctx  = cnv.getContext('2d');
+      SAMPLES.push({
+        idx: i, wrap, cell, cnv, ctx,
+        img: ctx.createImageData(COLS, ROWS),
+        blank: ctx.createImageData(COLS, ROWS), // all-zero alpha
+        feats: null, fg: null,
+        zoomBg: `url('assets/cross/${i}.jpg')`,
+      });
+    }
+
+    function fp16ToFp32(h) {
+      const sign = (h & 0x8000) << 16;
+      let exp = (h & 0x7c00) >> 10, mant = h & 0x03ff;
+      if (exp === 0x1f) return mant ? NaN : (sign ? -Infinity : Infinity);
+      if (exp === 0) {
+        if (mant === 0) return sign ? -0 : 0;
+        while ((mant & 0x400) === 0) { mant <<= 1; exp--; }
+        mant &= 0x3ff; exp += 1;
+      }
+      exp = exp - 15 + 127;
+      F32U[0] = sign | (exp << 23) | (mant << 13);
+      return F32F[0];
+    }
+    const F32F = new Float32Array(1), F32U = new Uint32Array(F32F.buffer);
+
+    function loadSample(s) {
+      return Promise.all([
+        fetch(`assets/cross/${s.idx}.feats.bin`).then(r => { if (!r.ok) throw new Error('feats ' + s.idx + ' ' + r.status); return r.arrayBuffer(); }),
+        fetch(`assets/cross/${s.idx}.mask.bin`).then(r => { if (!r.ok) throw new Error('mask ' + s.idx + ' ' + r.status); return r.arrayBuffer(); }),
+      ]).then(([fbuf, mbuf]) => {
+        const u16 = new Uint16Array(fbuf);
+        const f32 = new Float32Array(u16.length);
+        for (let j = 0; j < u16.length; j++) f32[j] = fp16ToFp32(u16[j]);
+        for (let p = 0; p < N; p++) {
+          const off = p * DIM;
+          let n = 0;
+          for (let d = 0; d < DIM; d++) { const v = f32[off + d]; n += v * v; }
+          n = Math.sqrt(n);
+          if (n > 1e-8) { const inv = 1 / n; for (let d = 0; d < DIM; d++) f32[off + d] *= inv; }
+        }
+        s.feats = f32;
+        s.fg = new Uint8Array(mbuf);
+      });
+    }
+
+    // Zoom: 144px display × 9 magnification on the 16×16 patch.
+    const ZOOM_SCALE = 9;
+    const NATIVE_W = 768, NATIVE_H = 1024;
+    if (zoomEl) {
+      zoomEl.style.backgroundSize = `${NATIVE_W * ZOOM_SCALE}px ${NATIVE_H * ZOOM_SCALE}px`;
+      zoomEl.style.backgroundRepeat = 'no-repeat';
+    }
+
+    // Defer the 29 MB feature load until the Emergent Capabilities section enters the viewport.
+    let featuresStarted = false;
+    function loadFeatures() {
+      if (featuresStarted) return;
+      featuresStarted = true;
+      Promise.all(SAMPLES.map(loadSample)).then(() => {
+        if (statusEl) statusEl.textContent =
+          'features ready · ' + NUM + ' subjects × ' + DIM + '-dim PCA · ' + N + ' patches each';
+        setQuery(0, 24, 22);
+      }).catch(err => {
+        console.error('[sapiens2] cross feature load error:', err);
+        if (statusEl) {
+          statusEl.textContent = 'FEATURES FAILED: ' + err.message;
+          statusEl.style.color = '#c83838';
+        }
+      });
+    }
+    const emergentRoot = document.getElementById('emergent');
+    if (emergentRoot && 'IntersectionObserver' in window) {
+      const ioEm = new IntersectionObserver((entries) => {
+        if (entries.some(e => e.isIntersecting)) {
+          ioEm.disconnect();
+          loadFeatures();
+        }
+      }, { rootMargin: '400px 0px' });   // start a little before user reaches it
+      ioEm.observe(emergentRoot);
+    } else {
+      loadFeatures();
+    }
+
+    function renderHeatmap(tgt, src, qOff) {
+      const F = tgt.feats, FG = tgt.fg, Q = src.feats;
+      let minS = Infinity, maxS = -Infinity;
+      for (let i = 0; i < N; i++) {
+        if (!FG[i]) { SCORES[i] = -Infinity; continue; }
+        let s = 0;
+        const off = i * DIM;
+        for (let d = 0; d < DIM; d += 4) {
+          s += Q[qOff + d    ] * F[off + d    ]
+            +  Q[qOff + d + 1] * F[off + d + 1]
+            +  Q[qOff + d + 2] * F[off + d + 2]
+            +  Q[qOff + d + 3] * F[off + d + 3];
+        }
+        SCORES[i] = s;
+        if (s < minS) minS = s;
+        if (s > maxS) maxS = s;
+      }
+      const range = Math.max(maxS - minS, 1e-6);
+      const data = tgt.img.data;
+      for (let i = 0; i < N; i++) {
+        const off = i * 4;
+        if (!FG[i]) { data[off] = data[off + 1] = data[off + 2] = data[off + 3] = 0; continue; }
+        const norm = (SCORES[i] - minS) / range;
+        const v = 1 / (1 + Math.exp(-A * (norm - 0.5)));
+        const seg = v >= 1 ? 3 : Math.floor(v * 4);
+        const u = (v * 4) - seg;
+        const a = INFERNO[seg], b = INFERNO[seg + 1];
+        data[off    ] = a[0] + (b[0] - a[0]) * u;
+        data[off + 1] = a[1] + (b[1] - a[1]) * u;
+        data[off + 2] = a[2] + (b[2] - a[2]) * u;
+        data[off + 3] = 255;
+      }
+      tgt.ctx.putImageData(tgt.img, 0, 0);
+    }
+
+    function clearHeatmap(tgt) {
+      tgt.ctx.clearRect(0, 0, COLS, ROWS);
+    }
+
+    function setQuery(srcIdx, px, py) {
+      px = Math.max(0, Math.min(COLS - 1, px));
+      py = Math.max(0, Math.min(ROWS - 1, py));
+      const src = SAMPLES[srcIdx];
+      if (!src.feats) return;
+      const queryIdx = py * COLS + px;
+      const qOff = queryIdx * DIM;
+      const onForeground = src.fg && src.fg[queryIdx];
+
+      // White cursor outline only on the hovered (source) subject.
+      for (let i = 0; i < NUM; i++) {
+        const s = SAMPLES[i];
+        if (!s.feats) continue;
+        if (i === srcIdx) {
+          s.cell.style.left = (px * 100 / COLS) + '%';
+          s.cell.style.top  = (py * 100 / ROWS) + '%';
+          s.cell.style.opacity = 1;
+        } else {
+          s.cell.style.opacity = 0;
+        }
+        // If query is on the background, clear every heatmap; else render full cross-sim.
+        if (onForeground) {
+          renderHeatmap(s, src, qOff);
+        } else {
+          clearHeatmap(s);
+        }
+      }
+
+      // Zoom: shows the query patch from the source subject.
+      if (zoomEl) {
+        zoomEl.style.backgroundImage = src.zoomBg;
+        zoomEl.style.backgroundPosition = `-${px * 16 * ZOOM_SCALE}px -${py * 16 * ZOOM_SCALE}px`;
+      }
+      if (coordEl) {
+        coordEl.textContent = onForeground
+          ? `Subject ${LETTER[srcIdx]} · (${px}, ${py})`
+          : `Background · (${px}, ${py})`;
+      }
+    }
+
+    SAMPLES.forEach((s, i) => {
+      s.wrap.addEventListener('mousemove', (e) => {
+        const r = s.wrap.getBoundingClientRect();
+        const px = Math.floor(((e.clientX - r.left) / r.width)  * COLS);
+        const py = Math.floor(((e.clientY - r.top)  / r.height) * ROWS);
+        setQuery(i, px, py);
+      });
+      s.wrap.addEventListener('touchstart', (e) => {
+        if (!e.touches.length) return;
+        const t = e.touches[0];
+        const r = s.wrap.getBoundingClientRect();
+        const px = Math.floor(((t.clientX - r.left) / r.width)  * COLS);
+        const py = Math.floor(((t.clientY - r.top)  / r.height) * ROWS);
+        setQuery(i, px, py);
+      }, { passive: true });
+    });
+  })();
+
+  // ---------- Pretraining 3D globes ----------
+  (function () {
+    const root       = document.getElementById('ds-globes');
+    const tooltip    = document.getElementById('ds-tooltip');
+    const tooltipImg = document.getElementById('ds-tooltip-img');
+    if (!root || !tooltip || !tooltipImg) return;
+
+    const SVGNS = 'http://www.w3.org/2000/svg';
+    const PHI   = Math.PI * (3 - Math.sqrt(5));
+    const NIMG  = 64;
+    const SPIN  = 0.0025;        // rad/frame ≈ 1 turn / 42s @ 60fps
+    const globes = [];
+
+    root.querySelectorAll('.ds-globe-wrap').forEach((wrap) => {
+      const n     = +wrap.dataset.count;
+      const R     = +wrap.dataset.radius;
+      const layer = wrap.querySelector('.ds-dots');
+      const pts   = [];
+      const frag  = document.createDocumentFragment();
+      for (let i = 0; i < n; i++) {
+        const yi = 1 - (i / (n - 1)) * 2;
+        const ri = Math.sqrt(1 - yi * yi);
+        const ti = PHI * i;
+        const x0 = Math.cos(ti) * ri;
+        const z0 = Math.sin(ti) * ri;
+        const imgIdx = Math.floor(Math.random() * NIMG);
+        const el = document.createElementNS(SVGNS, 'image');
+        el.setAttribute('class', 'ds-dot');
+        el.setAttribute('href', `assets/pretrain-imgs/${imgIdx}.jpg`);
+        el.setAttribute('preserveAspectRatio', 'xMidYMid slice');
+        el.dataset.img = imgIdx;
+        frag.appendChild(el);
+        pts.push({ x0, y0: yi, z0, el });
+      }
+      layer.appendChild(frag);
+      globes.push({
+        wrap, layer, pts, R,
+        alpha: Math.random() * Math.PI * 2,
+        pauseUntil: 0,
+        dragging: false,
+      });
+    });
+
+    function tick() {
+      const now = performance.now();
+      for (const g of globes) {
+        if (!g.dragging && (!g.pauseUntil || now > g.pauseUntil)) {
+          g.alpha += SPIN;
+        }
+        const c = Math.cos(g.alpha), s = Math.sin(g.alpha);
+        for (const p of g.pts) {
+          const x =  p.x0 * c + p.z0 * s;
+          const z = -p.x0 * s + p.z0 * c;
+          const d = 0.5 + 0.5 * z;                  // 0 back .. 1 front
+          const size = 9 + 13 * d;                  // 9 → 22 px image size
+          p.el.setAttribute('x', (x * g.R - size / 2).toFixed(2));
+          p.el.setAttribute('y', (-p.y0 * g.R - size / 2).toFixed(2));
+          p.el.setAttribute('width',  size.toFixed(2));
+          p.el.setAttribute('height', size.toFixed(2));
+          p.el.setAttribute('opacity', (0.35 + 0.65 * d).toFixed(3));
+        }
+      }
+      requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+
+    // Hover tooltip
+    root.addEventListener('mouseover', (e) => {
+      const t = e.target;
+      if (!t.classList || !t.classList.contains('ds-dot')) return;
+      const g = globes.find(x => x.layer.contains(t));
+      if (g) g.pauseUntil = performance.now() + 700;
+      tooltipImg.src = `assets/pretrain-imgs/${t.dataset.img}.jpg`;
+      const r = t.getBoundingClientRect();
+      const rootR = root.getBoundingClientRect();
+      tooltip.style.left = (r.left + r.width / 2 - rootR.left) + 'px';
+      tooltip.style.top  = (r.top  - rootR.top - 140) + 'px';
+      tooltip.style.opacity = '1';
+    });
+    root.addEventListener('mouseout', (e) => {
+      const t = e.target;
+      if (t.classList && t.classList.contains('ds-dot')) tooltip.style.opacity = '0';
+    });
+
+    // Drag-to-rotate per globe
+    globes.forEach((g) => {
+      let lastX = 0;
+      g.wrap.addEventListener('pointerdown', (e) => {
+        g.dragging = true; lastX = e.clientX;
+        try { g.wrap.setPointerCapture(e.pointerId); } catch (_) {}
+      });
+      g.wrap.addEventListener('pointermove', (e) => {
+        if (!g.dragging) return;
+        g.alpha += (e.clientX - lastX) * 0.006;
+        lastX = e.clientX;
+      });
+      const release = () => {
+        if (!g.dragging) return;
+        g.dragging = false;
+        g.pauseUntil = performance.now() + 500;
+      };
+      g.wrap.addEventListener('pointerup',     release);
+      g.wrap.addEventListener('pointercancel', release);
+      g.wrap.addEventListener('pointerleave',  release);
+    });
+  })();
+})();
+</script>
+
+</body>
+</html>
