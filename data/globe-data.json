@@ -1,19 +1,19 @@
 {
   "period": "all time",
-  "updated": "2026-05-18",
-  "total_visitors": 1151,
+  "updated": "2026-05-24",
+  "total_visitors": 1187,
   "locations": [
     {
       "country": "US",
-      "count": 474
+      "count": 516
     },
     {
       "country": "IN",
-      "count": 255
+      "count": 257
     },
     {
       "country": "KR",
-      "count": 93
+      "count": 96
     },
     {
       "country": "DE",
@@ -25,11 +25,11 @@
     },
     {
       "country": "GB",
-      "count": 26
+      "count": 28
     },
     {
       "country": "JP",
-      "count": 21
+      "count": 22
     },
     {
       "country": "IL",
@@ -44,20 +44,24 @@
       "count": 16
     },
     {
-      "country": "BR",
-      "count": 8
-    },
-    {
       "country": "FR",
-      "count": 8
+      "count": 9
     },
     {
       "country": "HK",
+      "count": 9
+    },
+    {
+      "country": "BR",
       "count": 8
     },
     {
       "country": "NL",
       "count": 8
+    },
+    {
+      "country": "IT",
+      "count": 7
     },
     {
       "country": "CH",
@@ -72,15 +76,11 @@
       "count": 5
     },
     {
-      "country": "IT",
-      "count": 5
+      "country": "TR",
+      "count": 4
     },
     {
       "country": "ES",
-      "count": 3
-    },
-    {
-      "country": "TR",
       "count": 3
     },
     {
@@ -89,6 +89,10 @@
     },
     {
       "country": "CN",
+      "count": 2
+    },
+    {
+      "country": "FI",
       "count": 2
     },
     {
@@ -101,6 +105,10 @@
     },
     {
       "country": "PT",
+      "count": 2
+    },
+    {
+      "country": "SE",
       "count": 2
     },
     {
@@ -120,7 +128,7 @@
       "count": 1
     },
     {
-      "country": "FI",
+      "country": "EG",
       "count": 1
     },
     {
@@ -148,6 +156,10 @@
       "count": 1
     },
     {
+      "country": "PE",
+      "count": 1
+    },
+    {
       "country": "RO",
       "count": 1
     },
@@ -157,10 +169,6 @@
     },
     {
       "country": "RU",
-      "count": 1
-    },
-    {
-      "country": "SE",
       "count": 1
     }
   ]
