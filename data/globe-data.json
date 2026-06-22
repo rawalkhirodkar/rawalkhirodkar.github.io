@@ -1,7 +1,7 @@
 {
   "period": "all time",
-  "updated": "2026-06-21",
-  "total_visitors": 2451,
+  "updated": "2026-06-22",
+  "total_visitors": 2452,
   "locations": [
     {
       "country": "US",
@@ -29,7 +29,7 @@
     },
     {
       "country": "JP",
-      "count": 26
+      "count": 27
     },
     {
       "country": "SG",
