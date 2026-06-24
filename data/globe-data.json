@@ -1,11 +1,11 @@
 {
   "period": "all time",
-  "updated": "2026-06-23",
-  "total_visitors": 2466,
+  "updated": "2026-06-24",
+  "total_visitors": 2475,
   "locations": [
     {
       "country": "US",
-      "count": 1730
+      "count": 1736
     },
     {
       "country": "IN",
@@ -13,11 +13,11 @@
     },
     {
       "country": "KR",
-      "count": 102
+      "count": 103
     },
     {
       "country": "DE",
-      "count": 92
+      "count": 93
     },
     {
       "country": "CA",
@@ -149,6 +149,10 @@
     },
     {
       "country": "IE",
+      "count": 1
+    },
+    {
+      "country": "LB",
       "count": 1
     },
     {
