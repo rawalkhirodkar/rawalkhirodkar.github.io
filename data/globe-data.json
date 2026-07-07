@@ -1,15 +1,15 @@
 {
   "period": "all time",
-  "updated": "2026-07-06",
-  "total_visitors": 2552,
+  "updated": "2026-07-07",
+  "total_visitors": 2560,
   "locations": [
     {
       "country": "US",
-      "count": 1797
+      "count": 1804
     },
     {
       "country": "IN",
-      "count": 299
+      "count": 300
     },
     {
       "country": "KR",
