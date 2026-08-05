@@ -1,59 +1,59 @@
 {
   "period": "all time",
-  "updated": "2026-07-05",
-  "total_visitors": 2551,
+  "updated": "2026-08-04",
+  "total_visitors": 3186,
   "locations": [
     {
       "country": "US",
-      "count": 1789
+      "count": 2416
     },
     {
       "country": "IN",
-      "count": 298
+      "count": 336
     },
     {
       "country": "KR",
-      "count": 111
+      "count": 118
     },
     {
       "country": "DE",
-      "count": 95
+      "count": 97
     },
     {
       "country": "CA",
-      "count": 70
+      "count": 72
     },
     {
       "country": "GB",
-      "count": 38
+      "count": 42
     },
     {
       "country": "JP",
-      "count": 29
+      "count": 35
     },
     {
       "country": "SG",
-      "count": 22
+      "count": 24
     },
     {
       "country": "IL",
       "count": 19
     },
     {
+      "country": "CH",
+      "count": 16
+    },
+    {
+      "country": "FR",
+      "count": 16
+    },
+    {
       "country": "ZA",
       "count": 16
     },
     {
-      "country": "CH",
-      "count": 15
-    },
-    {
-      "country": "FR",
-      "count": 15
-    },
-    {
       "country": "HK",
-      "count": 12
+      "count": 13
     },
     {
       "country": "NL",
@@ -68,32 +68,36 @@
       "count": 7
     },
     {
+      "country": "AU",
+      "count": 6
+    },
+    {
+      "country": "TR",
+      "count": 6
+    },
+    {
       "country": "VN",
       "count": 6
     },
     {
-      "country": "AU",
+      "country": "TW",
       "count": 5
     },
     {
-      "country": "TR",
-      "count": 5
+      "country": "CN",
+      "count": 4
     },
     {
       "country": "SE",
       "count": 4
     },
     {
-      "country": "TW",
-      "count": 4
-    },
-    {
-      "country": "CN",
-      "count": 3
-    },
-    {
       "country": "ES",
       "count": 3
+    },
+    {
+      "country": "BG",
+      "count": 2
     },
     {
       "country": "FI",
@@ -113,6 +117,10 @@
     },
     {
       "country": "PT",
+      "count": 2
+    },
+    {
+      "country": "RU",
       "count": 2
     },
     {
@@ -185,10 +193,6 @@
     },
     {
       "country": "RS",
-      "count": 1
-    },
-    {
-      "country": "RU",
       "count": 1
     },
     {
