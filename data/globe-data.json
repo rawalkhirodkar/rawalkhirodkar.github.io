@@ -1,11 +1,11 @@
 {
   "period": "all time",
-  "updated": "2026-08-22",
-  "total_visitors": 3283,
+  "updated": "2026-08-23",
+  "total_visitors": 3290,
   "locations": [
     {
       "country": "US",
-      "count": 2478
+      "count": 2481
     },
     {
       "country": "IN",
@@ -21,7 +21,7 @@
     },
     {
       "country": "CA",
-      "count": 74
+      "count": 75
     },
     {
       "country": "GB",
@@ -36,12 +36,12 @@
       "count": 24
     },
     {
-      "country": "IL",
+      "country": "CH",
       "count": 19
     },
     {
-      "country": "CH",
-      "count": 17
+      "country": "IL",
+      "count": 19
     },
     {
       "country": "FR",
@@ -61,7 +61,7 @@
     },
     {
       "country": "NL",
-      "count": 12
+      "count": 13
     },
     {
       "country": "TR",
