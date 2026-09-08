@@ -1,11 +1,11 @@
 {
   "period": "all time",
-  "updated": "2026-09-07",
-  "total_visitors": 3376,
+  "updated": "2026-09-08",
+  "total_visitors": 3380,
   "locations": [
     {
       "country": "US",
-      "count": 2535
+      "count": 2538
     },
     {
       "country": "IN",
@@ -45,7 +45,7 @@
     },
     {
       "country": "HK",
-      "count": 19
+      "count": 20
     },
     {
       "country": "FR",
