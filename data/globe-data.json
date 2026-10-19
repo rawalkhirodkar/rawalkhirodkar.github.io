@@ -1,7 +1,7 @@
 {
   "period": "all time",
-  "updated": "2026-10-18",
-  "total_visitors": 3557,
+  "updated": "2026-10-19",
+  "total_visitors": 3558,
   "locations": [
     {
       "country": "US",
@@ -72,16 +72,16 @@
       "count": 10
     },
     {
+      "country": "IT",
+      "count": 8
+    },
+    {
       "country": "SE",
       "count": 8
     },
     {
       "country": "TR",
       "count": 8
-    },
-    {
-      "country": "IT",
-      "count": 7
     },
     {
       "country": "VN",
